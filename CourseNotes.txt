@@ -1,0 +1,9 @@
+NOTES ON ANGULAR COURSE
+=============================
+1.5
+Install Angular:
+	Make sure to have node installed (and npm)
+	To upgrade node version (mac os):
+		sudo npm cache clean -f
+		sudo npm install -g n 
+		sudo n stable
