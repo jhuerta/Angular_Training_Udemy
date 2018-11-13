@@ -1,0 +1,658 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"agilof",
+				"agiloftAuth"
+			],
+			[
+				"url",
+				"urlEncryptedValue"
+			],
+			[
+				"htm",
+				"htmlElement"
+			],
+			[
+				"contr",
+				"venueController"
+			],
+			[
+				"gety",
+				"getDay\t(): int Date"
+			],
+			[
+				"cat",
+				"cathErrors"
+			],
+			[
+				"info",
+				"infoJson"
+			],
+			[
+				"people",
+				"peopleIterator"
+			],
+			[
+				"follo",
+				"followerInfo"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"project",
+				"Project: Save As"
+			],
+			[
+				"form",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"vue",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"es",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"html",
+				"HTMLBeautify"
+			],
+			[
+				"esl",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"htm",
+				"HTMLBeautify"
+			],
+			[
+				"line",
+				"Line Endings Unify"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"javascrip",
+				"Javascript Beautify"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"vue ",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"vue c",
+				"Snippet: Vue component"
+			],
+			[
+				"syn vue",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"format css",
+				"Format CSS: Compact"
+			],
+			[
+				"set sycss",
+				"Set Syntax: CSS"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"h",
+				"HTMLBeautify"
+			],
+			[
+				"ht",
+				"HTMLBeautify"
+			],
+			[
+				"eslin",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"format",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"html ",
+				"HTMLBeautify"
+			],
+			[
+				"for",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"pref",
+				"Preferences: Settings"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"forma",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"syn vu",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"vue aut",
+				"VUEFormatter: Set Keyboard Shortcuts"
+			],
+			[
+				"insall pa",
+				"Package Control: Install Package"
+			],
+			[
+				"fomrat",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"rmeove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"eslint",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"sublimelinter",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"sublimelinter ",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"ori cr pa r",
+				"Origami: Create Pane on the Right"
+			],
+			[
+				"linter",
+				"SublimeLinter: Choose Lint Mode"
+			],
+			[
+				"pug",
+				"Set Syntax: Pug"
+			],
+			[
+				"npm",
+				"Set Syntax: NPM JSON"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"color pic",
+				"Color Picker"
+			],
+			[
+				"color",
+				"Toggle Colorcode on this view"
+			],
+			[
+				"se sy css",
+				"Set Syntax: CSS"
+			],
+			[
+				"set sy  css",
+				"Set Syntax: CSS"
+			],
+			[
+				"s s html",
+				"Set Syntax: HTML"
+			],
+			[
+				"ori zoo",
+				"Origami: Unzoom Current Pane"
+			],
+			[
+				"ori clon ri",
+				"Origami: Clone File to Pane on the Right"
+			],
+			[
+				"de pa le",
+				"Origami: Destroy Pane on the Left"
+			],
+			[
+				"de pa ri",
+				"Origami: Destroy Pane on the Right"
+			],
+			[
+				"cre wi ",
+				"Origami: Create Pane with File Below"
+			],
+			[
+				"fo pa le",
+				"Origami: Focus on Pane on the Left"
+			],
+			[
+				"des p b",
+				"Origami: Destroy Pane Below"
+			],
+			[
+				"cr pa le",
+				"Origami: Create Pane on the Left"
+			],
+			[
+				"cr pa be",
+				"Origami: Create Pane Below"
+			],
+			[
+				"or cre pa ri",
+				"Origami: Create Pane on the Right"
+			],
+			[
+				"insall p",
+				"Package Control: Install Package"
+			],
+			[
+				"sy htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"set sy css",
+				"Set Syntax: CSS"
+			],
+			[
+				"syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"low",
+				"Convert Case: Lower Case"
+			],
+			[
+				"lowerc",
+				"Convert Case: Lower Case"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"pret",
+				"HTMLPrettify"
+			],
+			[
+				"up",
+				"Convert Case: Upper Case"
+			],
+			[
+				"pre",
+				"HTMLPrettify"
+			],
+			[
+				"html pre",
+				"HTMLPrettify"
+			],
+			[
+				"beaut",
+				"HTMLBeautify"
+			],
+			[
+				"materi",
+				"Activate Materialize Theme"
+			],
+			[
+				"materia",
+				"Activate Materialize Theme"
+			],
+			[
+				"intall pa",
+				"Package Control: Install Package"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 538.0
+	},
+	"console":
+	{
+		"height": 197.0,
+		"history":
+		[
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"----------------"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jhuerta/Documents/Training/Angular"
+	],
+	"file_history":
+	[
+		"/Users/jhuerta/Documents/Training/Angular/CourseNotes.txt",
+		"/Users/jhuerta/Documents/Training/Angular/CourseNotes",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4373.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4374.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4375.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4376.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4377.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4378.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4396.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4399.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4402.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4403.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4404.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4406.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4411.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4412.JPG",
+		"/Users/jhuerta/Desktop/IMG_4402/IMG_4415.JPG",
+		"/Users/jhuerta/Documents/Training/Vue/poc/src/components/agText.vue",
+		"/Users/jhuerta/Documents/Training/Vue/poc/src/mixins/agiloftWebServices.js",
+		"/Users/jhuerta/Documents/Training/Vue/poc/src/mixins/agiloftBaseComponent.js",
+		"/Users/jhuerta/Documents/Training/Vue/poc/index.html",
+		"/Users/jhuerta/Documents/Training/Vue/poc/src/components/agCurrency.vue",
+		"/Users/jhuerta/Documents/Training/Vue/poc/src/components/agTextCurrency.vue",
+		"/Users/jhuerta/Documents/Training/Vue/agTextList.vue",
+		"/Users/jhuerta/Documents/Training/Vue/poc/src/main.js",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/index.html",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/mixins/agBaseComponent.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/components/agTextMix.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/mixins/agiloftWebServices.js",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/components/agText.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/components/agBaseComponent.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/index.html",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/main.js",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/main.js",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/components/agUser.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/components/commonCSS.vue",
+		"/E/TFS/RAD/Code/Agiloft_Tables/prod/table_definitions/approles.js",
+		"/E/TFS/RAD/Code/Agiloft_Tables/agiloft_tables/js/utilities.js",
+		"/E/TFS/RAD/Code/Agiloft_Tables/agiloft_tables/js/global_variables.js",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/components/agWebServices.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/components/agOffices.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/components/agOffices.dev.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/config/index.js",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/mixins/agWS.js",
+		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/CSS Format/CSS Format.sublime-settings",
+		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/User/CSS Format.sublime-settings",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/components/agUser.dev.vue",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/Notes.txt",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/main2.js",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/components/tcom.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/components/HelloWorld.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/components/AGDate2.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/components/agdate.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/components/App.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/components/AGDate.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/App.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/App.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/components/HelloWorld.vue",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/dist/index.html",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/config/index.js",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/.eslintrc.js",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/build/webpack.dev.conf.js",
+		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Installed Packages/VueFormatter.sublime-package/.vuebeautifyrc",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/Vue_Agiloft_Poc.sublime-project",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/assets/logo.png",
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/config/dev.env.js",
+		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Installed Packages/VueFormatter.sublime-package/Default (Windows).sublime-keymap",
+		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Installed Packages/VueFormatter.sublime-package/VUEFormatter.sublime-settings",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/Sublime_Project_Node_Training.sublime-project",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/start.js",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/models/Event.js",
+		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/ESLint-Formatter/ESLint-Formatter.sublime-settings",
+		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/User/ESLint-Formatter.sublime-settings",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/package-lock.json",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/controllers/venueController.js",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/helpers.js",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/start.js",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/helpers.js",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/views/layout.pug",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/views/usingextend.pug",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/views/venue.pug",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/variables.env",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/handlers/errorHandlers.js",
+		"/E/TFS/UPUWeb/DevOps/Docs/utils and commands.txt",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/routes/index.js",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/package.json",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/controllers/venueController.js",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/app.js",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/public/dist/App.bundle.js",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/views/helloworld.pug",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/.gitignore",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/app.js",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/views/layout.pug",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/public/javascripts/activitytracker-app.js",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/public/javascripts/modules/bling.js",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/webpack.config.js",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/routes/index.js",
+		"/C/Users/huertaj/AppData/Roaming/npm-cache/_logs/2017-11-13T09_17_45_980Z-debug.log",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/.gitignore",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/package.json",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/variables.env",
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/Config_Not_Committed.txt",
+		"/E/TFS/UPUWeb/Resources/Packages/gulpfile.js",
+		"/C/Users/huertaj/.hyper.js",
+		"/C/Users/huertaj/AppData/Local/lxss/home/jhuerta/.bashrc",
+		"/C/Users/huertaj/Desktop/bashrc_backup.sh",
+		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript-Completions.sublime-settings",
+		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/JavaScript Completions/Default (Windows).sublime-keymap",
+		"/C/Users/huertaj/Desktop/test2.css",
+		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/Color Highlighter/ColorHighlighter.sublime-settings",
+		"/E/MyStuff/Personal/Trainings/Sublime/.gitignore",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Notes/Notes_Summary.txt",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/70bis.html",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/69_70.html",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/69bis.html",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/.git/hooks/commit-msg.sh",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/30.html",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/.eslintrc",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/30bis.html",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/01.js",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Notes/Notes.txt",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/77.html",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/72.html",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/71.html",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/66.html",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/67.html",
+		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/68.html"
+	],
+	"find":
+	{
+		"height": 44.0
+	},
+	"find_in_files":
+	{
+		"height": 155.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 77.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 144.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "AngularSublimeProject.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"inde",
+				"agiloft\\index.html"
+			],
+			[
+				"main.j",
+				"agiloft\\src\\main.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"E:\\MyStuff\\Personal\\Trainings\\Vue_Agiloft_Poc\\Vue_Agiloft_Poc.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 255.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 3
+	}
+}

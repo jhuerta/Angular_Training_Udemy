@@ -7,3 +7,7 @@ Install Angular:
 		sudo npm cache clean -f
 		sudo npm install -g n 
 		sudo n stable
+Create an Angular project
+	ng new name-of-the-project
+	cd name-of-the-project
+	ng server
