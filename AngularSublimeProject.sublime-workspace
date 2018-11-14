@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"server",
+				"serverStatus\tproperty"
+			],
+			[
+				"war",
+				"warning-alert.component.css"
+			],
+			[
+				"c",
+				"bootstrap.min.css"
+			],
+			[
 				"agilof",
 				"agiloftAuth"
 			],
@@ -44,29 +56,10 @@
 	"buffers":
 	[
 		{
-			"file": "my-first-angular-app/src/app/app.component.html",
+			"file": "CourseNotes.txt",
 			"settings":
 			{
-				"buffer_size": 1150,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "This list shows how much time each plugin has taken to respond to each event:\n\non_activated:\n    SublimeGit.sgit.commit: 0.000s total, mean: 0.000s, max: 0.000s\n    Default.pane: 0.000s total, mean: 0.000s, max: 0.000s\n    AutoFileName.autofilename: 0.000s total, mean: 0.000s, max: 0.000s\n    EncodingHelper.EncodingHelper: 0.149s total, mean: 0.037s, max: 0.149s\n    SublimeGit.sgit.status: 0.000s total, mean: 0.000s, max: 0.000s\n    GitGutter.modules.events: 0.002s total, mean: 0.000s, max: 0.001s\n    SideBarEnhancements.SideBar: 0.000s total, mean: 0.000s, max: 0.000s\n    SublimeGit.sgit.diff: 0.000s total, mean: 0.000s, max: 0.000s\n\non_close:\n    GitGutter.modules.events: 0.000s total, mean: 0.000s, max: 0.000s\n    SublimeGit.sgit.commit: 0.000s total\n    SideBarEnhancements.SideBar: 0.000s total\n    Default.pane: 0.000s total\n\non_deactivated:\n    GitGutter.modules.events: 0.000s total, mean: 0.000s, max: 0.000s\n    Default.history_list: 0.000s total, mean: 0.000s, max: 0.000s\n\non_hover:\n    SublimeLinter.highlight_view: 0.000s total, mean: 0.000s, max: 0.000s\n    GitGutter.modules.events: 0.000s total, mean: 0.000s, max: 0.000s\n    Default.symbol: 0.000s total, mean: 0.000s, max: 0.000s\n\non_load:\n    EncodingHelper.EncodingHelper: 0.000s total\n    Default.exec: 0.000s total\n    SublimeGit.sgit.status: 0.000s total\n    GitGutter.modules.events: 0.000s total\n    Default.detect_indentation: 0.002s total\n\non_modified:\n    GitGutter.modules.events: 0.000s total, mean: 0.000s, max: 0.000s\n    SublimeGit.sgit.commit: 0.000s total, mean: 0.000s, max: 0.000s\n    PackageResourceViewer.package_resource_viewer: 0.000s total, mean: 0.000s, max: 0.000s\n    SideBarEnhancements.SideBar: 0.000s total, mean: 0.000s, max: 0.000s\n    AutoFileName.autofilename: 0.000s total, mean: 0.000s, max: 0.000s\n\non_pre_close:\n    SublimeLinter.highlight_view: 0.000s total\n    SublimeLinter.sublime_linter: 0.000s total\n    SublimeLinter.panel_view: 0.000s total, mean: 0.000s, max: 0.000s\n    Default.history_list: 0.000s total\n\non_selection_modified:\n    SublimeGit.sgit.blame: 0.000s total, mean: 0.000s, max: 0.000s\n    GitGutter.modules.events: 0.000s total\n\n",
-			"settings":
-			{
-				"buffer_size": 2167,
-				"line_ending": "Unix",
-				"name": "Plugin Event Profile",
-				"scratch": true
-			}
-		},
-		{
-			"contents": "{\n    \"user\":\n    {\n        \"debug\": false,\n        \"delay\": 0.25,\n        \"error_color\": \"D02000\",\n        \"gutter_theme\": \"Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme\",\n        \"gutter_theme_excludes\":\n        [\n        ],\n        \"lint_mode\": \"background\",\n        \"linters\":\n        {\n        },\n        \"mark_style\": \"outline\",\n        \"no_column_highlights_line\": false,\n        \"passive_warnings\": false,\n        \"paths\":\n        {\n            \"linux\":\n            [\n            ],\n            \"osx\":\n            [\n            ],\n            \"windows\":\n            [\n            ]\n        },\n        \"python_paths\":\n        {\n            \"linux\":\n            [\n            ],\n            \"osx\":\n            [\n            ],\n            \"windows\":\n            [\n            ]\n        },\n        \"rc_search_limit\": 3,\n        \"shell_timeout\": 10,\n        \"show_errors_on_save\": false,\n        \"show_marks_in_minimap\": true,\n        \"syntax_map\":\n        {\n            \"html (django)\": \"html\",\n            \"html (rails)\": \"html\",\n            \"html 5\": \"html\",\n            \"javascript (babel)\": \"javascript\",\n            \"magicpython\": \"python\",\n            \"php\": \"html\",\n            \"python django\": \"python\",\n            \"pythonimproved\": \"python\"\n        },\n        \"tooltip_fontsize\": \"1rem\",\n        \"tooltip_theme\": \"Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme\",\n        \"tooltip_theme_excludes\":\n        [\n        ],\n        \"tooltips\": false,\n        \"warning_color\": \"DDB700\",\n        \"wrap_find\": true\n    }\n}\n",
-			"settings":
-			{
-				"buffer_size": 1570,
+				"buffer_size": 3566,
 				"line_ending": "Unix"
 			}
 		}
@@ -83,11 +76,47 @@
 		"selected_items":
 		[
 			[
-				"remove",
-				"Package Control: Remove Package"
+				"tabs",
+				"TabsExtra: Settings"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
 			],
 			[
 				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insall pa",
+				"Package Control: Install Package"
+			],
+			[
+				"html ",
+				"HTMLBeautify"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"typescr",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"install pack",
+				"Package Control: Install Package"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
 				"Package Control: Remove Package"
 			],
 			[
@@ -135,10 +164,6 @@
 				"Line Endings Unify"
 			],
 			[
-				"install pa",
-				"Package Control: Install Package"
-			],
-			[
 				"javascrip",
 				"Javascript Beautify"
 			],
@@ -171,10 +196,6 @@
 				"Set Syntax: CSS"
 			],
 			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
 				"h",
 				"HTMLBeautify"
 			],
@@ -191,20 +212,12 @@
 				"ESLint Formatter: Format this file"
 			],
 			[
-				"html ",
-				"HTMLBeautify"
-			],
-			[
 				"for",
 				"ESLint Formatter: Format this file"
 			],
 			[
 				"pref",
 				"Preferences: Settings"
-			],
-			[
-				"install p",
-				"Package Control: Install Package"
 			],
 			[
 				"forma",
@@ -217,10 +230,6 @@
 			[
 				"vue aut",
 				"VUEFormatter: Set Keyboard Shortcuts"
-			],
-			[
-				"insall pa",
-				"Package Control: Install Package"
 			],
 			[
 				"fomrat",
@@ -416,10 +425,65 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy"
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/server"
 	],
 	"file_history":
 	[
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/tslint.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/tslint.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/tsconfig.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/styles.css",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/README.md",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/polyfills.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/package.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/package-lock.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/CourseNotes.txt",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/angular.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/.gitignore",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/how-to-use.txt",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.css",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/browserslist",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/favicon.ico",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/test.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/tsconfig.app.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/tsconfig.spec.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/main.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.module.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.spec.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/server/server.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/app.component.css",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/servers/servers.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/app.module.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/servers/servers.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/my-first-angular-app/src/app/app.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/my-first-angular-app/src/app/app.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/my-first-angular-app/src/index.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/my-first-angular-app/angular.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/my-first-angular-app/src/app/app.module.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/main.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/my-first-angular-app/node_modules/bootstrap/dist/css/bootstrap.min.css",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/index.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/app.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/app.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/server/server.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/servers/servers.component.css",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_1/src/app/warning-error/warning-error.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_1/src/app/warning-alert/warning-alert.component.css",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_1/src/app/warning-alert/warning-alert.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_1/src/app/app.module.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_1/src/app/app.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_1/src/app/warning-alert/warning-alert.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_1/src/app/warning-error/warning-error.component.spec.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_1/src/app/warning-error/warning-error.component.html",
 		"/Users/jhuerta/Documents/Training/Angular/CourseNotes.txt",
 		"/Users/jhuerta/Documents/Training/Angular/CourseNotes",
 		"/Users/jhuerta/Desktop/IMG_4402/IMG_4373.JPG",
@@ -499,59 +563,11 @@
 		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/helpers.js",
 		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/start.js",
 		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/helpers.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/views/layout.pug",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/views/usingextend.pug",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/views/venue.pug",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/variables.env",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/handlers/errorHandlers.js",
-		"/E/TFS/UPUWeb/DevOps/Docs/utils and commands.txt",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/routes/index.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/package.json",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/controllers/venueController.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/app.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/public/dist/App.bundle.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/views/helloworld.pug",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/.gitignore",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/app.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/views/layout.pug",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/public/javascripts/activitytracker-app.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/public/javascripts/modules/bling.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/webpack.config.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/routes/index.js",
-		"/C/Users/huertaj/AppData/Roaming/npm-cache/_logs/2017-11-13T09_17_45_980Z-debug.log",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/.gitignore",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/package.json",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/variables.env",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/Config_Not_Committed.txt",
-		"/E/TFS/UPUWeb/Resources/Packages/gulpfile.js",
-		"/C/Users/huertaj/.hyper.js",
-		"/C/Users/huertaj/AppData/Local/lxss/home/jhuerta/.bashrc",
-		"/C/Users/huertaj/Desktop/bashrc_backup.sh",
-		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript-Completions.sublime-settings",
-		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/JavaScript Completions/Default (Windows).sublime-keymap",
-		"/C/Users/huertaj/Desktop/test2.css",
-		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/Color Highlighter/ColorHighlighter.sublime-settings",
-		"/E/MyStuff/Personal/Trainings/Sublime/.gitignore",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Notes/Notes_Summary.txt",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/70bis.html",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/69_70.html",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/69bis.html",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/.git/hooks/commit-msg.sh",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/30.html",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/.eslintrc",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/30bis.html",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/01.js",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Notes/Notes.txt",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/77.html",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/72.html",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/71.html",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/66.html",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/67.html",
-		"/E/MyStuff/Personal/Trainings/ES6_Training_WesBos/Exercises/68.html"
+		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/views/layout.pug"
 	],
 	"find":
 	{
-		"height": 44.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -565,6 +581,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"hola",
+			"scratch"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -572,6 +590,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"hola"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -582,183 +601,39 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "my-first-angular-app/src/app/app.component.html",
+					"file": "CourseNotes.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1150,
+						"buffer_size": 3566,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								119,
-								119
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"SL.16.region_keys":
-							[
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
-							],
 							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2167,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2167,
-								2167
-							]
-						],
-						"settings":
-						{
-							"SL.17.region_keys":
-							[
-							],
-							"default_dir": "/Users/jhuerta/Documents/Trainings/AngularUdemy/my-first-angular-app/src/app",
-							"encoding_helper_encoding": "",
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1570,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1570,
-								1570
-							]
-						],
-						"settings":
-						{
-							"SL.36.region_keys":
-							[
-							],
-							"default_dir": "/Users/jhuerta/Library/Application Support/Sublime Text 3/Packages/User",
-							"encoding_helper_encoding": "",
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 4,
+							"tabs_extra_last_activated": 1542199833.51,
+							"tabs_extra_last_activated_sheet_index": 0,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1101.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -798,11 +673,23 @@
 		]
 	},
 	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.doc":
+	{
+		"height": 0.0
+	},
 	"output.exec":
 	{
 		"height": 144.0
 	},
 	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
 	{
 		"height": 0.0
 	},
@@ -819,6 +706,34 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"course no",
+				"CourseNotes.txt"
+			],
+			[
+				"c",
+				"CourseNotes.txt"
+			],
+			[
+				"Course",
+				"CourseNotes.txt"
+			],
+			[
+				"cours",
+				"CourseNotes.txt"
+			],
+			[
+				"cour",
+				"CourseNotes.txt"
+			],
+			[
+				"cou",
+				"CourseNotes.txt"
+			],
+			[
+				"course",
+				"CourseNotes.txt"
+			],
 			[
 				"inde",
 				"agiloft\\index.html"
@@ -860,7 +775,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 255.0,
+	"side_bar_width": 366.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -1,0 +1,13 @@
+<button  (mouseover)="serverCreationStatus=this.defaultServerCreationStatus"(click)='onCreateServer()' [disabled]="allowNewServer" class="btn btn-primary" >Add New Server</button>
+
+<button  (click)='onRemoveServer()' class="btn btn-success" >Remove Server</button>
+
+<input type="text" class="form-control" [(ngModel)]='serverName'>
+
+<p *ngIf='serverIsCreated;else noServer'>{{serverCreationStatus}}</p>
+<ng-template #noServer>
+    <p>Server not yet created</p>
+</ng-template>
+<hr>
+
+<app-server *ngFor="let server of serverList"></app-server>

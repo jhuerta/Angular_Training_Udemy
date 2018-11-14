@@ -54,3 +54,28 @@ Create an Angular project
             IN ORDER TO USE TWO_WAY_BINDING (ngModel) you need to import FormsModule!
             <input type="text" class="form-control" [(ngModel)]='myProperty'>
             myProperty will change with a change in input. But also, if somewhere else the myProperty value changes, it will also be reflected in this input control.
+2.33
+    Directives: Instructions in the DOM
+        A component is a directive with template
+        But is also possible to have directive without template
+            <p appTurnGreen> This will make the paragraph into gree</p>
+        Built in directives:
+            - Structural directive (*), modifies the structure of the dom by adding/removing the item
+                *ngIf:
+                Trick to use else (beside use opposite if condition):
+                    <p *ngIf='conditioIsTrue;else elseShowBlock'>Show this on IF</p>
+                    <ng-template #elseShowBlock>
+                        <p>Show this on else</p>
+                    </ng-template>
+                *ngFor: Repeats the element where is inserted (regardless of whether you use the name in the list or not)
+                    <app-server *ngFor="let server of serverList"></app-server>
+
+            - Attribute Directives: Don't modify the DOM by adding or removing elements, but rather modifying the element on which are applied
+                ngStyle: Applies styles;
+                    <p [ngStyle]="{'background-color': getColor()}"> </p>
+                ngClass: Add class
+                    <p  [ngStyle]="{'background-color': getColor()}"
+                        [ngClass]="{online:isOnline(),offline:!isOnline()}"></p>
+
+
+
