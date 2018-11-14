@@ -19,5 +19,6 @@
 <span [ngClass]='{redColor:moreThan5Clicks()}' [ngStyle]="{color:blueIfMoreThan5Clicks()}" *ngIf='showDetails'>Secret Password = 'tuna'</span>
 
 <ol>
-  <li *ngFor='let timeStamp of logOfClicks'> {{ timeStamp }}</li>
+  <li *ngFor='let timeStamp of logOfClicks;let i = index'>
+    <p [ngClass]='{redColor:i%2 === 0}'>{{ timeStamp }}</p></li>
 </ol>

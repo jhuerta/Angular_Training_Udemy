@@ -10,7 +10,7 @@ export class AppComponent {
     logOfClicks = [];
     moreThan5Clicks()
     {
-        return this.logOfClicks.length > 5;
+        return (this.logOfClicks.length > 5);
     }
     blueIfMoreThan5Clicks()
     {
@@ -21,7 +21,7 @@ export class AppComponent {
     }
     toggleDisplay()
     {
-        this.logOfClicks.push(Date.now());
+        this.logOfClicks.push(new Date());
         this.showDetails = !this.showDetails;
     }
 }
