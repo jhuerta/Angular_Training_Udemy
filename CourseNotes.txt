@@ -5,9 +5,13 @@ Install Angular:
 	Make sure to have node installed (and npm)
 	To upgrade node version (mac os):
 		sudo npm cache clean -f
-		sudo npm install -g n 
+		sudo npm install -g n
 		sudo n stable
 Create an Angular project
 	ng new name-of-the-project
 	cd name-of-the-project
 	ng server
+1.6
+ app>app.component.ts => The TypeScript of the component. Notice the selector section, which is linked with the parent root in the index.html file (app-root)
+ app>app.component.html => The template of the component
+ index.html => The html file that is actually rendered

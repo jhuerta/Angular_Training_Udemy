@@ -51,6 +51,24 @@
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"contents": "This list shows how much time each plugin has taken to respond to each event:\n\non_activated:\n    SublimeGit.sgit.commit: 0.000s total, mean: 0.000s, max: 0.000s\n    Default.pane: 0.000s total, mean: 0.000s, max: 0.000s\n    AutoFileName.autofilename: 0.000s total, mean: 0.000s, max: 0.000s\n    EncodingHelper.EncodingHelper: 0.149s total, mean: 0.037s, max: 0.149s\n    SublimeGit.sgit.status: 0.000s total, mean: 0.000s, max: 0.000s\n    GitGutter.modules.events: 0.002s total, mean: 0.000s, max: 0.001s\n    SideBarEnhancements.SideBar: 0.000s total, mean: 0.000s, max: 0.000s\n    SublimeGit.sgit.diff: 0.000s total, mean: 0.000s, max: 0.000s\n\non_close:\n    GitGutter.modules.events: 0.000s total, mean: 0.000s, max: 0.000s\n    SublimeGit.sgit.commit: 0.000s total\n    SideBarEnhancements.SideBar: 0.000s total\n    Default.pane: 0.000s total\n\non_deactivated:\n    GitGutter.modules.events: 0.000s total, mean: 0.000s, max: 0.000s\n    Default.history_list: 0.000s total, mean: 0.000s, max: 0.000s\n\non_hover:\n    SublimeLinter.highlight_view: 0.000s total, mean: 0.000s, max: 0.000s\n    GitGutter.modules.events: 0.000s total, mean: 0.000s, max: 0.000s\n    Default.symbol: 0.000s total, mean: 0.000s, max: 0.000s\n\non_load:\n    EncodingHelper.EncodingHelper: 0.000s total\n    Default.exec: 0.000s total\n    SublimeGit.sgit.status: 0.000s total\n    GitGutter.modules.events: 0.000s total\n    Default.detect_indentation: 0.002s total\n\non_modified:\n    GitGutter.modules.events: 0.000s total, mean: 0.000s, max: 0.000s\n    SublimeGit.sgit.commit: 0.000s total, mean: 0.000s, max: 0.000s\n    PackageResourceViewer.package_resource_viewer: 0.000s total, mean: 0.000s, max: 0.000s\n    SideBarEnhancements.SideBar: 0.000s total, mean: 0.000s, max: 0.000s\n    AutoFileName.autofilename: 0.000s total, mean: 0.000s, max: 0.000s\n\non_pre_close:\n    SublimeLinter.highlight_view: 0.000s total\n    SublimeLinter.sublime_linter: 0.000s total\n    SublimeLinter.panel_view: 0.000s total, mean: 0.000s, max: 0.000s\n    Default.history_list: 0.000s total\n\non_selection_modified:\n    SublimeGit.sgit.blame: 0.000s total, mean: 0.000s, max: 0.000s\n    GitGutter.modules.events: 0.000s total\n\n",
+			"settings":
+			{
+				"buffer_size": 2167,
+				"line_ending": "Unix",
+				"name": "Plugin Event Profile",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "{\n    \"user\":\n    {\n        \"debug\": false,\n        \"delay\": 0.25,\n        \"error_color\": \"D02000\",\n        \"gutter_theme\": \"Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme\",\n        \"gutter_theme_excludes\":\n        [\n        ],\n        \"lint_mode\": \"background\",\n        \"linters\":\n        {\n        },\n        \"mark_style\": \"outline\",\n        \"no_column_highlights_line\": false,\n        \"passive_warnings\": false,\n        \"paths\":\n        {\n            \"linux\":\n            [\n            ],\n            \"osx\":\n            [\n            ],\n            \"windows\":\n            [\n            ]\n        },\n        \"python_paths\":\n        {\n            \"linux\":\n            [\n            ],\n            \"osx\":\n            [\n            ],\n            \"windows\":\n            [\n            ]\n        },\n        \"rc_search_limit\": 3,\n        \"shell_timeout\": 10,\n        \"show_errors_on_save\": false,\n        \"show_marks_in_minimap\": true,\n        \"syntax_map\":\n        {\n            \"html (django)\": \"html\",\n            \"html (rails)\": \"html\",\n            \"html 5\": \"html\",\n            \"javascript (babel)\": \"javascript\",\n            \"magicpython\": \"python\",\n            \"php\": \"html\",\n            \"python django\": \"python\",\n            \"pythonimproved\": \"python\"\n        },\n        \"tooltip_fontsize\": \"1rem\",\n        \"tooltip_theme\": \"Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme\",\n        \"tooltip_theme_excludes\":\n        [\n        ],\n        \"tooltips\": false,\n        \"warning_color\": \"DDB700\",\n        \"wrap_find\": true\n    }\n}\n",
+			"settings":
+			{
+				"buffer_size": 1570,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -64,6 +82,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
 			[
 				"project",
 				"Project: Save As"
@@ -219,10 +245,6 @@
 			[
 				"sublimelinter ",
 				"SublimeLinter: Show All Errors"
-			],
-			[
-				"remove pa",
-				"Package Control: Remove Package"
 			],
 			[
 				"ori cr pa r",
@@ -394,10 +416,7 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/jhuerta/Documents/Training/Angular",
-		"/Users/jhuerta/Documents/Training/Angular/my-first-angular-app",
-		"/Users/jhuerta/Documents/Training/Angular/my-first-angular-app/src",
-		"/Users/jhuerta/Documents/Training/Angular/my-first-angular-app/src/app"
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy"
 	],
 	"file_history":
 	[
@@ -563,7 +582,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -585,6 +604,9 @@
 						],
 						"settings":
 						{
+							"SL.16.region_keys":
+							[
+							],
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.clone": -1,
 							"bracket_highlighter.locations":
@@ -660,6 +682,8 @@
 								"bh_c_define_close",
 								"bh_c_define_content"
 							],
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
 							"git_gutter_is_enabled": true,
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 2,
@@ -667,6 +691,74 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2167,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2167,
+								2167
+							]
+						],
+						"settings":
+						{
+							"SL.17.region_keys":
+							[
+							],
+							"default_dir": "/Users/jhuerta/Documents/Trainings/AngularUdemy/my-first-angular-app/src/app",
+							"encoding_helper_encoding": "",
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1570,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1570,
+								1570
+							]
+						],
+						"settings":
+						{
+							"SL.36.region_keys":
+							[
+							],
+							"default_dir": "/Users/jhuerta/Library/Application Support/Sublime Text 3/Packages/User",
+							"encoding_helper_encoding": "",
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1101.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
