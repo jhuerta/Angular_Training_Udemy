@@ -26,3 +26,9 @@ Create an Angular project
     creating a component from scratch
 2.16
     angular modules (and module files) bundles components
+2.18
+    Use ng generate component NAME (or ng g c NAME) to generate your own component with the comnmand line (cli)
+2.19
+    It is required to have always a template for a component, always!
+    However, you can use it external (templateURL) or inline (template)
+    If using inline, you can use ` (tics) to use multiline. Otherwise, ' for single lines
