@@ -79,3 +79,6 @@ Create an Angular project
 
 
 
+4.57
+    To debut in the browser, look for the TypeScript file under the sources/webpack/. folder
+    Install augury as a chrome extension to debut
