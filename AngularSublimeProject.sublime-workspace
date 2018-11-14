@@ -4,16 +4,20 @@
 		"selected_items":
 		[
 			[
+				"c",
+				"bootstrap.min.css"
+			],
+			[
+				"font-s",
+				"font-size\tproperty"
+			],
+			[
 				"server",
 				"serverStatus\tproperty"
 			],
 			[
 				"war",
 				"warning-alert.component.css"
-			],
-			[
-				"c",
-				"bootstrap.min.css"
 			],
 			[
 				"agilof",
@@ -56,10 +60,151 @@
 	"buffers":
 	[
 		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/angular.json",
+			"settings":
+			{
+				"buffer_size": 3871,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/app.component.html",
+			"settings":
+			{
+				"buffer_size": 616,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/app.module.ts",
+			"settings":
+			{
+				"buffer_size": 1056,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "CourseNotes.txt",
 			"settings":
 			{
-				"buffer_size": 3566,
+				"buffer_size": 4775,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/header/header.component.html",
+			"settings":
+			{
+				"buffer_size": 846,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/header/header.component.ts",
+			"settings":
+			{
+				"buffer_size": 165,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/shared/ingredient.model.ts",
+			"settings":
+			{
+				"buffer_size": 420,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/recipes/recipe-detail/recipe-detail.component.html",
+			"settings":
+			{
+				"buffer_size": 738,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.html",
+			"settings":
+			{
+				"buffer_size": 705,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.ts",
+			"settings":
+			{
+				"buffer_size": 727,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/recipes/recipe.model.ts",
+			"settings":
+			{
+				"buffer_size": 276,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/recipes/recipes.component.html",
+			"settings":
+			{
+				"buffer_size": 192,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_ExerciseLectureApp/src/app/servers/servers.component.html",
+			"settings":
+			{
+				"buffer_size": 542,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/shopping-list/shopping-edit/shopping-edit.component.html",
+			"settings":
+			{
+				"buffer_size": 902,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/shopping-list/shopping-list.component.html",
+			"settings":
+			{
+				"buffer_size": 379,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/shopping-list/shopping-list.component.ts",
+			"settings":
+			{
+				"buffer_size": 457,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -426,41 +571,55 @@
 	"expanded_folders":
 	[
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/server"
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/header",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe-list",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shopping-list"
 	],
 	"file_history":
 	[
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/servers/servers.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/servers/servers.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/server/server.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/server/server.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/CourseNotes.txt",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/app.module.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_3/src/app/app.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/app.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_3/src/app/app.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/app.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_3/src/app/app.component.css",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/angular.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/server/server.component.css",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/favicon.ico",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/tslint.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/tsconfig.spec.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/tsconfig.app.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/package.json",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/karma.conf.js",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/index.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/how-to-use.txt",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/browserslist",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.spec.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.css",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/angular.json",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/tslint.json",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/tsconfig.json",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/styles.css",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/README.md",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/polyfills.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/package.json",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/package-lock.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/CourseNotes.txt",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/angular.json",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/.gitignore",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/how-to-use.txt",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.css",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/browserslist",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/favicon.ico",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/test.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/tsconfig.app.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/tsconfig.spec.json",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/main.ts",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.module.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.spec.ts",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/server/server.component.html",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/app.component.css",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.ts",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/servers/servers.component.html",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/app.module.ts",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/Section_2_13/src/app/servers/servers.component.ts",
@@ -549,21 +708,7 @@
 		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/build/webpack.dev.conf.js",
 		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Installed Packages/VueFormatter.sublime-package/.vuebeautifyrc",
 		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/Vue_Agiloft_Poc.sublime-project",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/assets/logo.png",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/config/dev.env.js",
-		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Installed Packages/VueFormatter.sublime-package/Default (Windows).sublime-keymap",
-		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Installed Packages/VueFormatter.sublime-package/VUEFormatter.sublime-settings",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/Sublime_Project_Node_Training.sublime-project",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/start.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/models/Event.js",
-		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/ESLint-Formatter/ESLint-Formatter.sublime-settings",
-		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/User/ESLint-Formatter.sublime-settings",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/package-lock.json",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/controllers/venueController.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/helpers.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/dang-thats-delicious/start.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/helpers.js",
-		"/E/MyStuff/Personal/Trainings/Node_Training_WesBos/ActivityTracker/views/layout.pug"
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/assets/logo.png"
 	],
 	"find":
 	{
@@ -601,16 +746,505 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook",
+							"encoding_helper_encoding": "",
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tabs_extra_last_activated": 1542225934.43,
+							"tabs_extra_last_activated_sheet_index": 1
+						},
+						"translation.x": 0.0,
+						"translation.y": 1.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_RecipeBook/angular.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								808,
+								808
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"tabs_extra_last_activated": 1542225904.25,
+							"tabs_extra_last_activated_sheet_index": 0,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_RecipeBook/src/app/app.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 616,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								144,
+								117
+							]
+						],
+						"settings":
+						{
+							"SL.16.region_keys":
+							[
+							],
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1542227655.27,
+							"tabs_extra_last_activated_sheet_index": 2,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_RecipeBook/src/app/app.module.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1056,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								211,
+								211
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tabs_extra_last_activated": 1542227443.09,
+							"tabs_extra_last_activated_sheet_index": 3,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "CourseNotes.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3566,
+						"buffer_size": 4775,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4775,
+								4775
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"tabs_extra_last_activated": 1542233739.52,
+							"tabs_extra_last_activated_sheet_index": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1961.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "_RecipeBook/src/app/header/header.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 846,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								217,
+								217
+							]
+						],
+						"settings":
+						{
+							"SL.19.region_keys":
+							[
+							],
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1542228342.18,
+							"tabs_extra_last_activated_sheet_index": 4
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "_RecipeBook/src/app/header/header.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 165,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								103,
+								124
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tabs_extra_last_activated": 1542226417.6,
+							"tabs_extra_last_activated_sheet_index": 3,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "_RecipeBook/src/app/shared/ingredient.model.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 420,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								412,
+								412
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tabs_extra_last_activated": 1542232344.44,
+							"tabs_extra_last_activated_sheet_index": 6,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "_RecipeBook/src/app/recipes/recipe-detail/recipe-detail.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 738,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								187,
+								187
+							]
+						],
+						"settings":
+						{
+							"SL.33.region_keys":
+							[
+							],
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1542231667.89,
+							"tabs_extra_last_activated_sheet_index": 6
+						},
+						"translation.x": 0.0,
+						"translation.y": 24.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 705,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								124,
+								124
+							]
+						],
+						"settings":
+						{
+							"SL.19.region_keys":
+							[
+							],
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1542231671.99,
+							"tabs_extra_last_activated_sheet_index": 7
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 727,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								727,
+								727
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tabs_extra_last_activated": 1542231773.51,
+							"tabs_extra_last_activated_sheet_index": 8,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "_RecipeBook/src/app/recipes/recipe.model.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								268,
+								268
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tabs_extra_last_activated": 1542229024.85,
+							"tabs_extra_last_activated_sheet_index": 8,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "_RecipeBook/src/app/recipes/recipes.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								154,
+								154
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1542227682.13,
+							"tabs_extra_last_activated_sheet_index": 6
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "_ExerciseLectureApp/src/app/servers/servers.component.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 542,
 						"regions":
 						{
 						},
@@ -626,17 +1260,130 @@
 							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"tabs_extra_last_activated": 1542199833.51,
-							"tabs_extra_last_activated_sheet_index": 0,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1542230362.29,
+							"tabs_extra_last_activated_sheet_index": 10,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							}
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "_RecipeBook/src/app/shopping-list/shopping-edit/shopping-edit.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 902,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								902,
+								902
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1542233375.88,
+							"tabs_extra_last_activated_sheet_index": 13
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "_RecipeBook/src/app/shopping-list/shopping-list.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								301,
+								301
+							]
+						],
+						"settings":
+						{
+							"SL.23.region_keys":
+							[
+							],
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tabs_extra_last_activated": 1542232265.21,
+							"tabs_extra_last_activated_sheet_index": 13
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "_RecipeBook/src/app/shopping-list/shopping-list.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 457,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								405,
+								405
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tabs_extra_last_activated": 1542232209.37,
+							"tabs_extra_last_activated_sheet_index": 14,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -707,15 +1454,39 @@
 		"selected_items":
 		[
 			[
+				"Course",
+				"CourseNotes.txt"
+			],
+			[
+				"shopping-list-ed",
+				"_RecipeBook/src/app/shopping-list/shopping-edit/shopping-edit.component.html"
+			],
+			[
+				"ingredient",
+				"_RecipeBook/src/app/shared/ingredient.model.ts"
+			],
+			[
+				"shopping-l",
+				"_RecipeBook/src/app/shopping-list/shopping-list.component.ts"
+			],
+			[
+				"shopping-list",
+				"_RecipeBook/src/app/shopping-list/shopping-list.component.html"
+			],
+			[
+				"recipe-deta",
+				"_RecipeBook/src/app/recipes/recipe-detail/recipe-detail.component.html"
+			],
+			[
+				"recipe-list",
+				"_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.ts"
+			],
+			[
 				"course no",
 				"CourseNotes.txt"
 			],
 			[
 				"c",
-				"CourseNotes.txt"
-			],
-			[
-				"Course",
 				"CourseNotes.txt"
 			],
 			[
