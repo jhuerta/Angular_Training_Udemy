@@ -19,3 +19,10 @@ Create an Angular project
     Installing bootstrap in project:
         npm install --save  bootstrap@3
         Then add the css library in angular.json file (under style section, before the 'src/styles.css' file which is the custom for the project)
+2.13
+    main.tx First file to be executed in a project. It glues all the modules
+    It starts the modules with "bootstrapModule" (previously defined in the import), which connects with the module.ts of your component. This module.ts of your component, connects with the specify ts file of the component itself.
+2.15
+    creating a component from scratch
+2.16
+    angular modules (and module files) bundles components
