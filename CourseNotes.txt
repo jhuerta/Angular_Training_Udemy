@@ -15,3 +15,7 @@ Create an Angular project
  app>app.component.ts => The TypeScript of the component. Notice the selector section, which is linked with the parent root in the index.html file (app-root)
  app>app.component.html => The template of the component
  index.html => The html file that is actually rendered
+1.7
+    Installing bootstrap in project:
+        npm install --save  bootstrap@3
+        Then add the css library in angular.json file (under style section, before the 'src/styles.css' file which is the custom for the project)
