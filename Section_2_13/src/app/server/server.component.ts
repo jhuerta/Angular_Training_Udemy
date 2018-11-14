@@ -6,5 +6,12 @@ import { Component } from '@angular/core'
 })
 
 export class ServerComponent {
-
+    serverId: number = 10;
+    serverStatus: string = 'Offline';
+    getServerOS() {
+        return 'Windows';
+    }
+    getServerStatus() {
+        return this.serverStatus;
+    }
 }

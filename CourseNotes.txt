@@ -39,3 +39,18 @@ Create an Angular project
             selector: 'app-root' ====> <app-root></app-root>
             selector: '[app-root]' ====> <div app-root></app-root>
             selector: '.app-root' ======> <div class='app-root'></div>
+2.22
+    Data binding can be seen as communication between the code (TS) and the view, and the other way around, from the view towards the code (event binding), or both ways (dual bindings)
+        String Interpolation: {{serverName}}
+        Property bindings:
+                <button [disabled]="allowNewServer">Add</button>
+                <p [innerText]="serverName"></p>
+                N.B.: You can see the properties you can bind with console.log(element), as well events
+        React to events (event binding):
+            <button  (click)='onCreateServer()'>Add New Server</button>
+            <button  (click)='propertyName="new value"' >Add New Server</button>
+            <input  (ihput)='onSomething($event)' > $event contains the data
+        Two way data inding (combined property and event binding):
+            IN ORDER TO USE TWO_WAY_BINDING (ngModel) you need to import FormsModule!
+            <input type="text" class="form-control" [(ngModel)]='myProperty'>
+            myProperty will change with a change in input. But also, if somewhere else the myProperty value changes, it will also be reflected in this input control.
