@@ -32,3 +32,10 @@ Create an Angular project
     It is required to have always a template for a component, always!
     However, you can use it external (templateURL) or inline (template)
     If using inline, you can use ` (tics) to use multiline. Otherwise, ' for single lines
+2.20
+    As with templates, for styling the component, you can also use external file (styleUrls , notice this takes an array) or styles (using ` if you need multiple lines). It seems that the css is exclusively for that component, is not inherited in the children
+2.21
+    Selectors are like css selectors, therefore you can use [] (attributre) or . (class). Id does not work
+            selector: 'app-root' ====> <app-root></app-root>
+            selector: '[app-root]' ====> <div app-root></app-root>
+            selector: '.app-root' ======> <div class='app-root'></div>
