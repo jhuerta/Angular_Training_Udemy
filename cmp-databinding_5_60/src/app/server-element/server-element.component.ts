@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Input, ViewEncapsulation,SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, ViewEncapsulation,SimpleChanges, ContentChild } from '@angular/core';
 import {Server} from '../shared/server.model';
 
 @Component({
@@ -10,9 +10,18 @@ import {Server} from '../shared/server.model';
 export class ServerElementComponent implements OnInit, OnChanges {
 	
 	@Input('oneServer') element: { type: string, name: string, content: string};
+	@ContentChild('contentHTML') contentHTML;
 
   	constructor() { 
   		console.log('CONSTRUCTOR CALLED');
+  	}
+
+  	displayContent(){
+  		console.log('---------------');
+  		console.log(this.contentHTML.nativeElement.textContent);
+  		console.log('---------------');
+
+
   	}
 
 	  ngOnInit() {

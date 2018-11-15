@@ -214,3 +214,16 @@ Create an Angular project
         - ngAfterViewInit()   
         - ngAfterViewChecked()    
         - ngOnDestroy()   
+
+5.73 It is also possible to access the ng-content similto to ViewChild, but with ViewContent
+    // PARENT ELEMENT HTML
+    <child-element>
+       <p #ANY_TAG_NAME></p>
+    </child-element>
+
+    //CHILD ELEMENT TS
+        @ContentChild('ANY_TAG_NAME') contentHTML;
+
+    anyMethod(){
+        console.log(this.contentHTML.nativeElement.textContent);
+    }
