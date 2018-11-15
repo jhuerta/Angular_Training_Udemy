@@ -106,32 +106,92 @@ Create an Angular project
         Use to communicate from CHILDREN TO PARENT
         We need to create a new event in the child component, and emmit it with an argument.
         Later, in the father, we catch that event and assign it to a proper method, using the argument emmited.
-            CHILD COMPONENT (ts)
-                // Make sure to import EventEmitter and Output
-                import { ... EventEmitter, Output } from '@angular/core';
 
-            []...
-            export class CockpitComponent implements OnInit {
-                // Create event, assign alias and specify argument that will be passed
-              @Output('HERE_THE_EVENT_ALIAS') newChildEvent = new EventEmitter<{serverName: string, serverContent: string}>();
-              // Use a method to trigger te emmision of the event
+            CHILD COMPONENT
+                TypeScript
+                    // Make sure to import EventEmitter and Output
+                    import { ... EventEmitter, Output } from '@angular/core';
 
-              property_1;
-              property_2;
+                    []...
+                    export class CockpitComponent implements OnInit {
+                        // Create event, assign alias and specify argument that will be passed
+                      @Output('HERE_THE_EVENT_ALIAS') newChildEvent = new EventEmitter<{serverName: string, serverContent: string}>();
+                      // Use a method to trigger te emmision of the event
 
-              onSomethingHappendInChildComponent() {
-                //Emmit the event and properties
-                this.newChildEvent.emit({serverName: this.property_1, serverContent: this.property_2});
-              }
-            }
-                CHILD HTML
-                <button (click)="onSomethingHappendInChildComponent()">Emmit New Event</button>
+                      property_1;
+                      property_2;
 
-            PARENT COMPONENT (HTML)
-                <child-app (HERE_THE_EVENT_ALIAS)="parent_method($event)"></child-app>
+                      onSomethingHappendInChildComponent() {
+                        //Emmit the event and properties
+                        this.newChildEvent.emit({serverName: this.property_1, serverContent: this.property_2});
+                      }
+                    }
+            
+                HTML
+                    <button (click)="onSomethingHappendInChildComponent()">Emmit New Event</button>
 
-                PARENT COMPONENT (ts
-                  parent_method(serverData: {serverName: string, serverContent: string}) {
-                        DO_SOMETHING_HERE
-                })
+            PARENT COMPONENT 
+                HTML
+                    <child-app (HERE_THE_EVENT_ALIAS)="parent_method($event)"></child-app>
+
+                TypeScript
+                    parent_method(serverData: {serverName: string, serverContent: string}) {
+                            DO_SOMETHING_HERE
+                    })
+
+5.68 Encapsulation
+    By default, the css only applies to the component. This is because it uses encapsulation.
+    This encapsulation is done by appending to each HTML element of component an specific name, and modifying the CSS to only applies to those new components (shadowing).
+
+    However, this behavior can be changed in the component definition:
+
+    import { [...] ViewEncapsulation } from '@angular/core';
+
+    @Component({
+        [...]
+        encapsulation: ViewEncapsulation.Emulated // None, Native
+    })
+
+    - None will remove the shadowing
+
+5.69 Local Reference
+    ONLY TO BE USED IN THE TEMPLATE: Allows to have a 'copy' of the HTML element (any) in the template and pass or use this full HTML element in the template. It can be used as a way to get a value from an input
+
+        <input type="text" class="form-control" #serverNameElement>
+        <button class="btn btn-primary" (click)="onAddServer(serverNameInput.value)">Add Server</button>
+        // Notice the '#serverNameElement' and the serverNameElement.value
+5.70 Access to DOM from TS
+    It is possible to access the DOM from the ts file with the @ViewChild decorator.
+    By adding a reference name into the HTML file, we can use that reference in the TS file. This will import the HTML element into the TS file, and it is possible to access the properties in the TS. 
+    DO NOT MODIFIED THE DOM DIRECTLY THROUGH THIS REFERENCE, USE OTHER ANGULAR METHODS.
+    HTML file
+        <input type="text" class="form-control" #ANY_NAME_HERE>
+    TypeScript file
+        import { ... ViewChild,ElementRef } from '@angular/core';
+        [...]
+
+        export class CockpitComponent implements OnInit {
+          @ViewChild('ANY_NAME_HERE') serverHTMLElementContentInput:ElementRef;
+
+          onAddServer(serverName) {
+            var serverElementContent = this.serverHTMLElementContentInput.nativeElement.value;
+            [...]
+          }
+        }
+
+    It is possible to access a child component (first one) or all the children elements
+
+    import { ... ViewChildren } from '@angular/core';
+    import {CockpitComponent} from './cockpit/cockpit.component'
+
+    export class AppComponent {
+      @ViewChildren(CockpitComponent) cockpitElement;
+
+       onServerAdded(serverData: {serverName: string, serverContent: string}) {
+         console.log(this.cockpitElement._results[0].serverHTMLElementContentInput.nativeElement.value);
+         console.log(this.cockpitElement._results[1].serverHTMLElementContentInput.nativeElement.value);
+         console.log(this.cockpitElement._results[2].serverHTMLElementContentInput.nativeElement.value);
+
+      }
+    }
 

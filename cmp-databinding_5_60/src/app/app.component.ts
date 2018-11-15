@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild,ViewChildren } from '@angular/core';
+
+import {CockpitComponent} from './cockpit/cockpit.component'
 
 @Component({
   selector: 'app-root',
@@ -13,7 +15,14 @@ export class AppComponent {
   {type: 'blueprint',name: 'Jenkins',content: 'Consider replacing Jenkins with Hudson'}
   ];
 
+  @ViewChildren(CockpitComponent) cockpitElement;
+
    onServerAdded(serverData: {serverName: string, serverContent: string}) {
+     console.log(this.cockpitElement._results[0].serverHTMLElementContentInput.nativeElement.value);
+     console.log(this.cockpitElement._results[1].serverHTMLElementContentInput.nativeElement.value);
+     console.log(this.cockpitElement._results[2].serverHTMLElementContentInput.nativeElement.value);
+     // console.log(this.cockpitElement[1].serverHTMLElementContentInput.nativeElement.value);
+     // console.log(this.cockpitElement[2].serverHTMLElementContentInput.nativeElement.value);
     this.addServerData('server', serverData);
   }
 
