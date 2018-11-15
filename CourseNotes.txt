@@ -126,11 +126,11 @@ Create an Angular project
                         this.newChildEvent.emit({serverName: this.property_1, serverContent: this.property_2});
                       }
                     }
-            
+
                 HTML
                     <button (click)="onSomethingHappendInChildComponent()">Emmit New Event</button>
 
-            PARENT COMPONENT 
+            PARENT COMPONENT
                 HTML
                     <child-app (HERE_THE_EVENT_ALIAS)="parent_method($event)"></child-app>
 
@@ -162,7 +162,7 @@ Create an Angular project
         // Notice the '#serverNameElement' and the serverNameElement.value
 5.70 Access to DOM from TS
     It is possible to access the DOM from the ts file with the @ViewChild decorator.
-    By adding a reference name into the HTML file, we can use that reference in the TS file. This will import the HTML element into the TS file, and it is possible to access the properties in the TS. 
+    By adding a reference name into the HTML file, we can use that reference in the TS file. This will import the HTML element into the TS file, and it is possible to access the properties in the TS.
     DO NOT MODIFIED THE DOM DIRECTLY THROUGH THIS REFERENCE, USE OTHER ANGULAR METHODS.
     HTML file
         <input type="text" class="form-control" #ANY_NAME_HERE>
@@ -207,13 +207,13 @@ Create an Angular project
 5.72 Lifecycle
     There is quite a bit of hooks that will be triggered during changes, events, constructions, deletions of the angular application: https://angular.io/guide/lifecycle-hooks:
         - ngOnChanges()
-        - ngOnInit()  
-        - ngDoCheck() 
-        - ngAfterContentInit()    
-        - ngAfterContentChecked() 
-        - ngAfterViewInit()   
-        - ngAfterViewChecked()    
-        - ngOnDestroy()   
+        - ngOnInit()
+        - ngDoCheck()
+        - ngAfterContentInit()
+        - ngAfterContentChecked()
+        - ngAfterViewInit()
+        - ngAfterViewChecked()
+        - ngOnDestroy()
 
 5.73 It is also possible to access the ng-content similto to ViewChild, but with ViewContent
     // PARENT ELEMENT HTML
@@ -227,3 +227,54 @@ Create an Angular project
     anyMethod(){
         console.log(this.contentHTML.nativeElement.textContent);
     }
+
+22.295 DEPLOYMENT
+    Just run ' ng build --prod' (it turns on AOT by default for prod (ahead of time))
+    So, it will be the same as ng build --prod --aot
+    The end product will be compiled into hte dist/SolutionName folder
+
+30.397 ANGULAR 6: WHAT'S NEW
+    [DONE, nothing to written]
+
+32.414 TYPESCRIPT
+    TYPES: string, number, boolean, Array<TYPE>, any, void and your own custom classes
+    CLASSES:
+        class car {
+            name: string;
+            private speed: number;
+            constructor(speed: number)
+            {
+                this.speed = speed || 0;
+            }
+            accelerate():void{
+                this.speed++;
+            }
+            stati numberOfWheels(): number {
+            return 4;
+            }
+        }
+
+        let car = new Car(5);
+        car.accelerate();
+        Car.numberOfWheels(); // Calling the static method from the class itself
+    INTERFACES
+        interface User {
+            username: string;
+            age?: number; // Optional property, does no need to be implemented
+            accelerate(speed:number):void;
+        }
+
+        let newUser:User = {
+            username: 'huertaj';
+            accelerate: function(speed:number){
+                /...
+            }
+        }
+    MODULES
+        Declaring a class to be used outside the file
+        export class ClassName {
+            // ...
+        }
+        If you don't use export (modularity), the class wont be able to be used outside that file
+
+
