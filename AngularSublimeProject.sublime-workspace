@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"Eve",
+				"EventEmitter\talias"
+			],
+			[
+				"mod",
+				"recipe.model\tscript"
+			],
+			[
 				"c",
 				"bootstrap.min.css"
 			],
@@ -60,35 +68,21 @@
 	"buffers":
 	[
 		{
+			"contents": "Searching 4258 files for \"else\"\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/common/src/directives/ng_if.d.ts:\n   10   * Conditionally includes a template based on the value of an `expression`.\n   11   *\n   12:  * `ngIf` evaluates the `expression` and then renders the `then` or `else` template in its place\n   13   * when expression is truthy or falsy respectively. Typically the:\n   14   *  - `then` template is the inline template of `ngIf` unless bound to a different value.\n   15:  *  - `else` template is blank unless it is bound.\n   16   *\n   17   *\n   ..\n   24   * {@example common/ngIf/ts/module.ts region='NgIfSimple'}\n   25   *\n   26:  * ### Showing an alternative template using `else`\n   27   *\n   28:  * If it is necessary to display a template when the `expression` is falsy use the `else` template\n   29:  * binding as shown. Note that the `else` binding points to a `<ng-template>` labeled `#elseBlock`.\n   30   * The template can be defined anywhere in the component view but is typically placed right after\n   31   * `ngIf` for readability.\n   32   *\n   33:  * {@example common/ngIf/ts/module.ts region='NgIfElse'}\n   34   *\n   35   * ### Using non-inlined `then` template\n   36   *\n   37   * Usually the `then` template is the inlined template of the `ngIf`, but it can be changed using\n   38:  * a binding (just like `else`). Because `then` and `else` are bindings, the template references can\n   39   * change at runtime as shown in this example.\n   40   *\n   41:  * {@example common/ngIf/ts/module.ts region='NgIfThenElse'}\n   42   *\n   43   * ### Storing conditional result in a variable\n   ..\n   78   * - `<ng-template [ngIf]=\"condition\"><div>...</div></ng-template>`\n   79   *\n   80:  * Form with an else block:\n   81   * ```\n   82:  * <div *ngIf=\"condition; else elseBlock\">...</div>\n   83:  * <ng-template #elseBlock>...</ng-template>\n   84   * ```\n   85   *\n   86:  * Form with a `then` and `else` block:\n   87   * ```\n   88:  * <div *ngIf=\"condition; then thenBlock else elseBlock\"></div>\n   89   * <ng-template #thenBlock>...</ng-template>\n   90:  * <ng-template #elseBlock>...</ng-template>\n   91   * ```\n   92   *\n   93   * Form with storing the value locally:\n   94   * ```\n   95:  * <div *ngIf=\"condition as value; else elseBlock\">{{value}}</div>\n   96:  * <ng-template #elseBlock>...</ng-template>\n   97   * ```\n   98   *\n   ..\n  104      private _context;\n  105      private _thenTemplateRef;\n  106:     private _elseTemplateRef;\n  107      private _thenViewRef;\n  108:     private _elseViewRef;\n  109      constructor(_viewContainer: ViewContainerRef, templateRef: TemplateRef<NgIfContext>);\n  110      ngIf: any;\n  111      ngIfThen: TemplateRef<NgIfContext> | null;\n  112:     ngIfElse: TemplateRef<NgIfContext> | null;\n  113      private _updateView;\n  114      /**\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/compiler-cli/src/metadata/schema.d.ts:\n  107      condition: MetadataValue;\n  108      thenExpression: MetadataValue;\n  109:     elseExpression: MetadataValue;\n  110  }\n  111  export declare function isMetadataSymbolicIfExpression(value: any): value is MetadataSymbolicIfExpression;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/compiler-cli/src/ngtools_api.d.ts:\n   11   *\n   12   * This API should be stable for NG 2. It can be removed in NG 4..., but should be replaced by\n   13:  * something else.\n   14   */\n   15  /**\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/compiler-cli/src/ngtsc/host/src/reflection.d.ts:\n  384       *\n  385       * Normally this will be the initializer of the declaration, but where the variable is\n  386:      * not a `const` we may need to look elsewhere for the variable's value.\n  387       *\n  388       * @param declaration a TypeScript variable declaration, whose value we want.\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/compiler/src/output/output_ast.d.ts:\n  595  export declare function assertNotNull(expr: Expression, sourceSpan?: ParseSourceSpan | null): AssertNotNull;\n  596  export declare function fn(params: FnParam[], body: Statement[], type?: Type | null, sourceSpan?: ParseSourceSpan | null, name?: string | null): FunctionExpr;\n  597: export declare function ifStmt(condition: Expression, thenClause: Statement[], elseClause?: Statement[]): IfStmt;\n  598  export declare function literal(value: any, type?: Type | null, sourceSpan?: ParseSourceSpan | null): LiteralExpr;\n  599  export declare function isNull(exp: Expression): boolean;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/core/src/change_detection/change_detection_util.d.ts:\n   19   * if (this._latestValue === this._latestReturnedValue) {\n   20   *    return this._latestReturnedValue;\n   21:  *  } else {\n   22   *    this._latestReturnedValue = this._latestValue;\n   23   *    return WrappedValue.wrap(this._latestValue); // this will force update\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/core/src/event_emitter.d.ts:\n   37   *     if (this.visible) {\n   38   *       this.open.emit(null);\n   39:  *     } else {\n   40   *       this.close.emit(null);\n   41   *     }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/core/src/render3/interfaces/view.d.ts:\n  214       * ID for inline views to determine whether a view is the same as the previous view\n  215       * in a certain position. If it's not, we know the new view needs to be inserted\n  216:      * and the one that exists needs to be removed (e.g. if/else statements)\n  217       *\n  218       * If this is -1, then this is a component view or a dynamically created view.\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/core/src/render3/view_ref.d.ts:\n  150       *     if (value) {\n  151       *       this.ref.reattach();\n  152:      *     } else {\n  153       *       this.ref.detach();\n  154       *     }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/core/src/zone/ng_zone.d.ts:\n   72   *     if (this.progress < 100) {\n   73   *       window.setTimeout(() => this._increaseProgress(doneCallback), 10);\n   74:  *     } else {\n   75   *       doneCallback();\n   76   *     }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/router/src/router_module.d.ts:\n  209       *      if (e.position) {\n  210       *        viewportScroller.scrollToPosition(e.position);\n  211:      *      } else if (e.anchor) {\n  212       *        viewportScroller.scrollToAnchor(e.anchor);\n  213:      *      } else {\n  214       *        viewportScroller.scrollToPosition([0, 0]);\n  215       *      }\n  ...\n  230       *       if (e.position) {\n  231       *         viewportScroller.scrollToPosition(e.position);\n  232:      *       } else {\n  233       *         viewportScroller.scrollToPosition([0, 0]);\n  234       *       }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@schematics/angular/application/other-files/app.component.ts:\n   26       %><router-outlet></router-outlet><%\n   27      } %>\n   28:   `,<% } else { %>\n   29    templateUrl: './app.component.html',<% } if(inlineStyle) { %>\n   30:   styles: []<% } else { %>\n   31    styleUrls: ['./app.component.<%= styleext %>']<% } %>\n   32  })\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@schematics/angular/component/files/__name@dasherize@if-flat__/__name@dasherize__.component.ts:\n    7        <%= dasherize(name) %> works!\n    8      </p>\n    9:   `,<% } else { %>\n   10    templateUrl: './<%= dasherize(name) %>.component.html',<% } if(inlineStyle) { %>\n   11:   styles: []<% } else { %>\n   12    styleUrls: ['./<%= dasherize(name) %>.component.<%= styleext %>']<% } %><% if(!!viewEncapsulation) { %>,\n   13    encapsulation: ViewEncapsulation.<%= viewEncapsulation %><% } if (changeDetection !== 'Default') { %>,\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@types/node/index.d.ts:\n 2121      export function exec(command: string, options: ExecOptions, callback?: (error: Error | null, stdout: string, stderr: string) => void): ChildProcess;\n 2122  \n 2123:     // fallback if nothing else matches. Worst case is always `string | Buffer`.\n 2124      export function exec(command: string, options: ({ encoding?: string | null } & ExecOptions) | undefined | null, callback?: (error: Error | null, stdout: string | Buffer, stderr: string | Buffer) => void): ChildProcess;\n 2125  \n ....\n 2180      export function execFile(file: string, args: string[] | undefined | null, options: ExecFileOptions, callback: (error: Error | null, stdout: string, stderr: string) => void): ChildProcess;\n 2181  \n 2182:     // fallback if nothing else matches. Worst case is always `string | Buffer`.\n 2183      export function execFile(file: string, options: ({ encoding?: string | null } & ExecFileOptions) | undefined | null, callback: ((error: Error | null, stdout: string | Buffer, stderr: string | Buffer) => void) | undefined | null): ChildProcess;\n 2184      export function execFile(file: string, args: string[] | undefined | null, options: ({ encoding?: string | null } & ExecFileOptions) | undefined | null, callback: ((error: Error | null, stdout: string | Buffer, stderr: string | Buffer) => void) | undefined | null): ChildProcess;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@types/q/index.d.ts:\n   76           * Much like then, but with different behavior around unhandled rejection. If there is an unhandled rejection, either because promise is rejected and no onRejected callback was provided, or because onFulfilled or onRejected threw an error or returned a rejected promise, the resulting rejection reason is thrown as an exception in a future turn of the event loop.\n   77           *\n   78:          * This method should be used to terminate chains of promises that will not be passed elsewhere. Since exceptions thrown in then callbacks are consumed and transformed into rejections, exceptions at the end of the chain are easy to accidentally, silently ignore. By arranging for the exception to be thrown in a future turn of the event loop, so that it won't be caught, it causes an onerror event on the browser window, or an uncaughtException event on Node.js's process object.\n   79           *\n   80           * Exceptions thrown by done will have long stack traces, if Q.longStackSupport is set to true. If Q.onerror is set, exceptions will be delivered there instead of thrown in a future turn.\n   81           *\n   82:          * The Golden Rule of done vs. then usage is: either return your promise to someone else, or if the chain ends with you, call done to terminate it.\n   83           */\n   84          done(onFulfilled?: (value: T) => any, onRejected?: (reason: any) => any, onProgress?: (progress: any) => any): void;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/internal/observable/dom/AjaxObservable.d.ts:\n   57       *   - async: Whether the request is async\n   58       *   - headers: Optional headers\n   59:      *   - crossDomain: true if a cross domain request, else false\n   60       *   - createXHR: a function to override if you need to use an alternate\n   61       *   XMLHttpRequest implementation.\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/internal/observable/empty.d.ts:\n   10   * emits a complete notification.\n   11   *\n   12:  * <span class=\"informal\">Just emits 'complete', and nothing else.\n   13   * </span>\n   14   *\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/internal/observable/never.d.ts:\n   12   *\n   13   * ##  Example\n   14:  * ### Emit the number 7, then never emit anything else (not even complete)\n   15   * ```javascript\n   16   * function info() {\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/internal/observable/throwError.d.ts:\n    5   * emits an error notification.\n    6   *\n    7:  * <span class=\"informal\">Just emits 'error', and nothing else.\n    8   * </span>\n    9   *\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/internal/operators/partition.d.ts:\n   19   *\n   20   * ## Example\n   21:  * Partition click events into those on DIV elements and those elsewhere\n   22   * ```javascript\n   23   * const clicks = fromEvent(document, 'click');\n   24   * const parts = clicks.pipe(partition(ev => ev.target.tagName === 'DIV'));\n   25   * const clicksOnDivs = parts[0];\n   26:  * const clicksElsewhere = parts[1];\n   27   * clicksOnDivs.subscribe(x => console.log('DIV clicked: ', x));\n   28:  * clicksElsewhere.subscribe(x => console.log('Other clicked: ', x));\n   29   * ```\n   30   *\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/AsyncSubject.ts:\n   19        subscriber.error(this.thrownError);\n   20        return Subscription.EMPTY;\n   21:     } else if (this.hasCompleted && this.hasNext) {\n   22        subscriber.next(this.value);\n   23        subscriber.complete();\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/BehaviorSubject.ts:\n   33      if (this.hasError) {\n   34        throw this.thrownError;\n   35:     } else if (this.closed) {\n   36        throw new ObjectUnsubscribedError();\n   37:     } else {\n   38        return this._value;\n   39      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/config.ts:\n   24        const error = new Error();\n   25        console.warn('DEPRECATED! RxJS was set to use deprecated synchronous error handling behavior by code at: \\n' + error.stack);\n   26:     } else if (_enable_super_gross_mode_that_will_cause_bad_things) {\n   27        console.log('RxJS: Back to a better error behavior. Thank you. <3');\n   28      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/Notification.ts:\n   74      if (nextOrObserver && typeof (<PartialObserver<T>>nextOrObserver).next === 'function') {\n   75        return this.observe(<PartialObserver<T>>nextOrObserver);\n   76:     } else {\n   77        return this.do(<(value: T) => void>nextOrObserver, error, complete);\n   78      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/Observable.ts:\n  199      if (operator) {\n  200        operator.call(sink, this.source);\n  201:     } else {\n  202        sink.add(\n  203          this.source || (config.useDeprecatedSynchronousErrorHandling && !sink.syncErrorThrowable) ?\n  ...\n  230        if (canReportError(sink)) {\n  231          sink.error(err);\n  232:       } else {\n  233          console.warn(err);\n  234        }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/bindCallback.ts:\n  177      if (isScheduler(resultSelector)) {\n  178        scheduler = resultSelector;\n  179:     } else {\n  180        // DEPRECATED PATH\n  181        return (...args: any[]) => bindCallback(callbackFunc, scheduler)(...args).pipe(\n  ...\n  208              if (canReportError(subject)) {\n  209                subject.error(err);\n  210:             } else {\n  211                console.warn(err);\n  212              }\n  ...\n  214          }\n  215          return subject.subscribe(subscriber);\n  216:       } else {\n  217          const state: DispatchState<T> = {\n  218            args, subscriber, params,\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/bindNodeCallback.ts:\n  163      if (isScheduler(resultSelector)) {\n  164        scheduler = resultSelector;\n  165:     } else {\n  166        // DEPRECATED PATH\n  167        return (...args: any[]) => bindNodeCallback(callbackFunc, scheduler)(...args).pipe(\n  ...\n  202              if (canReportError(subject)) {\n  203                subject.error(err);\n  204:             } else {\n  205                console.warn(err);\n  206              }\n  ...\n  208          }\n  209          return subject.subscribe(subscriber);\n  210:       } else {\n  211          return scheduler.schedule<DispatchState<T>>(dispatch, 0, { params, subscriber, context });\n  212        }\n  ...\n  241        if (err) {\n  242          this.add(scheduler.schedule<DispatchErrorArg<T>>(dispatchError, 0, { err, subject }));\n  243:       } else {\n  244          const value = innerArgs.length <= 1 ? innerArgs[0] : innerArgs;\n  245          this.add(scheduler.schedule<DispatchNextArg<T>>(dispatchNext, 0, { value, subject }));\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/combineLatest.ts:\n  215      if (len === 0) {\n  216        this.destination.complete();\n  217:     } else {\n  218        this.active = len;\n  219        this.toRespond = len;\n  ...\n  244        if (this.resultSelector) {\n  245          this._tryResultSelector(values);\n  246:       } else {\n  247          this.destination.next(values.slice());\n  248        }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/ConnectableObservable.ts:\n   46          this._connection = null;\n   47          connection = Subscription.EMPTY;\n   48:       } else {\n   49          this._connection = connection;\n   50        }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/dom/AjaxObservable.ts:\n   27    if (root.XMLHttpRequest) {\n   28      return new root.XMLHttpRequest();\n   29:   } else if (!!root.XDomainRequest) {\n   30      return new root.XDomainRequest();\n   31:   } else {\n   32      throw new Error('CORS is not supported by your browser');\n   33    }\n   ..\n   37    if (root.XMLHttpRequest) {\n   38      return new root.XMLHttpRequest();\n   39:   } else {\n   40      let progId: string;\n   41      try {\n   ..\n  125     *   - async: Whether the request is async\n  126     *   - headers: Optional headers\n  127:    *   - crossDomain: true if a cross domain request, else false\n  128     *   - createXHR: a function to override if you need to use an alternate\n  129     *   XMLHttpRequest implementation.\n  ...\n  171      if (typeof urlOrRequest === 'string') {\n  172        request.url = urlOrRequest;\n  173:     } else {\n  174        for (const prop in urlOrRequest) {\n  175          if (urlOrRequest.hasOwnProperty(prop)) {\n  ...\n  224      if (response.response === errorObject) {\n  225        destination.error(errorObject.e);\n  226:     } else {\n  227        destination.next(response);\n  228      }\n  ...\n  239      if (<any>xhr === errorObject) {\n  240        this.error(errorObject.e);\n  241:     } else {\n  242        this.xhr = xhr;\n  243  \n  ...\n  251        if (user) {\n  252          result = tryCatch(xhr.open).call(xhr, method, url, async, user, password);\n  253:       } else {\n  254          result = tryCatch(xhr.open).call(xhr, method, url, async);\n  255        }\n  ...\n  287      if (!body || typeof body === 'string') {\n  288        return body;\n  289:     } else if (root.FormData && body instanceof root.FormData) {\n  290        return body;\n  291      }\n  ...\n  327        if (ajaxTimeoutError.response === errorObject) {\n  328          subscriber.error(errorObject.e);\n  329:       } else {\n  330          subscriber.error(ajaxTimeoutError);\n  331        }\n  ...\n  344          if (root.XDomainRequest) {\n  345            xhr.onprogress = xhrProgress;\n  346:         } else {\n  347            xhr.upload.onprogress = xhrProgress;\n  348          }\n  ...\n  358          if (ajaxError.response === errorObject) {\n  359            subscriber.error(errorObject.e);\n  360:         } else {\n  361            subscriber.error(ajaxError);\n  362          }\n  ...\n  398            subscriber.next(e);\n  399            subscriber.complete();\n  400:         } else {\n  401            if (progressSubscriber) {\n  402              progressSubscriber.error(e);\n  ...\n  405            if (ajaxError.response === errorObject) {\n  406              subscriber.error(errorObject.e);\n  407:           } else {\n  408              subscriber.error(ajaxError);\n  409            }\n  ...\n  501  function parseJson(xhr: XMLHttpRequest) {\n  502    // HACK(benlesh): TypeScript shennanigans\n  503:   // tslint:disable-next-line:no-any XMLHttpRequest is defined to always have 'response' inferring xhr as never for the else clause.\n  504    if ('response' in (xhr as any)) {\n  505      //IE does not support json as responseType, parse it internally\n  506      return xhr.responseType ? xhr.response : JSON.parse(xhr.response || xhr.responseText || 'null');\n  507:   } else {\n  508      return JSON.parse((xhr as any).responseText || 'null');\n  509    }\n  ...\n  519        default:\n  520            // HACK(benlesh): TypeScript shennanigans\n  521:           // tslint:disable-next-line:no-any XMLHttpRequest is defined to always have 'response' inferring xhr as never for the else sub-expression.\n  522            return  ('response' in (xhr as any)) ? xhr.response : xhr.responseText;\n  523    }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/dom/WebSocketSubject.ts:\n   79        this.destination = destination;\n   80        this.source = urlConfigOrSource as Observable<T>;\n   81:     } else {\n   82        const config = this._config = { ...DEFAULT_WEBSOCKET_CONFIG };\n   83        this._output = new Subject<T>();\n   84        if (typeof urlConfigOrSource === 'string') {\n   85          config.url = urlConfigOrSource;\n   86:       } else {\n   87          for (let key in urlConfigOrSource) {\n   88            if (urlConfigOrSource.hasOwnProperty(key)) {\n   ..\n   94        if (!config.WebSocketCtor && WebSocket) {\n   95          config.WebSocketCtor = WebSocket;\n   96:       } else if (!config.WebSocketCtor) {\n   97          throw new Error('no WebSocket constructor can be found');\n   98        }\n   ..\n  140        if (result === errorObject) {\n  141          observer.error(errorObject.e);\n  142:       } else {\n  143          self.next(result);\n  144        }\n  ...\n  148          if (result === errorObject) {\n  149            observer.error(errorObject.e);\n  150:         } else if (result) {\n  151            observer.next(x);\n  152          }\n  ...\n  159          if (result === errorObject) {\n  160            observer.error(errorObject.e);\n  161:         } else {\n  162            self.next(result);\n  163          }\n  ...\n  219            if (e && e.code) {\n  220              socket.close(e.code, e.reason);\n  221:           } else {\n  222              observer.error(new TypeError(WEBSOCKETSUBJECT_INVALID_ERROR_OBJECT));\n  223            }\n  ...\n  252        if (e.wasClean) {\n  253          observer.complete();\n  254:       } else {\n  255          observer.error(e);\n  256        }\n  ...\n  262        if (result === errorObject) {\n  263          observer.error(errorObject.e);\n  264:       } else {\n  265          observer.next(result);\n  266        }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/empty.ts:\n   12   * emits a complete notification.\n   13   *\n   14:  * <span class=\"informal\">Just emits 'complete', and nothing else.\n   15   * </span>\n   16   *\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/from.ts:\n  108      if (isInteropObservable(input)) {\n  109        return fromObservable(input, scheduler);\n  110:     } else if (isPromise(input)) {\n  111        return fromPromise(input, scheduler);\n  112:     } else if (isArrayLike(input)) {\n  113        return fromArray(input, scheduler);\n  114:     }  else if (isIterable(input) || typeof input === 'string') {\n  115        return fromIterable(input, scheduler);\n  116      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/fromArray.ts:\n    7    if (!scheduler) {\n    8      return new Observable<T>(subscribeToArray(input));\n    9:   } else {\n   10      return new Observable<T>(subscriber => {\n   11        const sub = new Subscription();\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/fromEvent.ts:\n  194        if (arguments.length > 1) {\n  195          subscriber.next(Array.prototype.slice.call(arguments));\n  196:       } else {\n  197          subscriber.next(e);\n  198        }\n  ...\n  210      sourceObj.addEventListener(eventName, handler, options);\n  211      unsubscribe = () => source.removeEventListener(eventName, handler, options);\n  212:   } else if (isJQueryStyleEventEmitter(sourceObj)) {\n  213      const source = sourceObj;\n  214      sourceObj.on(eventName, handler);\n  215      unsubscribe = () => source.off(eventName, handler);\n  216:   } else if (isNodeStyleEventEmitter(sourceObj)) {\n  217      const source = sourceObj;\n  218      sourceObj.addListener(eventName, handler as NodeEventHandler);\n  219      unsubscribe = () => source.removeListener(eventName, handler as NodeEventHandler);\n  220:   } else if (sourceObj && (sourceObj as any).length) {\n  221      for (let i = 0, len = (sourceObj as any).length; i < len; i++) {\n  222        setupSubscription(sourceObj[i], eventName, handler, subscriber, options);\n  223      }\n  224:   } else {\n  225      throw new TypeError('Invalid event target');\n  226    }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/fromIterable.ts:\n   11    if (!scheduler) {\n   12      return new Observable<T>(subscribeToIterable(input));\n   13:   } else {\n   14      return new Observable<T>(subscriber => {\n   15        const sub = new Subscription();\n   ..\n   39            if (done) {\n   40              subscriber.complete();\n   41:           } else {\n   42              subscriber.next(value);\n   43              this.schedule();\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/fromObservable.ts:\n    8    if (!scheduler) {\n    9      return new Observable<T>(subscribeToObservable(input));\n   10:   } else {\n   11      return new Observable<T>(subscriber => {\n   12        const sub = new Subscription();\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/fromPromise.ts:\n    7    if (!scheduler) {\n    8      return new Observable<T>(subscribeToPromise(input));\n    9:   } else {\n   10      return new Observable<T>(subscriber => {\n   11        const sub = new Subscription();\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/generate.ts:\n  273      resultSelector = options.resultSelector || identity as ResultFunc<S, T>;\n  274      scheduler = options.scheduler;\n  275:   } else if (resultSelectorOrObservable === undefined || isScheduler(resultSelectorOrObservable)) {\n  276      initialState = initialStateOrOptions as S;\n  277      resultSelector = identity as ResultFunc<S, T>;\n  278      scheduler = resultSelectorOrObservable as SchedulerLike;\n  279:   } else {\n  280      initialState = initialStateOrOptions as S;\n  281      resultSelector = resultSelectorOrObservable as ResultFunc<S, T>;\n  ...\n  343        return undefined;\n  344      }\n  345:   } else {\n  346      state.needIterate = true;\n  347    }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/merge.ts:\n   95        concurrent = <number>observables.pop();\n   96      }\n   97:   } else if (typeof last === 'number') {\n   98      concurrent = <number>observables.pop();\n   99    }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/never.ts:\n   14   *\n   15   * ##  Example\n   16:  * ### Emit the number 7, then never emit anything else (not even complete)\n   17   * ```javascript\n   18   * function info() {\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/of.ts:\n   77    if (isScheduler(scheduler)) {\n   78      args.pop();\n   79:   } else {\n   80      scheduler = undefined;\n   81    }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/pairs.ts:\n   62        subscriber.complete();\n   63      });\n   64:   } else {\n   65      return new Observable<[string, T]>(subscriber => {\n   66        const keys = Object.keys(obj);\n   ..\n   83        subscriber.next([key, obj[key]]);\n   84        subscription.add(this.schedule({ keys, index: index + 1, subscriber, subscription, obj }));\n   85:     } else {\n   86        subscriber.complete();\n   87      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/race.ts:\n   45      if (isArray(observables[0])) {\n   46        observables = <Array<Observable<any>>>observables[0];\n   47:     } else {\n   48        return <Observable<any>>observables[0];\n   49      }\n   ..\n   83      if (len === 0) {\n   84        this.destination.complete();\n   85:     } else {\n   86        for (let i = 0; i < len && !this.hasFirst; i++) {\n   87          let observable = observables[i];\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/range.ts:\n   45          index, count, start, subscriber\n   46        });\n   47:     } else {\n   48        do {\n   49          if (index++ >= count) {\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/throwError.ts:\n    7   * emits an error notification.\n    8   *\n    9:  * <span class=\"informal\">Just emits 'error', and nothing else.\n   10   * </span>\n   11   *\n   ..\n   70    if (!scheduler) {\n   71      return new Observable(subscriber => subscriber.error(error));\n   72:   } else {\n   73      return new Observable(subscriber => scheduler.schedule(dispatch, 0, { error, subscriber }));\n   74    }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/timer.ts:\n   58    if (isNumeric(periodOrScheduler)) {\n   59      period = Number(periodOrScheduler) < 1 && 1 || Number(periodOrScheduler);\n   60:   } else if (isScheduler(periodOrScheduler)) {\n   61      scheduler = periodOrScheduler as any;\n   62    }\n   ..\n   89    if (subscriber.closed) {\n   90      return;\n   91:   } else if (period === -1) {\n   92      return subscriber.complete();\n   93    }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/observable/zip.ts:\n  117      if (isArray(value)) {\n  118        iterators.push(new StaticArrayIterator(value));\n  119:     } else if (typeof value[Symbol_iterator] === 'function') {\n  120        iterators.push(new StaticIterator(value[Symbol_iterator]()));\n  121:     } else {\n  122        iterators.push(new ZipBufferIterator(this.destination, this, value));\n  123      }\n  ...\n  141          const destination = this.destination as Subscription;\n  142          destination.add(iterator.subscribe(iterator, i));\n  143:       } else {\n  144          this.active--; // not an observable\n  145        }\n  ...\n  189      if (this.resultSelector) {\n  190        this._tryresultSelector(args);\n  191:     } else {\n  192        destination.next(args);\n  193      }\n  ...\n  291      if (buffer.length === 0 && this.isComplete) {\n  292        return { value: null, done: true };\n  293:     } else {\n  294        return { value: buffer.shift(), done: false };\n  295      }\n  ...\n  308        this.isComplete = true;\n  309        this.parent.notifyInactive();\n  310:     } else {\n  311        this.destination.complete();\n  312      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/Observer.ts:\n    9      if (config.useDeprecatedSynchronousErrorHandling) {\n   10        throw err;\n   11:     } else {\n   12        hostReportError(err);\n   13      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/audit.ts:\n   91        if (duration === errorObject) {\n   92          this.destination.error(errorObject.e);\n   93:       } else {\n   94          const innerSubscription = subscribeToResult(this, duration);\n   95          if (!innerSubscription || innerSubscription.closed) {\n   96            this.clearThrottle();\n   97:         } else {\n   98            this.add(this.throttled = innerSubscription);\n   99          }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/bufferCount.ts:\n   65      if (!startBufferEvery || bufferSize === startBufferEvery) {\n   66        this.subscriberClass = BufferCountSubscriber;\n   67:     } else {\n   68        this.subscriberClass = BufferSkipCountSubscriber;\n   69      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/bufferTime.ts:\n  139        const timeSpanOnlyState = { subscriber: this, context, bufferTimeSpan };\n  140        this.add(context.closeAction = scheduler.schedule(dispatchBufferTimeSpanOnly, bufferTimeSpan, timeSpanOnlyState));\n  141:     } else {\n  142        const closeState = { subscriber: this, context };\n  143        const creationState: DispatchCreateArg<T> = { bufferTimeSpan, bufferCreationInterval, subscriber: this, scheduler };\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/bufferToggle.ts:\n  170      if (!innerSubscription || innerSubscription.closed) {\n  171        this.closeBuffer(context);\n  172:     } else {\n  173        (<any> innerSubscription).context = context;\n  174  \n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/bufferWhen.ts:\n  107      if (this.subscribing) {\n  108        this.complete();\n  109:     } else {\n  110        this.openBuffer();\n  111      }\n  ...\n  132      if (closingNotifier === errorObject) {\n  133        this.error(errorObject.e);\n  134:     } else {\n  135        closingSubscription = new Subscription();\n  136        this.closingSubscription = closingSubscription;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/count.ts:\n   89      if (this.predicate) {\n   90        this._tryPredicate(value);\n   91:     } else {\n   92        this.count++;\n   93      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/delay.ts:\n   98        const delay = Math.max(0, queue[0].time - scheduler.now());\n   99        this.schedule(state, delay);\n  100:     } else {\n  101        this.unsubscribe();\n  102        source.active = false;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/distinct.ts:\n  102      if (this.keySelector) {\n  103        this._useKeySelector(value);\n  104:     } else {\n  105        this._finalizeNext(value, value);\n  106      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/distinctUntilChanged.ts:\n  113          return this.destination.error(errorObject.e);\n  114        }\n  115:     } else {\n  116        this.hasKey = true;\n  117      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/endWith.ts:\n   52      if (isScheduler(scheduler)) {\n   53        array.pop();\n   54:     } else {\n   55        scheduler = null;\n   56      }\n   ..\n   59      if (len === 1 && !scheduler) {\n   60        return concatStatic(source, scalar(array[0] as T));\n   61:     } else if (len > 0) {\n   62        return concatStatic(source, fromArray(array as T[], scheduler));\n   63:     } else {\n   64        return concatStatic<T>(source, empty(scheduler) as any);\n   65      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/expand.ts:\n  130        if (result === errorObject) {\n  131          destination.error(errorObject.e);\n  132:       } else if (!this.scheduler) {\n  133          this.subscribeToProjection(result, value, index);\n  134:       } else {\n  135          const state: DispatchArg<T, R> = { subscriber: this, result, value, index };\n  136          const destination = this.destination as Subscription;\n  137          destination.add(this.scheduler.schedule<DispatchArg<T, R>>(ExpandSubscriber.dispatch, 0, state));\n  138        }\n  139:     } else {\n  140        this.buffer.push(value);\n  141      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/groupBy.ts:\n   22   * When the Observable emits an item, a key is computed for this item with the keySelector function.\n   23   *\n   24:  * If a {@link GroupedObservable} for this key exists, this {@link GroupedObservable} emits. Elsewhere, a new\n   25   * {@link GroupedObservable} for this key is created and emits.\n   26   *\n   ..\n  177          this.error(err);\n  178        }\n  179:     } else {\n  180        element = <any>value;\n  181      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/mergeMap.ts:\n   83        ), concurrent)\n   84      );\n   85:   } else if (typeof resultSelector === 'number') {\n   86      concurrent = resultSelector;\n   87    }\n   ..\n  121      if (this.active < this.concurrent) {\n  122        this._tryNext(value);\n  123:     } else {\n  124        this.buffer.push(value);\n  125      }\n  ...\n  166      if (buffer.length > 0) {\n  167        this._next(buffer.shift());\n  168:     } else if (this.active === 0 && this.hasCompleted) {\n  169        this.destination.complete();\n  170      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/mergeScan.ts:\n   91        if (ish === errorObject) {\n   92          destination.error(errorObject.e);\n   93:       } else {\n   94          this.active++;\n   95          this._innerSub(ish, value, index);\n   96        }\n   97:     } else {\n   98        this.buffer.push(value);\n   99      }\n  ...\n  134      if (buffer.length > 0) {\n  135        this._next(buffer.shift());\n  136:     } else if (this.active === 0 && this.hasCompleted) {\n  137        if (this.hasValue === false) {\n  138          this.destination.next(this.acc);\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/multicast.ts:\n   39      if (typeof subjectOrSubjectFactory === 'function') {\n   40        subjectFactory = <() => Subject<T>>subjectOrSubjectFactory;\n   41:     } else {\n   42        subjectFactory = function subjectFactory() {\n   43          return <Subject<T>>subjectOrSubjectFactory;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/onErrorResumeNext.ts:\n  160        destination.add(innerSubscriber);\n  161        subscribeToResult(this, next, undefined, undefined, innerSubscriber);\n  162:     } else {\n  163        this.destination.complete();\n  164      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/pairwise.ts:\n   70      if (this.hasPrev) {\n   71        this.destination.next([this.prev, value]);\n   72:     } else {\n   73        this.hasPrev = true;\n   74      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/partition.ts:\n   22   *\n   23   * ## Example\n   24:  * Partition click events into those on DIV elements and those elsewhere\n   25   * ```javascript\n   26   * const clicks = fromEvent(document, 'click');\n   27   * const parts = clicks.pipe(partition(ev => ev.target.tagName === 'DIV'));\n   28   * const clicksOnDivs = parts[0];\n   29:  * const clicksElsewhere = parts[1];\n   30   * clicksOnDivs.subscribe(x => console.log('DIV clicked: ', x));\n   31:  * clicksElsewhere.subscribe(x => console.log('Other clicked: ', x));\n   32   * ```\n   33   *\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/pluck.ts:\n   47        if (typeof p !== 'undefined') {\n   48          currentProp = p;\n   49:       } else {\n   50          return undefined;\n   51        }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/repeat.ts:\n   21      if (count === 0) {\n   22        return empty();\n   23:     } else if (count < 0) {\n   24        return source.lift(new RepeatOperator(-1, source));\n   25:     } else {\n   26        return source.lift(new RepeatOperator(count - 1, source));\n   27      }\n   ..\n   54        if (count === 0) {\n   55          return super.complete();\n   56:       } else if (count > -1) {\n   57          this.count = count - 1;\n   58        }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/retry.ts:\n   51        if (count === 0) {\n   52          return super.error(err);\n   53:       } else if (count > -1) {\n   54          this.count = count - 1;\n   55        }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/retryWhen.ts:\n   72          }\n   73          retriesSubscription = subscribeToResult(this, retries);\n   74:       } else {\n   75          this.errors = null;\n   76          this.retriesSubscription = null;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/scan.ts:\n  100        this.seed = value;\n  101        this.destination.next(value);\n  102:     } else {\n  103        return this._tryNext(value);\n  104      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/sequenceEqual.ts:\n   97      if (this._oneComplete && this._b.length === 0) {\n   98        this.emit(false);\n   99:     } else {\n  100        this._a.push(value);\n  101        this.checkValues();\n  ...\n  106      if (this._oneComplete) {\n  107        this.emit(this._a.length === 0 && this._b.length === 0);\n  108:     } else {\n  109        this._oneComplete = true;\n  110      }\n  ...\n  123            this.destination.error(errorObject.e);\n  124          }\n  125:       } else {\n  126          areEqual = a === b;\n  127        }\n  ...\n  141      if (this._oneComplete && this._a.length === 0) {\n  142        this.emit(false);\n  143:     } else {\n  144        this._b.push(value);\n  145        this.checkValues();\n  ...\n  150      if (this._oneComplete) {\n  151        this.emit(this._a.length === 0 && this._b.length === 0);\n  152:     } else {\n  153        this._oneComplete = true;\n  154      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/single.ts:\n   56      if (this.seenValue) {\n   57        this.destination.error('Sequence contains more than one element');\n   58:     } else {\n   59        this.seenValue = true;\n   60        this.singleValue = value;\n   ..\n   67      if (this.predicate) {\n   68        this.tryNext(value, index);\n   69:     } else {\n   70        this.applySingleValue(value);\n   71      }\n   ..\n   88        destination.next(this.seenValue ? this.singleValue : undefined);\n   89        destination.complete();\n   90:     } else {\n   91        destination.error(new EmptyError);\n   92      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/skipLast.ts:\n   56        // to Subscriber without any further logic.\n   57        return source.subscribe(new Subscriber(subscriber));\n   58:     } else {\n   59        return source.subscribe(new SkipLastSubscriber(subscriber, this._skipCount));\n   60      }\n   ..\n   82      if (count < skipCount) {\n   83        this._ring[count] = value;\n   84:     } else {\n   85        const currentIndex = count % skipCount;\n   86        const ring = this._ring;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/startWith.ts:\n   55      if (isScheduler(scheduler)) {\n   56        array.pop();\n   57:     } else {\n   58        scheduler = null;\n   59      }\n   ..\n   62      if (len === 1 && !scheduler) {\n   63        return concatStatic(scalar(array[0] as T), source);\n   64:     } else if (len > 0) {\n   65        return concatStatic(fromArray(array as T[], scheduler), source);\n   66:     } else {\n   67        return concatStatic<T>(empty(scheduler) as any, source);\n   68      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/take.ts:\n   56      if (count === 0) {\n   57        return empty();\n   58:     } else {\n   59        return source.lift(new TakeOperator(count));\n   60      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/takeLast.ts:\n   49      if (count === 0) {\n   50        return empty();\n   51:     } else {\n   52        return source.lift(new TakeLastOperator(count));\n   53      }\n   ..\n   87      if (ring.length < total) {\n   88        ring.push(value);\n   89:     } else {\n   90        const index = count % total;\n   91        ring[index] = value;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/takeWhile.ts:\n   88      if (Boolean(predicateResult)) {\n   89        destination.next(value);\n   90:     } else {\n   91        destination.complete();\n   92      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/tap.ts:\n   99          this._context = this;\n  100          this._tapNext = observerOrNext;\n  101:       } else if (observerOrNext) {\n  102          this._context = observerOrNext;\n  103          this._tapNext = observerOrNext.next || noop;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/throttle.ts:\n  105        if (this._leading) {\n  106          this.send();\n  107:       } else {\n  108          this.throttle(value);\n  109        }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/throttleTime.ts:\n   95          this._hasTrailingValue = true;\n   96        }\n   97:     } else {\n   98        this.add(this.throttled = this.scheduler.schedule<DispatchArg<T>>(dispatchNext, this.duration, { subscriber: this }));\n   99        if (this.leading) {\n  ...\n  107        this.destination.next(this._trailingValue);\n  108        this.destination.complete();\n  109:     } else {\n  110        this.destination.complete();\n  111      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/timeoutWith.ts:\n  119        // to ensure that's the one we clone from next time.\n  120        this.action = (<SchedulerAction<TimeoutWithSubscriber<T, R>>> action.schedule(this, this.waitFor));\n  121:     } else {\n  122        this.add(this.action = (<SchedulerAction<TimeoutWithSubscriber<T, R>>> this.scheduler.schedule<TimeoutWithSubscriber<T, R>>(\n  123          TimeoutWithSubscriber.dispatchTimeout, this.waitFor, this\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/windowTime.ts:\n  103    if (isScheduler(arguments[2])) {\n  104      scheduler = arguments[2];\n  105:   } else if (isNumeric(arguments[2])) {\n  106      maxWindowSize = arguments[2];\n  107    }\n  ...\n  109    if (isScheduler(arguments[1])) {\n  110      scheduler = arguments[1];\n  111:   } else if (isNumeric(arguments[1])) {\n  112      windowCreationInterval = arguments[1];\n  113    }\n  ...\n  191        this.add(scheduler.schedule<CloseState<T>>(dispatchWindowClose, windowTimeSpan, closeState));\n  192        this.add(scheduler.schedule<CreationState<T>>(dispatchWindowCreation, windowCreationInterval, creationState));\n  193:     } else {\n  194        const timeSpanOnlyState: TimeSpanOnlyState<T> = { subscriber: this, window, windowTimeSpan };\n  195        this.add(scheduler.schedule<TimeSpanOnlyState<T>>(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/windowToggle.ts:\n  165        if (closingNotifier === errorObject) {\n  166          return this.error(errorObject.e);\n  167:       } else {\n  168          const window = new Subject<T>();\n  169          const subscription = new Subscription();\n  ...\n  174          if (innerSubscription.closed) {\n  175            this.closeWindow(this.contexts.length - 1);\n  176:         } else {\n  177            (<any> innerSubscription).context = context;\n  178            subscription.add(innerSubscription);\n  ...\n  182  \n  183        }\n  184:     } else {\n  185        this.closeWindow(this.contexts.indexOf(outerValue));\n  186      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/windowWhen.ts:\n  138        this.destination.error(err);\n  139        this.window.error(err);\n  140:     } else {\n  141        this.add(this.closingNotification = subscribeToResult(this, closingNotifier));\n  142      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/operators/withLatestFrom.ts:\n  134        if (this.project) {\n  135          this._tryProject(args);\n  136:       } else {\n  137          this.destination.next(args);\n  138        }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/ReplaySubject.ts:\n   30        this._infiniteTimeWindow = true;\n   31        this.next = this.nextInfiniteTimeWindow;\n   32:     } else {\n   33        this.next = this.nextTimeWindow;\n   34      }\n   ..\n   65      if (this.closed) {\n   66        throw new ObjectUnsubscribedError();\n   67:     } else if (this.isStopped || this.hasError) {\n   68        subscription = Subscription.EMPTY;\n   69:     } else {\n   70        this.observers.push(subscriber);\n   71        subscription = new SubjectSubscription(this, subscriber);\n   ..\n   80          subscriber.next(<T>_events[i]);\n   81        }\n   82:     } else {\n   83        for (let i = 0; i < len && !subscriber.closed; i++) {\n   84          subscriber.next((<ReplayEvent<T>>_events[i]).value);\n   ..\n   88      if (this.hasError) {\n   89        subscriber.error(this.thrownError);\n   90:     } else if (this.isStopped) {\n   91        subscriber.complete();\n   92      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/scheduler/AsyncAction.ts:\n   97      if (error) {\n   98        return error;\n   99:     } else if (this.pending === false && this.id != null) {\n  100        // Dequeue if the action didn't reschedule itself. Don't call\n  101        // unsubscribe(), because the action could reschedule later.\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/scheduler/AsyncScheduler.ts:\n   29        if (AsyncScheduler.delegate && AsyncScheduler.delegate !== this) {\n   30          return AsyncScheduler.delegate.now();\n   31:       } else {\n   32          return now();\n   33        }\n   ..\n   38      if (AsyncScheduler.delegate && AsyncScheduler.delegate !== this) {\n   39        return AsyncScheduler.delegate.schedule(work, delay, state);\n   40:     } else {\n   41        return super.schedule(work, delay, state);\n   42      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/scheduler/VirtualTimeScheduler.ts:\n   92        if (a.index === b.index) {\n   93          return 0;\n   94:       } else if (a.index > b.index) {\n   95          return 1;\n   96:       } else {\n   97          return -1;\n   98        }\n   99:     } else if (a.delay > b.delay) {\n  100        return 1;\n  101:     } else {\n  102        return -1;\n  103      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/Subject.ts:\n  111      if (this.closed) {\n  112        throw new ObjectUnsubscribedError();\n  113:     } else {\n  114        return super._trySubscribe(subscriber);\n  115      }\n  ...\n  120      if (this.closed) {\n  121        throw new ObjectUnsubscribedError();\n  122:     } else if (this.hasError) {\n  123        subscriber.error(this.thrownError);\n  124        return Subscription.EMPTY;\n  125:     } else if (this.isStopped) {\n  126        subscriber.complete();\n  127        return Subscription.EMPTY;\n  128:     } else {\n  129        this.observers.push(subscriber);\n  130        return new SubjectSubscription(this, subscriber);\n  ...\n  180      if (source) {\n  181        return this.source.subscribe(subscriber);\n  182:     } else {\n  183        return Subscription.EMPTY;\n  184      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/Subscriber.ts:\n   77              this.destination = destinationOrNext;\n   78              destinationOrNext.add(this);\n   79:           } else {\n   80              this.syncErrorThrowable = true;\n   81              this.destination = new SafeSubscriber<T>(this, <PartialObserver<any>> destinationOrNext);\n   ..\n  187      if (isFunction(observerOrNext)) {\n  188        next = (<((value: T) => void)> observerOrNext);\n  189:     } else if (observerOrNext) {\n  190        next = (<PartialObserver<T>> observerOrNext).next;\n  191        error = (<PartialObserver<T>> observerOrNext).error;\n  ...\n  211        if (!config.useDeprecatedSynchronousErrorHandling || !_parentSubscriber.syncErrorThrowable) {\n  212          this.__tryOrUnsub(this._next, value);\n  213:       } else if (this.__tryOrSetError(_parentSubscriber, this._next, value)) {\n  214          this.unsubscribe();\n  215        }\n  ...\n  225            this.__tryOrUnsub(this._error, err);\n  226            this.unsubscribe();\n  227:         } else {\n  228            this.__tryOrSetError(_parentSubscriber, this._error, err);\n  229            this.unsubscribe();\n  230          }\n  231:       } else if (!_parentSubscriber.syncErrorThrowable) {\n  232          this.unsubscribe();\n  233          if (useDeprecatedSynchronousErrorHandling) {\n  ...\n  235          }\n  236          hostReportError(err);\n  237:       } else {\n  238          if (useDeprecatedSynchronousErrorHandling) {\n  239            _parentSubscriber.syncErrorValue = err;\n  240            _parentSubscriber.syncErrorThrown = true;\n  241:         } else {\n  242            hostReportError(err);\n  243          }\n  ...\n  256            this.__tryOrUnsub(wrappedComplete);\n  257            this.unsubscribe();\n  258:         } else {\n  259            this.__tryOrSetError(_parentSubscriber, wrappedComplete);\n  260            this.unsubscribe();\n  261          }\n  262:       } else {\n  263          this.unsubscribe();\n  264        }\n  ...\n  273        if (config.useDeprecatedSynchronousErrorHandling) {\n  274          throw err;\n  275:       } else {\n  276          hostReportError(err);\n  277        }\n  ...\n  290          parent.syncErrorThrown = true;\n  291          return true;\n  292:       } else {\n  293          hostReportError(err);\n  294          return true;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/Subscription.ts:\n  110              if (err instanceof UnsubscriptionError) {\n  111                errors = errors.concat(flattenUnsubscriptionErrors(err.errors));\n  112:             } else {\n  113                errors.push(err);\n  114              }\n  ...\n  158          if (subscription.closed || typeof subscription.unsubscribe !== 'function') {\n  159            return subscription;\n  160:         } else if (this.closed) {\n  161            subscription.unsubscribe();\n  162            return subscription;\n  163:         } else if (typeof subscription._addParent !== 'function' /* quack quack */) {\n  164            const tmp = subscription;\n  165            subscription = new Subscription();\n  ...\n  202        // current parent, then set this._parent to the new parent.\n  203        this._parent = parent;\n  204:     } else if (!_parents) {\n  205        // If there's already one parent, but not multiple, allocate an Array to\n  206        // store the rest of the parent Subscriptions.\n  207        this._parents = [parent];\n  208:     } else if (_parents.indexOf(parent) === -1) {\n  209        // Only add the new parent to the _parents list if it's not already there.\n  210        _parents.push(parent);\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/testing/TestScheduler.ts:\n  257      if (unsubscriptionFrame < 0) {\n  258        return new SubscriptionLog(subscriptionFrame);\n  259:     } else {\n  260        return new SubscriptionLog(subscriptionFrame, unsubscriptionFrame);\n  261      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/util/canReportError.ts:\n   13      if (closed || isStopped) {\n   14        return false;\n   15:     } else if (destination && destination instanceof Subscriber) {\n   16        observer = destination;\n   17:     } else {\n   18        observer = null;\n   19      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/util/subscribeTo.ts:\n   19          subscriber.complete();\n   20          return undefined;\n   21:       } else {\n   22          return result.subscribe(subscriber);\n   23        }\n   24      };\n   25:   } else if (result && typeof result[Symbol_observable] === 'function') {\n   26      return subscribeToObservable(result as any);\n   27:   } else if (isArrayLike(result)) {\n   28      return subscribeToArray(result);\n   29:   } else if (isPromise(result)) {\n   30      return subscribeToPromise(result as Promise<any>);\n   31:   } else if (result && typeof result[Symbol_iterator] === 'function') {\n   32      return subscribeToIterable(result as any);\n   33:   } else {\n   34      const value = isObject(result) ? 'an invalid object' : `'${result}'`;\n   35      const msg = `You provided ${value} where a stream was expected.`\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/internal/util/subscribeToObservable.ts:\n   12      // Should be caught by observable subscribe function error handling.\n   13      throw new TypeError('Provided object does not correctly implement Symbol.observable');\n   14:   } else {\n   15      return obs.subscribe(subscriber);\n   16    }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/rxjs/src/MiscJSDoc.ts:\n   30     *\n   31     * Calling `next` with a value will emit that value to the observer. Calling `complete`\n   32:    * means that Observable finished emitting and will not do anything else.\n   33     * Calling `error` means that something went wrong - value passed to `error` method should\n   34     * provide details on what exactly happened.\n   35     *\n   36     * A well-formed Observable can emit as many values as it needs via `next` method,\n   37:    * but `complete` and `error` methods can be called only once and nothing else can be called\n   38     * thereafter. If you try to invoke `next`, `complete` or `error` methods after created\n   39     * Observable already completed or ended with an error, these calls will be ignored to\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/semver-dsl/index.d.ts:\n    9  }\n   10  export interface ISemVerContextBoundDSL {\n   11:     elseIf: ISemVerDSL;\n   12:     else(callback: Function): void;\n   13  }\n   14  export declare const SemVerDSL: (target: string, lastPredicate?: () => boolean) => {\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/typescript/lib/lib.dom.d.ts:\n 12396      readonly in2: SVGAnimatedString;\n 12397      readonly scale: SVGAnimatedNumber;\n 12398:     readonly xChannelSelector: SVGAnimatedEnumeration;\n 12399:     readonly yChannelSelector: SVGAnimatedEnumeration;\n 12400      readonly SVG_CHANNEL_A: number;\n 12401      readonly SVG_CHANNEL_B: number;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/typescript/lib/protocol.d.ts:\n  207      interface SpanOfEnclosingCommentRequestArgs extends FileLocationRequestArgs {\n  208          /**\n  209:          * Requires that the enclosing span be a multi-line comment, or else the request returns undefined.\n  210           */\n  211          onlyMultiLine: boolean;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/typescript/lib/tsserverlibrary.d.ts:\n   71      }\n   72      type JsDocSyntaxKind = SyntaxKind.EndOfFileToken | SyntaxKind.WhitespaceTrivia | SyntaxKind.AtToken | SyntaxKind.NewLineTrivia | SyntaxKind.AsteriskToken | SyntaxKind.OpenBraceToken | SyntaxKind.CloseBraceToken | SyntaxKind.LessThanToken | SyntaxKind.OpenBracketToken | SyntaxKind.CloseBracketToken | SyntaxKind.EqualsToken | SyntaxKind.CommaToken | SyntaxKind.DotToken | SyntaxKind.Identifier | SyntaxKind.NoSubstitutionTemplateLiteral | SyntaxKind.Unknown | KeywordSyntaxKind;\n   73:     type KeywordSyntaxKind = SyntaxKind.AbstractKeyword | SyntaxKind.AnyKeyword | SyntaxKind.AsKeyword | SyntaxKind.BooleanKeyword | SyntaxKind.BreakKeyword | SyntaxKind.CaseKeyword | SyntaxKind.CatchKeyword | SyntaxKind.ClassKeyword | SyntaxKind.ContinueKeyword | SyntaxKind.ConstKeyword | SyntaxKind.ConstructorKeyword | SyntaxKind.DebuggerKeyword | SyntaxKind.DeclareKeyword | SyntaxKind.DefaultKeyword | SyntaxKind.DeleteKeyword | SyntaxKind.DoKeyword | SyntaxKind.ElseKeyword | SyntaxKind.EnumKeyword | SyntaxKind.ExportKeyword | SyntaxKind.ExtendsKeyword | SyntaxKind.FalseKeyword | SyntaxKind.FinallyKeyword | SyntaxKind.ForKeyword | SyntaxKind.FromKeyword | SyntaxKind.FunctionKeyword | SyntaxKind.GetKeyword | SyntaxKind.IfKeyword | SyntaxKind.ImplementsKeyword | SyntaxKind.ImportKeyword | SyntaxKind.InKeyword | SyntaxKind.InferKeyword | SyntaxKind.InstanceOfKeyword | SyntaxKind.InterfaceKeyword | SyntaxKind.IsKeyword | SyntaxKind.KeyOfKeyword | SyntaxKind.LetKeyword | SyntaxKind.ModuleKeyword | SyntaxKind.NamespaceKeyword | SyntaxKind.NeverKeyword | SyntaxKind.NewKeyword | SyntaxKind.NullKeyword | SyntaxKind.NumberKeyword | SyntaxKind.ObjectKeyword | SyntaxKind.PackageKeyword | SyntaxKind.PrivateKeyword | SyntaxKind.ProtectedKeyword | SyntaxKind.PublicKeyword | SyntaxKind.ReadonlyKeyword | SyntaxKind.RequireKeyword | SyntaxKind.GlobalKeyword | SyntaxKind.ReturnKeyword | SyntaxKind.SetKeyword | SyntaxKind.StaticKeyword | SyntaxKind.StringKeyword | SyntaxKind.SuperKeyword | SyntaxKind.SwitchKeyword | SyntaxKind.SymbolKeyword | SyntaxKind.ThisKeyword | SyntaxKind.ThrowKeyword | SyntaxKind.TrueKeyword | SyntaxKind.TryKeyword | SyntaxKind.TypeKeyword | SyntaxKind.TypeOfKeyword | SyntaxKind.UndefinedKeyword | SyntaxKind.UniqueKeyword | SyntaxKind.UnknownKeyword | SyntaxKind.VarKeyword | SyntaxKind.VoidKeyword | SyntaxKind.WhileKeyword | SyntaxKind.WithKeyword | SyntaxKind.YieldKeyword | SyntaxKind.AsyncKeyword | SyntaxKind.AwaitKeyword | SyntaxKind.OfKeyword;\n   74      type JsxTokenSyntaxKind = SyntaxKind.LessThanSlashToken | SyntaxKind.EndOfFileToken | SyntaxKind.ConflictMarkerTrivia | SyntaxKind.JsxText | SyntaxKind.JsxTextAllWhiteSpaces | SyntaxKind.OpenBraceToken | SyntaxKind.LessThanToken;\n   75      enum SyntaxKind {\n   ..\n  156          DeleteKeyword = 80,\n  157          DoKeyword = 81,\n  158:         ElseKeyword = 82,\n  159          EnumKeyword = 83,\n  160          ExportKeyword = 84,\n  ...\n 1230          expression: Expression;\n 1231          thenStatement: Statement;\n 1232:         elseStatement?: Statement;\n 1233      }\n 1234      interface IterationStatement extends Statement {\n ....\n 3829      /** @deprecated Use `updateExpressionStatement` instead.  */\n 3830      const updateStatement: typeof updateExpressionStatement;\n 3831:     function createIf(expression: Expression, thenStatement: Statement, elseStatement?: Statement): IfStatement;\n 3832:     function updateIf(node: IfStatement, expression: Expression, thenStatement: Statement, elseStatement: Statement | undefined): IfStatement;\n 3833      function createDo(statement: Statement, expression: Expression): DoStatement;\n 3834      function updateDo(node: DoStatement, statement: Statement, expression: Expression): DoStatement;\n ....\n 5819      interface SpanOfEnclosingCommentRequestArgs extends FileLocationRequestArgs {\n 5820          /**\n 5821:          * Requires that the enclosing span be a multi-line comment, or else the request returns undefined.\n 5822           */\n 5823          onlyMultiLine: boolean;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/typescript/lib/typescript.d.ts:\n   71      }\n   72      type JsDocSyntaxKind = SyntaxKind.EndOfFileToken | SyntaxKind.WhitespaceTrivia | SyntaxKind.AtToken | SyntaxKind.NewLineTrivia | SyntaxKind.AsteriskToken | SyntaxKind.OpenBraceToken | SyntaxKind.CloseBraceToken | SyntaxKind.LessThanToken | SyntaxKind.OpenBracketToken | SyntaxKind.CloseBracketToken | SyntaxKind.EqualsToken | SyntaxKind.CommaToken | SyntaxKind.DotToken | SyntaxKind.Identifier | SyntaxKind.NoSubstitutionTemplateLiteral | SyntaxKind.Unknown | KeywordSyntaxKind;\n   73:     type KeywordSyntaxKind = SyntaxKind.AbstractKeyword | SyntaxKind.AnyKeyword | SyntaxKind.AsKeyword | SyntaxKind.BooleanKeyword | SyntaxKind.BreakKeyword | SyntaxKind.CaseKeyword | SyntaxKind.CatchKeyword | SyntaxKind.ClassKeyword | SyntaxKind.ContinueKeyword | SyntaxKind.ConstKeyword | SyntaxKind.ConstructorKeyword | SyntaxKind.DebuggerKeyword | SyntaxKind.DeclareKeyword | SyntaxKind.DefaultKeyword | SyntaxKind.DeleteKeyword | SyntaxKind.DoKeyword | SyntaxKind.ElseKeyword | SyntaxKind.EnumKeyword | SyntaxKind.ExportKeyword | SyntaxKind.ExtendsKeyword | SyntaxKind.FalseKeyword | SyntaxKind.FinallyKeyword | SyntaxKind.ForKeyword | SyntaxKind.FromKeyword | SyntaxKind.FunctionKeyword | SyntaxKind.GetKeyword | SyntaxKind.IfKeyword | SyntaxKind.ImplementsKeyword | SyntaxKind.ImportKeyword | SyntaxKind.InKeyword | SyntaxKind.InferKeyword | SyntaxKind.InstanceOfKeyword | SyntaxKind.InterfaceKeyword | SyntaxKind.IsKeyword | SyntaxKind.KeyOfKeyword | SyntaxKind.LetKeyword | SyntaxKind.ModuleKeyword | SyntaxKind.NamespaceKeyword | SyntaxKind.NeverKeyword | SyntaxKind.NewKeyword | SyntaxKind.NullKeyword | SyntaxKind.NumberKeyword | SyntaxKind.ObjectKeyword | SyntaxKind.PackageKeyword | SyntaxKind.PrivateKeyword | SyntaxKind.ProtectedKeyword | SyntaxKind.PublicKeyword | SyntaxKind.ReadonlyKeyword | SyntaxKind.RequireKeyword | SyntaxKind.GlobalKeyword | SyntaxKind.ReturnKeyword | SyntaxKind.SetKeyword | SyntaxKind.StaticKeyword | SyntaxKind.StringKeyword | SyntaxKind.SuperKeyword | SyntaxKind.SwitchKeyword | SyntaxKind.SymbolKeyword | SyntaxKind.ThisKeyword | SyntaxKind.ThrowKeyword | SyntaxKind.TrueKeyword | SyntaxKind.TryKeyword | SyntaxKind.TypeKeyword | SyntaxKind.TypeOfKeyword | SyntaxKind.UndefinedKeyword | SyntaxKind.UniqueKeyword | SyntaxKind.UnknownKeyword | SyntaxKind.VarKeyword | SyntaxKind.VoidKeyword | SyntaxKind.WhileKeyword | SyntaxKind.WithKeyword | SyntaxKind.YieldKeyword | SyntaxKind.AsyncKeyword | SyntaxKind.AwaitKeyword | SyntaxKind.OfKeyword;\n   74      type JsxTokenSyntaxKind = SyntaxKind.LessThanSlashToken | SyntaxKind.EndOfFileToken | SyntaxKind.ConflictMarkerTrivia | SyntaxKind.JsxText | SyntaxKind.JsxTextAllWhiteSpaces | SyntaxKind.OpenBraceToken | SyntaxKind.LessThanToken;\n   75      enum SyntaxKind {\n   ..\n  156          DeleteKeyword = 80,\n  157          DoKeyword = 81,\n  158:         ElseKeyword = 82,\n  159          EnumKeyword = 83,\n  160          ExportKeyword = 84,\n  ...\n 1230          expression: Expression;\n 1231          thenStatement: Statement;\n 1232:         elseStatement?: Statement;\n 1233      }\n 1234      interface IterationStatement extends Statement {\n ....\n 3829      /** @deprecated Use `updateExpressionStatement` instead.  */\n 3830      const updateStatement: typeof updateExpressionStatement;\n 3831:     function createIf(expression: Expression, thenStatement: Statement, elseStatement?: Statement): IfStatement;\n 3832:     function updateIf(node: IfStatement, expression: Expression, thenStatement: Statement, elseStatement: Statement | undefined): IfStatement;\n 3833      function createDo(statement: Statement, expression: Expression): DoStatement;\n 3834      function updateDo(node: DoStatement, statement: Statement, expression: Expression): DoStatement;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/typescript/lib/typescriptServices.d.ts:\n   71      }\n   72      type JsDocSyntaxKind = SyntaxKind.EndOfFileToken | SyntaxKind.WhitespaceTrivia | SyntaxKind.AtToken | SyntaxKind.NewLineTrivia | SyntaxKind.AsteriskToken | SyntaxKind.OpenBraceToken | SyntaxKind.CloseBraceToken | SyntaxKind.LessThanToken | SyntaxKind.OpenBracketToken | SyntaxKind.CloseBracketToken | SyntaxKind.EqualsToken | SyntaxKind.CommaToken | SyntaxKind.DotToken | SyntaxKind.Identifier | SyntaxKind.NoSubstitutionTemplateLiteral | SyntaxKind.Unknown | KeywordSyntaxKind;\n   73:     type KeywordSyntaxKind = SyntaxKind.AbstractKeyword | SyntaxKind.AnyKeyword | SyntaxKind.AsKeyword | SyntaxKind.BooleanKeyword | SyntaxKind.BreakKeyword | SyntaxKind.CaseKeyword | SyntaxKind.CatchKeyword | SyntaxKind.ClassKeyword | SyntaxKind.ContinueKeyword | SyntaxKind.ConstKeyword | SyntaxKind.ConstructorKeyword | SyntaxKind.DebuggerKeyword | SyntaxKind.DeclareKeyword | SyntaxKind.DefaultKeyword | SyntaxKind.DeleteKeyword | SyntaxKind.DoKeyword | SyntaxKind.ElseKeyword | SyntaxKind.EnumKeyword | SyntaxKind.ExportKeyword | SyntaxKind.ExtendsKeyword | SyntaxKind.FalseKeyword | SyntaxKind.FinallyKeyword | SyntaxKind.ForKeyword | SyntaxKind.FromKeyword | SyntaxKind.FunctionKeyword | SyntaxKind.GetKeyword | SyntaxKind.IfKeyword | SyntaxKind.ImplementsKeyword | SyntaxKind.ImportKeyword | SyntaxKind.InKeyword | SyntaxKind.InferKeyword | SyntaxKind.InstanceOfKeyword | SyntaxKind.InterfaceKeyword | SyntaxKind.IsKeyword | SyntaxKind.KeyOfKeyword | SyntaxKind.LetKeyword | SyntaxKind.ModuleKeyword | SyntaxKind.NamespaceKeyword | SyntaxKind.NeverKeyword | SyntaxKind.NewKeyword | SyntaxKind.NullKeyword | SyntaxKind.NumberKeyword | SyntaxKind.ObjectKeyword | SyntaxKind.PackageKeyword | SyntaxKind.PrivateKeyword | SyntaxKind.ProtectedKeyword | SyntaxKind.PublicKeyword | SyntaxKind.ReadonlyKeyword | SyntaxKind.RequireKeyword | SyntaxKind.GlobalKeyword | SyntaxKind.ReturnKeyword | SyntaxKind.SetKeyword | SyntaxKind.StaticKeyword | SyntaxKind.StringKeyword | SyntaxKind.SuperKeyword | SyntaxKind.SwitchKeyword | SyntaxKind.SymbolKeyword | SyntaxKind.ThisKeyword | SyntaxKind.ThrowKeyword | SyntaxKind.TrueKeyword | SyntaxKind.TryKeyword | SyntaxKind.TypeKeyword | SyntaxKind.TypeOfKeyword | SyntaxKind.UndefinedKeyword | SyntaxKind.UniqueKeyword | SyntaxKind.UnknownKeyword | SyntaxKind.VarKeyword | SyntaxKind.VoidKeyword | SyntaxKind.WhileKeyword | SyntaxKind.WithKeyword | SyntaxKind.YieldKeyword | SyntaxKind.AsyncKeyword | SyntaxKind.AwaitKeyword | SyntaxKind.OfKeyword;\n   74      type JsxTokenSyntaxKind = SyntaxKind.LessThanSlashToken | SyntaxKind.EndOfFileToken | SyntaxKind.ConflictMarkerTrivia | SyntaxKind.JsxText | SyntaxKind.JsxTextAllWhiteSpaces | SyntaxKind.OpenBraceToken | SyntaxKind.LessThanToken;\n   75      enum SyntaxKind {\n   ..\n  156          DeleteKeyword = 80,\n  157          DoKeyword = 81,\n  158:         ElseKeyword = 82,\n  159          EnumKeyword = 83,\n  160          ExportKeyword = 84,\n  ...\n 1230          expression: Expression;\n 1231          thenStatement: Statement;\n 1232:         elseStatement?: Statement;\n 1233      }\n 1234      interface IterationStatement extends Statement {\n ....\n 3829      /** @deprecated Use `updateExpressionStatement` instead.  */\n 3830      const updateStatement: typeof updateExpressionStatement;\n 3831:     function createIf(expression: Expression, thenStatement: Statement, elseStatement?: Statement): IfStatement;\n 3832:     function updateIf(node: IfStatement, expression: Expression, thenStatement: Statement, elseStatement: Statement | undefined): IfStatement;\n 3833      function createDo(statement: Statement, expression: Expression): DoStatement;\n 3834      function updateDo(node: DoStatement, statement: Statement, expression: Expression): DoStatement;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/uri-js/src/schemes/mailto.ts:\n  124  \t\t\t\t\tmailtoComponents.error = mailtoComponents.error || \"Email address's domain name can not be converted to ASCII via punycode: \" + e;\n  125  \t\t\t\t}\n  126: \t\t\t} else {\n  127  \t\t\t\taddr[1] = unescapeComponent(addr[1], options).toLowerCase();\n  128  \t\t\t}\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/uri-js/src/schemes/urn.ts:\n   42  \t\t\t\turnComponents = schemeHandler.parse(urnComponents, options) as URNComponents;\n   43  \t\t\t}\n   44: \t\t} else {\n   45  \t\t\turnComponents.error = urnComponents.error || \"URN can not be parsed.\";\n   46  \t\t}\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/uri-js/src/uri.ts:\n   94  \n   95  \tif (c < 16) e = \"%0\" + c.toString(16).toUpperCase();\n   96: \telse if (c < 128) e = \"%\" + c.toString(16).toUpperCase();\n   97: \telse if (c < 2048) e = \"%\" + ((c >> 6) | 192).toString(16).toUpperCase() + \"%\" + ((c & 63) | 128).toString(16).toUpperCase();\n   98: \telse e = \"%\" + ((c >> 12) | 224).toString(16).toUpperCase() + \"%\" + (((c >> 6) & 63) | 128).toString(16).toUpperCase() + \"%\" + ((c & 63) | 128).toString(16).toUpperCase();\n   99  \n  100  \treturn e;\n  ...\n  113  \t\t\ti += 3;\n  114  \t\t}\n  115: \t\telse if (c >= 194 && c < 224) {\n  116  \t\t\tif ((il - i) >= 6) {\n  117  \t\t\t\tconst c2 = parseInt(str.substr(i + 4, 2), 16);\n  118  \t\t\t\tnewStr += String.fromCharCode(((c & 31) << 6) | (c2 & 63));\n  119: \t\t\t} else {\n  120  \t\t\t\tnewStr += str.substr(i, 6);\n  121  \t\t\t}\n  122  \t\t\ti += 6;\n  123  \t\t}\n  124: \t\telse if (c >= 224) {\n  125  \t\t\tif ((il - i) >= 9) {\n  126  \t\t\t\tconst c2 = parseInt(str.substr(i + 4, 2), 16);\n  127  \t\t\t\tconst c3 = parseInt(str.substr(i + 7, 2), 16);\n  128  \t\t\t\tnewStr += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));\n  129: \t\t\t} else {\n  130  \t\t\t\tnewStr += str.substr(i, 9);\n  131  \t\t\t}\n  132  \t\t\ti += 9;\n  133  \t\t}\n  134: \t\telse {\n  135  \t\t\tnewStr += str.substr(i, 3);\n  136  \t\t\ti += 3;\n  ...\n  167  \tif (address) {\n  168  \t\treturn address.split(\".\").map(_stripLeadingZeros).join(\".\");\n  169: \t} else {\n  170  \t\treturn host;\n  171  \t}\n  ...\n  198  \t\t\t\tif (lastLongest && lastLongest.index + lastLongest.length === index) {\n  199  \t\t\t\t\tlastLongest.length++;\n  200: \t\t\t\t} else {\n  201  \t\t\t\t\tacc.push({ index, length : 1 });\n  202  \t\t\t\t}\n  ...\n  212  \t\t\tconst newLast = fields.slice(longestZeroFields.index + longestZeroFields.length);\n  213  \t\t\tnewHost = newFirst.join(\":\") + \"::\" + newLast.join(\":\");\n  214: \t\t} else {\n  215  \t\t\tnewHost = fields.join(\":\");\n  216  \t\t}\n  ...\n  221  \n  222  \t\treturn newHost;\n  223: \t} else {\n  224  \t\treturn host;\n  225  \t}\n  ...\n  252  \t\t\t\tcomponents.port = matches[5];\n  253  \t\t\t}\n  254: \t\t} else {  //IE FIX for improper RegExp matching\n  255  \t\t\t//store each component\n  256  \t\t\tcomponents.scheme = matches[1] || undefined;\n  ...\n  276  \t\tif (components.scheme === undefined && components.userinfo === undefined && components.host === undefined && components.port === undefined && !components.path && components.query === undefined) {\n  277  \t\t\tcomponents.reference = \"same-document\";\n  278: \t\t} else if (components.scheme === undefined) {\n  279  \t\t\tcomponents.reference = \"relative\";\n  280: \t\t} else if (components.fragment === undefined) {\n  281  \t\t\tcomponents.reference = \"absolute\";\n  282: \t\t} else {\n  283  \t\t\tcomponents.reference = \"uri\";\n  284  \t\t}\n  ...\n  305  \t\t\t//convert IRI -> URI\n  306  \t\t\t_normalizeComponentEncoding(components, URI_PROTOCOL);\n  307: \t\t} else {\n  308  \t\t\t//normalize encodings\n  309  \t\t\t_normalizeComponentEncoding(components, protocol);\n  ...\n  314  \t\t\tschemeHandler.parse(components, options);\n  315  \t\t}\n  316: \t} else {\n  317  \t\tcomponents.error = components.error || \"URI can not be parsed.\";\n  318  \t}\n  ...\n  355  \t\tif (input.match(RDS1)) {\n  356  \t\t\tinput = input.replace(RDS1, \"\");\n  357: \t\t} else if (input.match(RDS2)) {\n  358  \t\t\tinput = input.replace(RDS2, \"/\");\n  359: \t\t} else if (input.match(RDS3)) {\n  360  \t\t\tinput = input.replace(RDS3, \"/\");\n  361  \t\t\toutput.pop();\n  362: \t\t} else if (input === \".\" || input === \"..\") {\n  363  \t\t\tinput = \"\";\n  364: \t\t} else {\n  365  \t\t\tconst im = input.match(RDS5);\n  366  \t\t\tif (im) {\n  ...\n  368  \t\t\t\tinput = input.slice(s.length);\n  369  \t\t\t\toutput.push(s);\n  370: \t\t\t} else {\n  371  \t\t\t\tthrow new Error(\"Unexpected dot segment condition\");\n  372  \t\t\t}\n  ...\n  394  \n  395  \t\t//if host component is a domain name\n  396: \t\telse if (options.domainHost || (schemeHandler && schemeHandler.domainHost)) {\n  397  \t\t\t//convert IDN via punycode\n  398  \t\t\ttry {\n  ...\n  469  \t\ttarget.path = removeDotSegments(relative.path || \"\");\n  470  \t\ttarget.query = relative.query;\n  471: \t} else {\n  472  \t\tif (relative.userinfo !== undefined || relative.host !== undefined || relative.port !== undefined) {\n  473  \t\t\t//target.authority = relative.authority;\n  ...\n  477  \t\t\ttarget.path = removeDotSegments(relative.path || \"\");\n  478  \t\t\ttarget.query = relative.query;\n  479: \t\t} else {\n  480  \t\t\tif (!relative.path) {\n  481  \t\t\t\ttarget.path = base.path;\n  482  \t\t\t\tif (relative.query !== undefined) {\n  483  \t\t\t\t\ttarget.query = relative.query;\n  484: \t\t\t\t} else {\n  485  \t\t\t\t\ttarget.query = base.query;\n  486  \t\t\t\t}\n  487: \t\t\t} else {\n  488  \t\t\t\tif (relative.path.charAt(0) === \"/\") {\n  489  \t\t\t\t\ttarget.path = removeDotSegments(relative.path);\n  490: \t\t\t\t} else {\n  491  \t\t\t\t\tif ((base.userinfo !== undefined || base.host !== undefined || base.port !== undefined) && !base.path) {\n  492  \t\t\t\t\t\ttarget.path = \"/\" + relative.path;\n  493: \t\t\t\t\t} else if (!base.path) {\n  494  \t\t\t\t\t\ttarget.path = relative.path;\n  495: \t\t\t\t\t} else {\n  496  \t\t\t\t\t\ttarget.path = base.path.slice(0, base.path.lastIndexOf(\"/\") + 1) + relative.path;\n  497  \t\t\t\t\t}\n  ...\n  523  \tif (typeof uri === \"string\") {\n  524  \t\turi = serialize(parse(uri, options), options);\n  525: \t} else if (typeOf(uri) === \"object\") {\n  526  \t\turi = parse(serialize(<URIComponents>uri, options), options);\n  527  \t}\n  ...\n  535  \tif (typeof uriA === \"string\") {\n  536  \t\turiA = serialize(parse(uriA, options), options);\n  537: \t} else if (typeOf(uriA) === \"object\") {\n  538  \t\turiA = serialize(<URIComponents>uriA, options);\n  539  \t}\n  ...\n  541  \tif (typeof uriB === \"string\") {\n  542  \t\turiB = serialize(parse(uriB, options), options);\n  543: \t} else if (typeOf(uriB) === \"object\") {\n  544  \t\turiB = serialize(<URIComponents>uriB, options);\n  545  \t}\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/uri-js/src/util.ts:\n    8  \t\tsets[xl] = sets[xl].slice(1);\n    9  \t\treturn sets.join('');\n   10: \t} else {\n   11  \t\treturn sets[0];\n   12  \t}\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/browser/browser.ts:\n  183              // if the XHR is sync there is no task to schedule, just execute the code.\n  184              return sendNative.apply(self, args);\n  185:           } else {\n  186              const options: XHROptions = {\n  187                target: self,\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/browser/define-property.ts:\n   92        if (typeof originalConfigurableFlag == 'undefined') {\n   93          delete desc.configurable;\n   94:       } else {\n   95          desc.configurable = originalConfigurableFlag;\n   96        }\n   ..\n  107                      }' on object '${obj}' and got error, giving up: ${error}`);\n  108        }\n  109:     } else {\n  110        throw error;\n  111      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/browser/event-target.ts:\n   27      // Workaround for: https://github.com/google/tracing-framework/issues/555\n   28      apis = WTF_ISSUE_555_ARRAY.map((v) => 'HTML' + v + 'Element').concat(NO_EVENT_TARGET);\n   29:   } else if (_global[EVENT_TARGET]) {\n   30      apis.push(EVENT_TARGET);\n   31:   } else {\n   32      // Note: EventTarget is not available in all browsers,\n   33      // if it's not available, we instead patch the APIs in the IDL that inherit from EventTarget\n   ..\n   79            return false;\n   80          }\n   81:       } else {\n   82          const testString = delegate.toString();\n   83          if ((testString === FUNCTION_WRAPPER || testString == BROWSER_TOOLS)) {\n   ..\n   86          }\n   87        }\n   88:     } else if (isEnableCrossContextCheck) {\n   89        try {\n   90          delegate.toString();\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/browser/property-descriptor.ts:\n  326        patchFilteredProperties(WebSocket.prototype, websocketEventNames, ignoreProperties);\n  327      }\n  328:   } else {\n  329      // Safari, Android browsers (Jelly Bean)\n  330      patchViaCapturingAllTheEvents();\n  ...\n  369      ObjectDefineProperty(XMLHttpRequestPrototype, ON_READY_STATE_CHANGE, xhrDesc || {});\n  370      return result;\n  371:   } else {\n  372      const SYMBOL_FAKE_ONREADYSTATECHANGE = zoneSymbol('fake');\n  373      ObjectDefineProperty(XMLHttpRequestPrototype, ON_READY_STATE_CHANGE, {\n  ...\n  403        if (elt) {\n  404          source = elt.constructor['name'] + '.' + onproperty;\n  405:       } else {\n  406          source = 'unknown.' + onproperty;\n  407        }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/browser/register-element.ts:\n   30              descriptor.value = wrapWithCurrentZone(descriptor.value, source);\n   31              _redefineProperty(opts.prototype, callback, descriptor);\n   32:           } else {\n   33              prototype[callback] = wrapWithCurrentZone(prototype[callback], source);\n   34            }\n   35:         } else if (prototype[callback]) {\n   36            prototype[callback] = wrapWithCurrentZone(prototype[callback], source);\n   37          }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/browser/webapis-media-query.ts:\n   14          callback[api.symbol('mediaQueryCallback')] = wrapperedCallback;\n   15          return delegate.call(self, wrapperedCallback);\n   16:       } else {\n   17          return delegate.apply(self, args);\n   18        }\n   ..\n   27          if (wrapperedCallback) {\n   28            return delegate.call(self, wrapperedCallback);\n   29:         } else {\n   30            return delegate.apply(self, args);\n   31          }\n   32:       } else {\n   33          return delegate.apply(self, args);\n   34        }\n   ..\n   40      patchAddListener(proto);\n   41      patchRemoveListener(proto);\n   42:   } else if (global['matchMedia']) {\n   43      api.patchMethod(global, 'matchMedia', (delegate: Function) => (self: any, args: any[]) => {\n   44        const mql = delegate.apply(self, args);\n   ..\n   53            patchAddListener(mql);\n   54            patchRemoveListener(mql);\n   55:         } else if (mql['addListener']) {\n   56            // proto not exists, or proto has no addListener method \n   57            // try to patch mql instance\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/browser/webapis-resize-observer.ts:\n   37              zoneEntriesInfo.zone.run(\n   38                  callback, this, [zoneEntriesInfo.entries, observer], 'ResizeObserver');\n   39:           } else {\n   40              callback.call(this, zoneEntriesInfo.entries, observer);\n   41            }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/browser/websocket.ts:\n   46          };\n   47        });\n   48:     } else {\n   49        // we can patch the real socket\n   50        proxySocket = socket;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/common/error-rewrite.ts:\n   83                  // This is the special frame where zone changed. Print and process it accordingly\n   84                  zoneFrame = zoneFrame.parent;\n   85:               } else {\n   86                  zoneFrame = null;\n   87                }\n   ..\n  236                  if (fnName.indexOf(RUN_GUARDED) !== -1) {\n  237                    runGuardedFrame = true;\n  238:                 } else if (fnName.indexOf(RUN_TASK) !== -1) {\n  239                    runTaskFrame = true;\n  240:                 } else if (fnName.indexOf(RUN) !== -1) {\n  241                    runFrame = true;\n  242:                 } else {\n  243                    frameType = FrameType.blackList;\n  244                  }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/common/events.ts:\n  110        if (tasks.length === 1) {\n  111          invokeTask(tasks[0], target, event);\n  112:       } else {\n  113          // https://github.com/angular/zone.js/issues/836\n  114          // copy the tasks array before invoke, to avoid\n  ...\n  142        if (tasks.length === 1) {\n  143          invokeTask(tasks[0], target, event);\n  144:       } else {\n  145          // https://github.com/angular/zone.js/issues/836\n  146          // copy the tasks array before invoke, to avoid\n  ...\n  335          if (options === undefined) {\n  336            capture = false;\n  337:         } else if (options === true) {\n  338            capture = true;\n  339:         } else if (options === false) {\n  340            capture = false;\n  341:         } else {\n  342            capture = options ? !!options.capture : false;\n  343            once = options ? !!options.once : false;\n  ...\n  357            zoneSymbolEventNames[eventName][TRUE_STR] = symbolCapture;\n  358            symbolEventName = capture ? symbolCapture : symbol;\n  359:         } else {\n  360            symbolEventName = symbolEventNames[capture ? TRUE_STR : FALSE_STR];\n  361          }\n  ...\n  373              }\n  374            }\n  375:         } else {\n  376            existingTasks = target[symbolEventName] = [];\n  377          }\n  ...\n  433          if (!prepend) {\n  434            existingTasks.push(task);\n  435:         } else {\n  436            existingTasks.unshift(task);\n  437          }\n  ...\n  460        if (options === undefined) {\n  461          capture = false;\n  462:       } else if (options === true) {\n  463          capture = true;\n  464:       } else if (options === false) {\n  465          capture = false;\n  466:       } else {\n  467          capture = options ? !!options.capture : false;\n  468        }\n  ...\n  547          // remove removeListener listener finally\n  548          this[REMOVE_ALL_LISTENERS_EVENT_LISTENER].call(this, 'removeListener');\n  549:       } else {\n  550          const symbolEventNames = zoneSymbolEventNames[eventName];\n  551          if (symbolEventNames) {\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/common/promise.ts:\n   38              (<Zone>e.zone).name, '; Task:', e.task && (<Task>e.task).source, '; Value:', rejection,\n   39              rejection instanceof Error ? rejection.stack : undefined);\n   40:       } else {\n   41          console.error(e);\n   42        }\n   ..\n  149          clearRejectedNoCatch(<Promise<any>>value);\n  150          resolvePromise(promise, (value as any)[symbolState], (value as any)[symbolValue]);\n  151:       } else if (state !== REJECTED && typeof then === 'function') {\n  152          try {\n  153            then.call(\n  ...\n  159            })();\n  160          }\n  161:       } else {\n  162          (promise as any)[symbolState] = state;\n  163          const queue = (promise as any)[symbolValue];\n  ...\n  356        if ((this as any)[symbolState] == UNRESOLVED) {\n  357          (<any[]>(this as any)[symbolValue]).push(zone, chainPromise, onFulfilled, onRejected);\n  358:       } else {\n  359          scheduleResolveOrReject(this, zone, chainPromise, onFulfilled, onRejected);\n  360        }\n  ...\n  374        if ((this as any)[symbolState] == UNRESOLVED) {\n  375          (<any[]>(this as any)[symbolValue]).push(zone, chainPromise, onFinally, onFinally);\n  376:       } else {\n  377          scheduleResolveOrReject(this, zone, chainPromise, onFinally, onFinally);\n  378        }\n  ...\n  407          // save to global\n  408          global[ZONE_AWARE_PROMISE] = NewNativePromise;\n  409:       } else {\n  410          // if the NewNativePromise is not ZoneAwarePromise\n  411          // for example: after load zone.js, some library just\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/common/timers.ts:\n   42              // from local cache\n   43              delete tasksByHandleId[data.handleId];\n   44:           } else if (data.handleId) {\n   45              // Node returns complex objects as handleIds\n   46              // we remove task reference from timer object\n   ..\n   79              // mapping in local cache for clearTimeout\n   80              tasksByHandleId[handle] = task;\n   81:           } else if (handle) {\n   82              // for nodejs env, we save task\n   83              // reference in timerId Object for clearTimeout\n   ..\n   96            }\n   97            return task;\n   98:         } else {\n   99            // cause an error by calling it directly.\n  100            return delegate.apply(window, args);\n  ...\n  109            // non nodejs env.\n  110            task = tasksByHandleId[id];\n  111:         } else {\n  112            // nodejs env.\n  113            task = id && id[taskSymbol];\n  ...\n  122              if (typeof id === 'number') {\n  123                delete tasksByHandleId[id];\n  124:             } else if (id) {\n  125                id[taskSymbol] = null;\n  126              }\n  ...\n  128              task.zone.cancelTask(task);\n  129            }\n  130:         } else {\n  131            // cause an error by calling it directly.\n  132            delegate.apply(window, args);\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/common/to-string.ts:\n   23          if (typeof originalDelegate === 'function') {\n   24            return originalFunctionToString.apply(this[ORIGINAL_DELEGATE_SYMBOL], arguments);\n   25:         } else {\n   26            return Object.prototype.toString.call(originalDelegate);\n   27          }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/common/utils.ts:\n  201        target[eventNameSymbol] = newValue;\n  202        target.addEventListener(eventName, wrapFn, false);\n  203:     } else {\n  204        target[eventNameSymbol] = null;\n  205      }\n  ...\n  221      if (listener) {\n  222        return listener;\n  223:     } else if (originalDescGet) {\n  224        // result will be null when use inline event attribute,\n  225        // such as <button onclick=\"func();\">OK</button>\n  ...\n  248        patchProperty(obj, 'on' + properties[i], prototype);\n  249      }\n  250:   } else {\n  251      const onProperties = [];\n  252      for (const prop in obj) {\n  ...\n  307            return this[originalInstanceKey][prop].apply(this[originalInstanceKey], arguments);\n  308          };\n  309:       } else {\n  310          ObjectDefineProperty(_global[className].prototype, prop, {\n  311            set: function(fn) {\n  ...\n  316                // the native one.\n  317                attachOriginToPatched(this[originalInstanceKey][prop], fn);\n  318:             } else {\n  319                this[originalInstanceKey][prop] = fn;\n  320              }\n  ...\n  392        return scheduleMacroTaskWithCurrentZone(\n  393            meta.name, args[meta.cbIdx], meta, scheduleTask, null);\n  394:     } else {\n  395        // cause an error by calling it directly.\n  396        return delegate.apply(self, args);\n  ...\n  423      if (meta.cbIdx >= 0 && typeof args[meta.cbIdx] === 'function') {\n  424        return Zone.current.scheduleMicroTask(meta.name, args[meta.cbIdx], meta, scheduleTask);\n  425:     } else {\n  426        // cause an error by calling it directly.\n  427        return delegate.apply(self, args);\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/extra/jsonp.ts:\n   34              task.callback = delegate;\n   35              return task.invoke.apply(self, args);\n   36:           } else {\n   37              return delegate.apply(self, args);\n   38            }\n   39          });\n   40:       } else {\n   41          Object.defineProperty(global, methodName, {\n   42            configurable: true,\n   ..\n   54                  global[api.symbol('jsonpTask')] = undefined;\n   55                  return task.invoke.apply(this, arguments);\n   56:               } else {\n   57                  if (delegate) {\n   58                    return delegate.apply(this, arguments);\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/jasmine/jasmine.ts:\n  138      if (done) {\n  139        return testProxyZone.run(testBody, applyThis, [done]);\n  140:     } else {\n  141        return testProxyZone.run(testBody, applyThis);\n  142      }\n  ...\n  206          }\n  207          attrs.userContext.queueRunner = this;\n  208:       } else {\n  209          if (!attrs.userContext) {\n  210            attrs.userContext = {};\n  ...\n  267          Zone.current.scheduleMicroTask(\n  268              'jasmine.execute().forceTask', () => QueueRunner.prototype.execute.call(this));\n  269:       } else {\n  270          _super.prototype.execute.call(this);\n  271        }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/node/node.ts:\n   64      patchTimer(global, set, clear, 'Interval');\n   65      patchTimer(global, set, clear, 'Immediate');\n   66:   } else {\n   67      // global use timers setTimeout, but not equals\n   68      // this happens when use nodejs v0.10.x, global setTimeout will\n   ..\n  106              if (evtName === 'unhandledRejection') {\n  107                eventTask.invoke(e.rejection, e.promise);\n  108:             } else if (evtName === 'rejectionHandled') {\n  109                eventTask.invoke(e.promise);\n  110              }\n  ...\n  152          if (Zone.current === Zone.root) {\n  153            return originalMethod.apply(this, args);\n  154:         } else {\n  155            return Zone.root.run(originalMethod, this, args);\n  156          }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/rxjs/rxjs.ts:\n   80            if ((this as any)._zoneSubscribe) {\n   81              return (this as any)._zoneSubscribe;\n   82:           } else if (this.constructor === Observable) {\n   83              return _subscribe;\n   84            }\n   ..\n  138              // Restore the zone before invoking the subscribe callback.\n  139              _zone.run(unsubscribe, this);\n  140:           } else {\n  141              unsubscribe.apply(this);\n  142            }\n  ...\n  172        if (subscriptionZone && subscriptionZone !== currentZone) {\n  173          return subscriptionZone.run(next, this, arguments, nextSource);\n  174:       } else {\n  175          return next.apply(this, arguments);\n  176        }\n  ...\n  185        if (subscriptionZone && subscriptionZone !== currentZone) {\n  186          return subscriptionZone.run(error, this, arguments, errorSource);\n  187:       } else {\n  188          return error.apply(this, arguments);\n  189        }\n  ...\n  198        if (subscriptionZone && subscriptionZone !== currentZone) {\n  199          return subscriptionZone.run(complete, this, arguments, completeSource);\n  200:       } else {\n  201          return complete.apply(this, arguments);\n  202        }\n  ...\n  263              if (initZone && runningZone && initZone !== runningZone) {\n  264                return initZone.run(arg, this, argArgs);\n  265:             } else {\n  266                return arg.apply(this, argArgs);\n  267              }\n  ...\n  301          if (_zone && _zone !== Zone.current) {\n  302            subject = _zone.run(subjectOrSubjectFactory, this, arguments);\n  303:         } else {\n  304            subject = subjectOrSubjectFactory.apply(this, arguments);\n  305          }\n  ...\n  340          if (scheduleZone && scheduleZone !== Zone.current) {\n  341            return scheduleZone.runGuarded(work, this, arguments);\n  342:         } else {\n  343            return work.apply(this, arguments);\n  344          }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/testing/async-testing.ts:\n   30            if (typeof err === 'string') {\n   31              return done.fail(new Error(<string>err));\n   32:           } else {\n   33              done.fail(err);\n   34            }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/zone-spec/async-test.ts:\n  138        this._pendingMicroTasks = hasTaskState.microTask;\n  139        this._finishCallbackIfDone();\n  140:     } else if (hasTaskState.change == 'macroTask') {\n  141        this._pendingMacroTasks = hasTaskState.macroTask;\n  142        this._finishCallbackIfDone();\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/zone-spec/fake-async-test.ts:\n   37          d.setTime(FakeDate.now());\n   38          return d;\n   39:       } else {\n   40          const args = Array.prototype.slice.call(arguments);\n   41          return new OriginalDate(...args);\n   ..\n  136            // Done processing the queue since it's sorted by endTime.\n  137            break;\n  138:         } else {\n  139            // Time to run scheduled function. Remove it from the head of queue.\n  140            let current = this._schedulerQueue.shift();\n  ...\n  157        if (flushPeriodic) {\n  158          return this.flushPeriodic(doTick);\n  159:       } else {\n  160          return this.flushNonPeriodic(limit, doTick);\n  161        }\n  ...\n  250            // Flush microtasks only on success.\n  251            this.flushMicrotasks();\n  252:         } else {  // Failure\n  253            if (completers.onError != null) {\n  254              completers.onError.apply(global);\n  ...\n  485                    task.data['handleId'] = this._setInterval(task.invoke, delay, callbackArgs);\n  486                    task.data.isPeriodic = true;\n  487:                 } else {\n  488                    // not periodic, use setTimeout to simulate\n  489                    task.data['handleId'] = this._setTimeout(task.invoke, delay, callbackArgs);\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/zone-spec/long-stack-trace.ts:\n  166      if (frame1 === frame2) {\n  167        IGNORE_FRAMES[frame1] = true;\n  168:     } else {\n  169        break;\n  170      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/zone-spec/proxy.ts:\n  110      if (this._delegateSpec && this._delegateSpec.onFork) {\n  111        return this._delegateSpec.onFork(parentZoneDelegate, currentZone, targetZone, zoneSpec);\n  112:     } else {\n  113        return parentZoneDelegate.fork(targetZone, zoneSpec);\n  114      }\n  ...\n  122        return this._delegateSpec.onIntercept(\n  123            parentZoneDelegate, currentZone, targetZone, delegate, source);\n  124:     } else {\n  125        return parentZoneDelegate.intercept(targetZone, delegate, source);\n  126      }\n  ...\n  135        return this._delegateSpec.onInvoke(\n  136            parentZoneDelegate, currentZone, targetZone, delegate, applyThis, applyArgs, source);\n  137:     } else {\n  138        return parentZoneDelegate.invoke(targetZone, delegate, applyThis, applyArgs, source);\n  139      }\n  ...\n  144      if (this._delegateSpec && this._delegateSpec.onHandleError) {\n  145        return this._delegateSpec.onHandleError(parentZoneDelegate, currentZone, targetZone, error);\n  146:     } else {\n  147        return parentZoneDelegate.handleError(targetZone, error);\n  148      }\n  ...\n  156      if (this._delegateSpec && this._delegateSpec.onScheduleTask) {\n  157        return this._delegateSpec.onScheduleTask(parentZoneDelegate, currentZone, targetZone, task);\n  158:     } else {\n  159        return parentZoneDelegate.scheduleTask(targetZone, task);\n  160      }\n  ...\n  171        return this._delegateSpec.onInvokeTask(\n  172            parentZoneDelegate, currentZone, targetZone, task, applyThis, applyArgs);\n  173:     } else {\n  174        return parentZoneDelegate.invokeTask(targetZone, task, applyThis, applyArgs);\n  175      }\n  ...\n  184      if (this._delegateSpec && this._delegateSpec.onCancelTask) {\n  185        return this._delegateSpec.onCancelTask(parentZoneDelegate, currentZone, targetZone, task);\n  186:     } else {\n  187        return parentZoneDelegate.cancelTask(targetZone, task);\n  188      }\n  ...\n  193      if (this._delegateSpec && this._delegateSpec.onHasTask) {\n  194        this._delegateSpec.onHasTask(delegate, current, target, hasTaskState);\n  195:     } else {\n  196        delegate.hasTask(target, hasTaskState);\n  197      }\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/zone.js/lib/zone.ts:\n  682        if (patches.hasOwnProperty(name)) {\n  683          throw Error('Already loaded patch: ' + name);\n  684:       } else if (!global['__Zone_disable_' + name]) {\n  685          const perfName = 'Zone:' + name;\n  686          mark(perfName);\n  ...\n  815            if (task.type == eventTask || (task.data && task.data.isPeriodic)) {\n  816              reEntryGuard && (task as ZoneTask<any>)._transitionTo(scheduled, running);\n  817:           } else {\n  818              task.runCount = 0;\n  819              this._updateTaskCount(task as ZoneTask<any>, -1);\n  ...\n 1087              this._scheduleTaskDlgt, this._scheduleTaskCurrZone, targetZone, task) as ZoneTask<any>;\n 1088          if (!returnTask) returnTask = task as ZoneTask<any>;\n 1089:       } else {\n 1090          if (task.scheduleFn) {\n 1091            task.scheduleFn(task);\n 1092:         } else if (task.type == microTask) {\n 1093            scheduleMicroTask(<MicroTask>task);\n 1094:         } else {\n 1095            throw new Error('Task is missing scheduleFn.');\n 1096          }\n ....\n 1112          value = this._cancelTaskZS.onCancelTask(\n 1113              this._cancelTaskDlgt, this._cancelTaskCurrZone, targetZone, task);\n 1114:       } else {\n 1115          if (!task.cancelFn) {\n 1116            throw Error('Task is not cancelable');\n ....\n 1178        if (type === eventTask && options && (options as any).useG) {\n 1179          this.invoke = ZoneTask.invokeTask;\n 1180:       } else {\n 1181          this.invoke = function() {\n 1182            return ZoneTask.invokeTask.call(global, self, this, <any>arguments);\n ....\n 1219            this._zoneDelegates = null;\n 1220          }\n 1221:       } else {\n 1222          throw new Error(\n 1223              `${this.type} '${this.source}': can not transition to '${toState\n ....\n 1232        if (this.data && typeof this.data.handleId !== 'undefined') {\n 1233          return this.data.handleId;\n 1234:       } else {\n 1235          return Object.prototype.toString.call(this);\n 1236        }\n ....\n 1274        if (nativeMicroTaskQueuePromise) {\n 1275          nativeMicroTaskQueuePromise[symbolThen](drainMicroTaskQueue);\n 1276:       } else {\n 1277          global[symbolSetTimeout](drainMicroTaskQueue, 0);\n 1278        }\n\n399 matches across 133 files\n\n\nSearching 4258 files for \"ng-template\"\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/common/src/directives/ng_for_of.d.ts:\n   78   * - `<li *ngFor=\"let item of items; index as i; trackBy: trackByFn\">...</li>`\n   79   *\n   80:  * With `<ng-template>` element:\n   81   *\n   82   * ```\n   83:  * <ng-template ngFor let-item [ngForOf]=\"items\" let-i=\"index\" [ngForTrackBy]=\"trackByFn\">\n   84   *   <li>...</li>\n   85:  * </ng-template>\n   86   * ```\n   87   *\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/common/src/directives/ng_if.d.ts:\n   27   *\n   28   * If it is necessary to display a template when the `expression` is falsy use the `else` template\n   29:  * binding as shown. Note that the `else` binding points to a `<ng-template>` labeled `#elseBlock`.\n   30   * The template can be defined anywhere in the component view but is typically placed right after\n   31   * `ngIf` for readability.\n   ..\n   76   * Simple form:\n   77   * - `<div *ngIf=\"condition\">...</div>`\n   78:  * - `<ng-template [ngIf]=\"condition\"><div>...</div></ng-template>`\n   79   *\n   80   * Form with an else block:\n   81   * ```\n   82   * <div *ngIf=\"condition; else elseBlock\">...</div>\n   83:  * <ng-template #elseBlock>...</ng-template>\n   84   * ```\n   85   *\n   ..\n   87   * ```\n   88   * <div *ngIf=\"condition; then thenBlock else elseBlock\"></div>\n   89:  * <ng-template #thenBlock>...</ng-template>\n   90:  * <ng-template #elseBlock>...</ng-template>\n   91   * ```\n   92   *\n   ..\n   94   * ```\n   95   * <div *ngIf=\"condition as value; else elseBlock\">{{value}}</div>\n   96:  * <ng-template #elseBlock>...</ng-template>\n   97   * ```\n   98   *\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/common/src/directives/ng_plural.d.ts:\n   15   * ```\n   16   * <some-element [ngPlural]=\"value\">\n   17:  *   <ng-template ngPluralCase=\"=0\">there is nothing</ng-template>\n   18:  *   <ng-template ngPluralCase=\"=1\">there is one</ng-template>\n   19:  *   <ng-template ngPluralCase=\"few\">there are a few</ng-template>\n   20   * </some-element>\n   21   * ```\n   ..\n   63   * ```\n   64   * <some-element [ngPlural]=\"value\">\n   65:  *   <ng-template ngPluralCase=\"=0\">...</ng-template>\n   66:  *   <ng-template ngPluralCase=\"other\">...</ng-template>\n   67   * </some-element>\n   68   *```\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/compiler-cli/src/diagnostics/symbols.d.ts:\n   53      /**\n   54       * The language of the source that defines the symbol. (e.g. typescript for TypeScript,\n   55:      * ng-template for an Angular template, etc.)\n   56       */\n   57      readonly language: string;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/compiler/src/ml_parser/icu_ast_expander.d.ts:\n   25   * ```\n   26   * <ng-container [ngPlural]=\"messages.length\">\n   27:  *   <ng-template ngPluralCase=\"=0\">zero</ng-template>\n   28:  *   <ng-template ngPluralCase=\"=1\">one</ng-template>\n   29:  *   <ng-template ngPluralCase=\"other\">more than one</ng-template>\n   30   * </ng-container>\n   31   * ```\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/compiler/src/template_parser/template_ast.d.ts:\n  107  }\n  108  /**\n  109:  * A variable declaration on a <ng-template> (e.g. `var-someName=\"someLocalName\"`).\n  110   */\n  111  export declare class VariableAst implements TemplateAst {\n  ...\n  138  }\n  139  /**\n  140:  * A `<ng-template>` element included in an Angular template.\n  141   */\n  142  export declare class EmbeddedTemplateAst implements TemplateAst {\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/core/src/linker/template_ref.d.ts:\n   13   * method `createEmbeddedView()`.\n   14   *\n   15:  * Access a `TemplateRef` instance by placing a directive on an `<ng-template>`\n   16   * element (or directive prefixed with `*`). The `TemplateRef` for the embedded view\n   17   * is injected into the constructor of the directive,\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/core/src/linker/view_ref.d.ts:\n   65   * Count: {{items.length}}\n   66   * <ul>\n   67:  *   <ng-template ngFor let-item [ngForOf]=\"items\"></ng-template>\n   68   * </ul>\n   69   * ```\n   ..\n   81   * Count: 2\n   82   * <ul>\n   83:  *   <ng-template view-container-ref></ng-template>\n   84   *   <!-- ViewRef: inner-1 --><li>first</li><!-- /ViewRef: inner-1 -->\n   85   *   <!-- ViewRef: inner-2 --><li>second</li><!-- /ViewRef: inner-2 -->\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/core/src/metadata/di.d.ts:\n  324       *   * any provider defined through a string token (e.g. `@ViewChild('someToken') someTokenVal:\n  325       * any`)\n  326:      *   * a `TemplateRef` (e.g. query `<ng-template></ng-template>` with `@ViewChild(TemplateRef)\n  327       * template;`)\n  328       *\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/core/src/render3/instructions.d.ts:\n  495  export declare function createLContainer(hostNative: RElement | RComment, hostTNode: TElementNode | TContainerNode | TElementContainerNode, currentView: LViewData, native: RComment, isForViewContainerRef?: boolean): LContainer;\n  496  /**\n  497:  * Creates an LContainer for an ng-template (dynamically-inserted view), e.g.\n  498   *\n  499:  * <ng-template #foo>\n  500   *    <div></div>\n  501:  * </ng-template>\n  502   *\n  503   * @param index The index of the container in the data array\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/core/src/render3/interfaces/node.d.ts:\n  394   * Example:\n  395   * - `<div #nativeDivEl>` - `nativeDivEl` should point to the native `<div>` element;\n  396:  * - `<ng-template #tplRef>` - `tplRef` should point to the `TemplateRef` instance;\n  397   */\n  398  export declare type LocalRefExtractor = (tNode: TNodeWithLocalRefs, currentView: LViewData) => any;\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/core/src/render3/interfaces/view.d.ts:\n  162       * Example (AppComponent template):\n  163       *\n  164:      * <ng-template #foo></ng-template>       <-- declared here -->\n  165       * <some-comp [tpl]=\"foo\"></some-comp>    <-- inserted inside this component -->\n  166       *\n  167:      * The <ng-template> above is declared in the AppComponent template, but it will be passed into\n  168       * SomeComp and inserted there. In this case, the declaration view would be the AppComponent,\n  169       * but the insertion view would be SomeComp. When we are removing views, we would want to\n\n/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/node_modules/@angular/core/src/render3/view_engine_compatibility_prebound.d.ts:\n   11  /**\n   12   * Retrieves `TemplateRef` instance from `Injector` when a local reference is placed on the\n   13:  * `<ng-template>` element.\n   14   */\n   15  export declare function templateRefExtractor(tNode: TNode, currentView: LViewData): ViewEngine_TemplateRef<{}>;\n\n48 matches across 13 files\n",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
+				"buffer_size": 110699,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
 			}
 		},
 		{
-			"file": "_RecipeBook/angular.json",
+			"file": "_RecipeBook/src/app/app.component.ts",
 			"settings":
 			{
-				"buffer_size": 3871,
+				"buffer_size": 268,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_RecipeBook/src/app/app.component.html",
-			"settings":
-			{
-				"buffer_size": 616,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_RecipeBook/src/app/app.module.ts",
-			"settings":
-			{
-				"buffer_size": 1056,
 				"line_ending": "Unix"
 			}
 		},
@@ -96,88 +90,8 @@
 			"file": "CourseNotes.txt",
 			"settings":
 			{
-				"buffer_size": 4775,
+				"buffer_size": 12867,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_RecipeBook/src/app/header/header.component.html",
-			"settings":
-			{
-				"buffer_size": 846,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_RecipeBook/src/app/header/header.component.ts",
-			"settings":
-			{
-				"buffer_size": 165,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_RecipeBook/src/app/shared/ingredient.model.ts",
-			"settings":
-			{
-				"buffer_size": 420,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_RecipeBook/src/app/recipes/recipe-detail/recipe-detail.component.html",
-			"settings":
-			{
-				"buffer_size": 738,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.html",
-			"settings":
-			{
-				"buffer_size": 705,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.ts",
-			"settings":
-			{
-				"buffer_size": 727,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_RecipeBook/src/app/recipes/recipe.model.ts",
-			"settings":
-			{
-				"buffer_size": 276,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_RecipeBook/src/app/recipes/recipes.component.html",
-			"settings":
-			{
-				"buffer_size": 192,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_ExerciseLectureApp/src/app/servers/servers.component.html",
-			"settings":
-			{
-				"buffer_size": 542,
 				"line_ending": "Unix"
 			}
 		},
@@ -185,7 +99,16 @@
 			"file": "_RecipeBook/src/app/shopping-list/shopping-edit/shopping-edit.component.html",
 			"settings":
 			{
-				"buffer_size": 902,
+				"buffer_size": 950,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_RecipeBook/src/app/shopping-list/shopping-edit/shopping-edit.component.ts",
+			"settings":
+			{
+				"buffer_size": 834,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -194,16 +117,7 @@
 			"file": "_RecipeBook/src/app/shopping-list/shopping-list.component.html",
 			"settings":
 			{
-				"buffer_size": 379,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_RecipeBook/src/app/shopping-list/shopping-list.component.ts",
-			"settings":
-			{
-				"buffer_size": 457,
+				"buffer_size": 429,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -220,6 +134,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
 			[
 				"tabs",
 				"TabsExtra: Settings"
@@ -243,10 +161,6 @@
 			[
 				"html ",
 				"HTMLBeautify"
-			],
-			[
-				"install pa",
-				"Package Control: Install Package"
 			],
 			[
 				"typescr",
@@ -552,6 +466,9 @@
 		"height": 197.0,
 		"history":
 		[
+			"dir",
+			"ls",
+			"ng",
 			"sublime.log_commands(False)",
 			"sublime.log_commands(True)",
 			"sublime.log_commands(False)",
@@ -572,27 +489,48 @@
 	[
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/dist",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/header",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe-list",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shopping-list"
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shared",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shopping-list",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shopping-list/shopping-edit",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/cmp-databinding-assignment-start",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/cmp-databinding-assignment-start/src",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/cmp-databinding-assignment-start/src/app",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/cmp-databinding-assignment-start/src/app/even-number",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/cmp-databinding-assignment-start/src/app/game-control"
 	],
 	"file_history":
 	[
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe-detail/recipe-detail.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipes.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipes.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe.model.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe-list/recipe-item/recipe-item.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe-list/recipe-item/recipe-item.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe-detail/recipe-detail.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/app.module.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/app.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/app.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shopping-list/shopping-list.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shopping-list/shopping-list.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shopping-list/shopping-edit/shopping-edit.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shared/ingredient.model.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/header/header.component.ts",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/header/header.component.html",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/CourseNotes.txt",
+		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/angular.json",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/servers/servers.component.ts",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/servers/servers.component.html",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/server/server.component.ts",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/server/server.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/CourseNotes.txt",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/app.module.ts",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_3/src/app/app.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/app.component.ts",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_3/src/app/app.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/app.component.html",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_3/src/app/app.component.css",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/angular.json",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/server/server.component.css",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/favicon.ico",
 		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/tslint.json",
@@ -693,32 +631,18 @@
 		"/C/Windows/System32/drivers/etc/hosts",
 		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/Notes.txt",
 		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/main2.js",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/components/tcom.vue",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/components/HelloWorld.vue",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/components/AGDate2.vue",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/components/agdate.vue",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/components/App.vue",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/components/AGDate.vue",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/App.vue",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/poc/src/App.vue",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/components/HelloWorld.vue",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/dist/index.html",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/config/index.js",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/.eslintrc.js",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/build/webpack.dev.conf.js",
-		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Installed Packages/VueFormatter.sublime-package/.vuebeautifyrc",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/Vue_Agiloft_Poc.sublime-project",
-		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/assets/logo.png"
+		"/E/MyStuff/Personal/Trainings/Vue_Agiloft_Poc/agiloft/src/components/tcom.vue"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 44.0
 	},
 	"find_in_files":
 	{
 		"height": 155.0,
 		"where_history":
 		[
+			"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook,*.ts"
 		]
 	},
 	"find_state":
@@ -726,6 +650,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ng-template",
+			"else",
+			"Add",
+			"display_recipe_evt",
 			"hola",
 			"scratch"
 		],
@@ -746,7 +674,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -754,48 +682,1852 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 110699,
 						"regions":
 						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										318,
+										322
+									],
+									[
+										531,
+										535
+									],
+									[
+										730,
+										734
+									],
+									[
+										837,
+										841
+									],
+									[
+										895,
+										899
+									],
+									[
+										947,
+										951
+									],
+									[
+										1165,
+										1169
+									],
+									[
+										1377,
+										1381
+									],
+									[
+										1405,
+										1409
+									],
+									[
+										1578,
+										1582
+									],
+									[
+										1764,
+										1768
+									],
+									[
+										1823,
+										1827
+									],
+									[
+										1828,
+										1832
+									],
+									[
+										1873,
+										1877
+									],
+									[
+										1959,
+										1963
+									],
+									[
+										2034,
+										2038
+									],
+									[
+										2039,
+										2043
+									],
+									[
+										2133,
+										2137
+									],
+									[
+										2288,
+										2292
+									],
+									[
+										2293,
+										2297
+									],
+									[
+										2344,
+										2348
+									],
+									[
+										2488,
+										2492
+									],
+									[
+										2558,
+										2562
+									],
+									[
+										2759,
+										2763
+									],
+									[
+										3057,
+										3061
+									],
+									[
+										3461,
+										3465
+									],
+									[
+										3781,
+										3785
+									],
+									[
+										4408,
+										4412
+									],
+									[
+										4892,
+										4896
+									],
+									[
+										5243,
+										5247
+									],
+									[
+										5681,
+										5685
+									],
+									[
+										6009,
+										6013
+									],
+									[
+										6326,
+										6330
+									],
+									[
+										6621,
+										6625
+									],
+									[
+										6727,
+										6731
+									],
+									[
+										6954,
+										6958
+									],
+									[
+										7264,
+										7268
+									],
+									[
+										7369,
+										7373
+									],
+									[
+										7697,
+										7701
+									],
+									[
+										7821,
+										7825
+									],
+									[
+										8357,
+										8361
+									],
+									[
+										8896,
+										8900
+									],
+									[
+										10088,
+										10092
+									],
+									[
+										10820,
+										10824
+									],
+									[
+										11320,
+										11324
+									],
+									[
+										11692,
+										11696
+									],
+									[
+										11927,
+										11931
+									],
+									[
+										12234,
+										12238
+									],
+									[
+										12483,
+										12487
+									],
+									[
+										12718,
+										12722
+									],
+									[
+										12828,
+										12832
+									],
+									[
+										13124,
+										13128
+									],
+									[
+										13442,
+										13446
+									],
+									[
+										13529,
+										13533
+									],
+									[
+										13876,
+										13880
+									],
+									[
+										14327,
+										14331
+									],
+									[
+										14623,
+										14627
+									],
+									[
+										14854,
+										14858
+									],
+									[
+										15130,
+										15134
+									],
+									[
+										15380,
+										15384
+									],
+									[
+										15539,
+										15543
+									],
+									[
+										15862,
+										15866
+									],
+									[
+										16116,
+										16120
+									],
+									[
+										16275,
+										16279
+									],
+									[
+										16550,
+										16554
+									],
+									[
+										16942,
+										16946
+									],
+									[
+										17125,
+										17129
+									],
+									[
+										17433,
+										17437
+									],
+									[
+										17719,
+										17723
+									],
+									[
+										17809,
+										17813
+									],
+									[
+										17994,
+										17998
+									],
+									[
+										18210,
+										18214
+									],
+									[
+										18459,
+										18463
+									],
+									[
+										18688,
+										18692
+									],
+									[
+										18851,
+										18855
+									],
+									[
+										19031,
+										19035
+									],
+									[
+										19224,
+										19228
+									],
+									[
+										19453,
+										19457
+									],
+									[
+										19638,
+										19642
+									],
+									[
+										19846,
+										19850
+									],
+									[
+										20016,
+										20020
+									],
+									[
+										20250,
+										20254
+									],
+									[
+										20557,
+										20561
+									],
+									[
+										20807,
+										20811
+									],
+									[
+										21114,
+										21118
+									],
+									[
+										21484,
+										21488
+									],
+									[
+										21733,
+										21737
+									],
+									[
+										21979,
+										21983
+									],
+									[
+										22211,
+										22215
+									],
+									[
+										22383,
+										22387
+									],
+									[
+										22570,
+										22574
+									],
+									[
+										22742,
+										22746
+									],
+									[
+										22945,
+										22949
+									],
+									[
+										23111,
+										23115
+									],
+									[
+										23403,
+										23407
+									],
+									[
+										23661,
+										23665
+									],
+									[
+										23754,
+										23758
+									],
+									[
+										23848,
+										23852
+									],
+									[
+										24189,
+										24193
+									],
+									[
+										24537,
+										24541
+									],
+									[
+										24767,
+										24771
+									],
+									[
+										24972,
+										24976
+									],
+									[
+										25235,
+										25239
+									],
+									[
+										25473,
+										25477
+									],
+									[
+										25770,
+										25774
+									],
+									[
+										25970,
+										25974
+									],
+									[
+										26283,
+										26287
+									],
+									[
+										26608,
+										26612
+									],
+									[
+										26965,
+										26969
+									],
+									[
+										27252,
+										27256
+									],
+									[
+										27450,
+										27454
+									],
+									[
+										27695,
+										27699
+									],
+									[
+										27997,
+										28001
+									],
+									[
+										28257,
+										28261
+									],
+									[
+										28484,
+										28488
+									],
+									[
+										28768,
+										28772
+									],
+									[
+										29058,
+										29062
+									],
+									[
+										29220,
+										29224
+									],
+									[
+										29528,
+										29532
+									],
+									[
+										29824,
+										29828
+									],
+									[
+										29975,
+										29979
+									],
+									[
+										30351,
+										30355
+									],
+									[
+										30524,
+										30528
+									],
+									[
+										30820,
+										30824
+									],
+									[
+										30965,
+										30969
+									],
+									[
+										31223,
+										31227
+									],
+									[
+										31397,
+										31401
+									],
+									[
+										31579,
+										31583
+									],
+									[
+										31758,
+										31762
+									],
+									[
+										32025,
+										32029
+									],
+									[
+										32306,
+										32310
+									],
+									[
+										32514,
+										32518
+									],
+									[
+										32862,
+										32866
+									],
+									[
+										33289,
+										33293
+									],
+									[
+										33726,
+										33730
+									],
+									[
+										33994,
+										33998
+									],
+									[
+										34155,
+										34159
+									],
+									[
+										34476,
+										34480
+									],
+									[
+										34763,
+										34767
+									],
+									[
+										35044,
+										35048
+									],
+									[
+										35327,
+										35331
+									],
+									[
+										35574,
+										35578
+									],
+									[
+										35751,
+										35755
+									],
+									[
+										35862,
+										35866
+									],
+									[
+										36172,
+										36176
+									],
+									[
+										36280,
+										36284
+									],
+									[
+										36589,
+										36593
+									],
+									[
+										36979,
+										36983
+									],
+									[
+										37143,
+										37147
+									],
+									[
+										37366,
+										37370
+									],
+									[
+										37566,
+										37570
+									],
+									[
+										37720,
+										37724
+									],
+									[
+										38046,
+										38050
+									],
+									[
+										38161,
+										38165
+									],
+									[
+										38315,
+										38319
+									],
+									[
+										38724,
+										38728
+									],
+									[
+										39115,
+										39119
+									],
+									[
+										39392,
+										39396
+									],
+									[
+										39663,
+										39667
+									],
+									[
+										39898,
+										39902
+									],
+									[
+										40008,
+										40012
+									],
+									[
+										40297,
+										40301
+									],
+									[
+										40537,
+										40541
+									],
+									[
+										40637,
+										40641
+									],
+									[
+										40822,
+										40826
+									],
+									[
+										41098,
+										41102
+									],
+									[
+										41394,
+										41398
+									],
+									[
+										41683,
+										41687
+									],
+									[
+										41969,
+										41973
+									],
+									[
+										42168,
+										42172
+									],
+									[
+										42321,
+										42325
+									],
+									[
+										42488,
+										42492
+									],
+									[
+										42687,
+										42691
+									],
+									[
+										42985,
+										42989
+									],
+									[
+										43160,
+										43164
+									],
+									[
+										43357,
+										43361
+									],
+									[
+										43676,
+										43680
+									],
+									[
+										43882,
+										43886
+									],
+									[
+										44176,
+										44180
+									],
+									[
+										44353,
+										44357
+									],
+									[
+										44464,
+										44468
+									],
+									[
+										44737,
+										44741
+									],
+									[
+										45002,
+										45006
+									],
+									[
+										45172,
+										45176
+									],
+									[
+										45465,
+										45469
+									],
+									[
+										45731,
+										45735
+									],
+									[
+										46057,
+										46061
+									],
+									[
+										46309,
+										46313
+									],
+									[
+										46599,
+										46603
+									],
+									[
+										46971,
+										46975
+									],
+									[
+										47396,
+										47400
+									],
+									[
+										47580,
+										47584
+									],
+									[
+										47927,
+										47931
+									],
+									[
+										48404,
+										48408
+									],
+									[
+										48646,
+										48650
+									],
+									[
+										48811,
+										48815
+									],
+									[
+										49106,
+										49110
+									],
+									[
+										49426,
+										49430
+									],
+									[
+										49715,
+										49719
+									],
+									[
+										49880,
+										49884
+									],
+									[
+										49985,
+										49989
+									],
+									[
+										50190,
+										50194
+									],
+									[
+										50432,
+										50436
+									],
+									[
+										50690,
+										50694
+									],
+									[
+										51162,
+										51166
+									],
+									[
+										51384,
+										51388
+									],
+									[
+										51667,
+										51671
+									],
+									[
+										51737,
+										51741
+									],
+									[
+										51798,
+										51802
+									],
+									[
+										51864,
+										51868
+									],
+									[
+										52105,
+										52109
+									],
+									[
+										52277,
+										52281
+									],
+									[
+										52405,
+										52409
+									],
+									[
+										52521,
+										52525
+									],
+									[
+										52736,
+										52740
+									],
+									[
+										53027,
+										53031
+									],
+									[
+										53319,
+										53323
+									],
+									[
+										53657,
+										53661
+									],
+									[
+										53892,
+										53896
+									],
+									[
+										54044,
+										54048
+									],
+									[
+										54264,
+										54268
+									],
+									[
+										54464,
+										54468
+									],
+									[
+										54640,
+										54644
+									],
+									[
+										54791,
+										54795
+									],
+									[
+										54960,
+										54964
+									],
+									[
+										55114,
+										55118
+									],
+									[
+										55463,
+										55467
+									],
+									[
+										55683,
+										55687
+									],
+									[
+										55807,
+										55811
+									],
+									[
+										56106,
+										56110
+									],
+									[
+										56326,
+										56330
+									],
+									[
+										56727,
+										56731
+									],
+									[
+										57022,
+										57026
+									],
+									[
+										57133,
+										57137
+									],
+									[
+										57382,
+										57386
+									],
+									[
+										57481,
+										57485
+									],
+									[
+										57618,
+										57622
+									],
+									[
+										57705,
+										57709
+									],
+									[
+										57808,
+										57812
+									],
+									[
+										57941,
+										57945
+									],
+									[
+										58417,
+										58421
+									],
+									[
+										58763,
+										58767
+									],
+									[
+										59110,
+										59114
+									],
+									[
+										59488,
+										59492
+									],
+									[
+										59519,
+										59523
+									],
+									[
+										59874,
+										59878
+									],
+									[
+										59937,
+										59941
+									],
+									[
+										60352,
+										60356
+									],
+									[
+										61536,
+										61540
+									],
+									[
+										63412,
+										63416
+									],
+									[
+										63599,
+										63603
+									],
+									[
+										63924,
+										63928
+									],
+									[
+										64063,
+										64067
+									],
+									[
+										64505,
+										64509
+									],
+									[
+										65684,
+										65688
+									],
+									[
+										67560,
+										67564
+									],
+									[
+										67747,
+										67751
+									],
+									[
+										68072,
+										68076
+									],
+									[
+										68211,
+										68215
+									],
+									[
+										69553,
+										69557
+									],
+									[
+										71429,
+										71433
+									],
+									[
+										71616,
+										71620
+									],
+									[
+										71941,
+										71945
+									],
+									[
+										72080,
+										72084
+									],
+									[
+										72601,
+										72605
+									],
+									[
+										72905,
+										72909
+									],
+									[
+										73174,
+										73178
+									],
+									[
+										73240,
+										73244
+									],
+									[
+										73374,
+										73378
+									],
+									[
+										73616,
+										73620
+									],
+									[
+										73820,
+										73824
+									],
+									[
+										73916,
+										73920
+									],
+									[
+										74187,
+										74191
+									],
+									[
+										74283,
+										74287
+									],
+									[
+										74455,
+										74459
+									],
+									[
+										74629,
+										74633
+									],
+									[
+										74870,
+										74874
+									],
+									[
+										74975,
+										74979
+									],
+									[
+										75084,
+										75088
+									],
+									[
+										75490,
+										75494
+									],
+									[
+										75590,
+										75594
+									],
+									[
+										75692,
+										75696
+									],
+									[
+										75863,
+										75867
+									],
+									[
+										76042,
+										76046
+									],
+									[
+										76227,
+										76231
+									],
+									[
+										76312,
+										76316
+									],
+									[
+										76421,
+										76425
+									],
+									[
+										76498,
+										76502
+									],
+									[
+										76652,
+										76656
+									],
+									[
+										76804,
+										76808
+									],
+									[
+										77054,
+										77058
+									],
+									[
+										77344,
+										77348
+									],
+									[
+										77522,
+										77526
+									],
+									[
+										77593,
+										77597
+									],
+									[
+										77723,
+										77727
+									],
+									[
+										77909,
+										77913
+									],
+									[
+										77988,
+										77992
+									],
+									[
+										78215,
+										78219
+									],
+									[
+										78447,
+										78451
+									],
+									[
+										78666,
+										78670
+									],
+									[
+										78945,
+										78949
+									],
+									[
+										79262,
+										79266
+									],
+									[
+										79590,
+										79594
+									],
+									[
+										79794,
+										79798
+									],
+									[
+										80145,
+										80149
+									],
+									[
+										80226,
+										80230
+									],
+									[
+										80472,
+										80476
+									],
+									[
+										80672,
+										80676
+									],
+									[
+										81005,
+										81009
+									],
+									[
+										81247,
+										81251
+									],
+									[
+										81519,
+										81523
+									],
+									[
+										81885,
+										81889
+									],
+									[
+										82019,
+										82023
+									],
+									[
+										82431,
+										82435
+									],
+									[
+										82630,
+										82634
+									],
+									[
+										82721,
+										82725
+									],
+									[
+										82885,
+										82889
+									],
+									[
+										83180,
+										83184
+									],
+									[
+										83612,
+										83616
+									],
+									[
+										83869,
+										83873
+									],
+									[
+										84248,
+										84252
+									],
+									[
+										84464,
+										84468
+									],
+									[
+										84579,
+										84583
+									],
+									[
+										84685,
+										84689
+									],
+									[
+										84985,
+										84989
+									],
+									[
+										85231,
+										85235
+									],
+									[
+										85466,
+										85470
+									],
+									[
+										85545,
+										85549
+									],
+									[
+										85626,
+										85630
+									],
+									[
+										85923,
+										85927
+									],
+									[
+										86095,
+										86099
+									],
+									[
+										86279,
+										86283
+									],
+									[
+										86444,
+										86448
+									],
+									[
+										86519,
+										86523
+									],
+									[
+										86596,
+										86600
+									],
+									[
+										86845,
+										86849
+									],
+									[
+										87269,
+										87273
+									],
+									[
+										87501,
+										87505
+									],
+									[
+										87672,
+										87676
+									],
+									[
+										87977,
+										87981
+									],
+									[
+										88271,
+										88275
+									],
+									[
+										88497,
+										88501
+									],
+									[
+										88859,
+										88863
+									],
+									[
+										89152,
+										89156
+									],
+									[
+										89361,
+										89365
+									],
+									[
+										89585,
+										89589
+									],
+									[
+										89795,
+										89799
+									],
+									[
+										89964,
+										89968
+									],
+									[
+										90361,
+										90365
+									],
+									[
+										90688,
+										90692
+									],
+									[
+										90829,
+										90833
+									],
+									[
+										91084,
+										91088
+									],
+									[
+										91304,
+										91308
+									],
+									[
+										91570,
+										91574
+									],
+									[
+										91803,
+										91807
+									],
+									[
+										92109,
+										92113
+									],
+									[
+										92442,
+										92446
+									],
+									[
+										92556,
+										92560
+									],
+									[
+										92822,
+										92826
+									],
+									[
+										93143,
+										93147
+									],
+									[
+										93314,
+										93318
+									],
+									[
+										93570,
+										93574
+									],
+									[
+										93866,
+										93870
+									],
+									[
+										94156,
+										94160
+									],
+									[
+										94400,
+										94404
+									],
+									[
+										94719,
+										94723
+									],
+									[
+										94973,
+										94977
+									],
+									[
+										95216,
+										95220
+									],
+									[
+										95464,
+										95468
+									],
+									[
+										95719,
+										95723
+									],
+									[
+										95963,
+										95967
+									],
+									[
+										96202,
+										96206
+									],
+									[
+										96464,
+										96468
+									],
+									[
+										96781,
+										96785
+									],
+									[
+										97072,
+										97076
+									],
+									[
+										97423,
+										97427
+									],
+									[
+										97669,
+										97673
+									],
+									[
+										97928,
+										97932
+									],
+									[
+										98128,
+										98132
+									],
+									[
+										98438,
+										98442
+									],
+									[
+										98824,
+										98828
+									],
+									[
+										99151,
+										99155
+									],
+									[
+										99390,
+										99394
+									],
+									[
+										99661,
+										99665
+									],
+									[
+										99978,
+										99982
+									],
+									[
+										100268,
+										100272
+									],
+									[
+										100522,
+										100526
+									],
+									[
+										100828,
+										100832
+									],
+									[
+										101089,
+										101093
+									],
+									[
+										101382,
+										101386
+									],
+									[
+										101712,
+										101716
+									],
+									[
+										102022,
+										102026
+									],
+									[
+										102124,
+										102128
+									],
+									[
+										102229,
+										102233
+									],
+									[
+										102481,
+										102485
+									],
+									[
+										102727,
+										102731
+									],
+									[
+										102945,
+										102949
+									],
+									[
+										103206,
+										103210
+									],
+									[
+										103434,
+										103438
+									],
+									[
+										103826,
+										103837
+									],
+									[
+										103884,
+										103895
+									],
+									[
+										104008,
+										104019
+									],
+									[
+										104349,
+										104360
+									],
+									[
+										104614,
+										104625
+									],
+									[
+										104661,
+										104672
+									],
+									[
+										104804,
+										104815
+									],
+									[
+										104832,
+										104843
+									],
+									[
+										104971,
+										104982
+									],
+									[
+										104999,
+										105010
+									],
+									[
+										105023,
+										105034
+									],
+									[
+										105051,
+										105062
+									],
+									[
+										105193,
+										105204
+									],
+									[
+										105221,
+										105232
+									],
+									[
+										105450,
+										105461
+									],
+									[
+										105498,
+										105509
+									],
+									[
+										105524,
+										105535
+									],
+									[
+										105568,
+										105579
+									],
+									[
+										105594,
+										105605
+									],
+									[
+										105642,
+										105653
+									],
+									[
+										105772,
+										105783
+									],
+									[
+										105807,
+										105818
+									],
+									[
+										105833,
+										105844
+									],
+									[
+										105871,
+										105882
+									],
+									[
+										106177,
+										106188
+									],
+									[
+										106483,
+										106494
+									],
+									[
+										106519,
+										106530
+									],
+									[
+										106545,
+										106556
+									],
+									[
+										106580,
+										106591
+									],
+									[
+										106606,
+										106617
+									],
+									[
+										106654,
+										106665
+									],
+									[
+										106897,
+										106908
+									],
+									[
+										107065,
+										107076
+									],
+									[
+										107446,
+										107457
+									],
+									[
+										107789,
+										107800
+									],
+									[
+										107836,
+										107847
+									],
+									[
+										107932,
+										107943
+									],
+									[
+										107965,
+										107976
+									],
+									[
+										108420,
+										108431
+									],
+									[
+										108434,
+										108445
+									],
+									[
+										108922,
+										108933
+									],
+									[
+										108989,
+										109000
+									],
+									[
+										109044,
+										109055
+									],
+									[
+										109383,
+										109394
+									],
+									[
+										109776,
+										109787
+									],
+									[
+										109795,
+										109806
+									],
+									[
+										109961,
+										109972
+									],
+									[
+										110518,
+										110529
+									]
+								],
+								"scope": ""
+							}
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								103553,
+								103553
 							]
 						],
 						"settings":
 						{
-							"default_dir": "/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook",
+							"default_dir": "/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shopping-list/shopping-edit",
+							"detect_indentation": false,
 							"encoding_helper_encoding": "",
 							"git_gutter_is_enabled": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tabs_extra_last_activated": 1542225934.43,
-							"tabs_extra_last_activated_sheet_index": 1
+							"line_numbers": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"tabs_extra_last_activated": 1542321289.27,
+							"tabs_extra_last_activated_sheet_index": 3,
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1.0,
+						"translation.y": 62403.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "_RecipeBook/angular.json",
+					"file": "_RecipeBook/src/app/app.component.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3871,
+						"buffer_size": 268,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								808,
-								808
+								159,
+								159
 							]
 						],
 						"settings":
@@ -803,47 +2535,54 @@
 							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"tabs_extra_last_activated": 1542225904.25,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tabs_extra_last_activated": 1542318822.42,
 							"tabs_extra_last_activated_sheet_index": 0,
-							"translate_tabs_to_spaces": true
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "_RecipeBook/src/app/app.component.html",
+					"file": "CourseNotes.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 616,
+						"buffer_size": 12867,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								144,
-								117
+								12811,
+								12811
 							]
 						],
 						"settings":
 						{
-							"SL.16.region_keys":
+							"SL.116.region_keys":
 							[
 							],
 							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tabs_extra_last_activated": 1542227655.27,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"tabs_extra_last_activated": 1542323041.65,
 							"tabs_extra_last_activated_sheet_index": 2,
+							"translate_tabs_to_spaces": true,
 							"typescript_plugin_format_options":
 							{
 								"convertTabsToSpaces": true,
@@ -852,198 +2591,39 @@
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "_RecipeBook/src/app/app.module.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1056,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								211,
-								211
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tabs_extra_last_activated": 1542227443.09,
-							"tabs_extra_last_activated_sheet_index": 3,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "CourseNotes.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4775,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4775,
-								4775
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"tabs_extra_last_activated": 1542233739.52,
-							"tabs_extra_last_activated_sheet_index": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1961.0,
+						"translation.y": 6961.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "_RecipeBook/src/app/header/header.component.html",
+					"buffer": 3,
+					"file": "_RecipeBook/src/app/shopping-list/shopping-edit/shopping-edit.component.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 846,
+						"buffer_size": 950,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								217,
-								217
+								678,
+								691
 							]
 						],
 						"settings":
 						{
-							"SL.19.region_keys":
-							[
-							],
 							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
 							"git_gutter_is_enabled": true,
-							"open_with_edit": true,
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tabs_extra_last_activated": 1542228342.18,
-							"tabs_extra_last_activated_sheet_index": 4
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "_RecipeBook/src/app/header/header.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 165,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								103,
-								124
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tabs_extra_last_activated": 1542226417.6,
-							"tabs_extra_last_activated_sheet_index": 3,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "_RecipeBook/src/app/shared/ingredient.model.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 420,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								412,
-								412
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tabs_extra_last_activated": 1542232344.44,
-							"tabs_extra_last_activated_sheet_index": 6,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
+							"tab_size": 4,
+							"tabs_extra_last_activated": 1542318832.06,
+							"tabs_extra_last_activated_sheet_index": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1053,102 +2633,33 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "_RecipeBook/src/app/recipes/recipe-detail/recipe-detail.component.html",
+					"buffer": 4,
+					"file": "_RecipeBook/src/app/shopping-list/shopping-edit/shopping-edit.component.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 738,
+						"buffer_size": 834,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								187,
-								187
+								653,
+								653
 							]
 						],
 						"settings":
 						{
-							"SL.33.region_keys":
+							"SL.117.region_keys":
 							[
 							],
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tabs_extra_last_activated": 1542231667.89,
-							"tabs_extra_last_activated_sheet_index": 6
-						},
-						"translation.x": 0.0,
-						"translation.y": 24.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 705,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								124,
-								124
-							]
-						],
-						"settings":
-						{
-							"SL.19.region_keys":
-							[
-							],
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tabs_extra_last_activated": 1542231671.99,
-							"tabs_extra_last_activated_sheet_index": 7
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 727,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								727,
-								727
-							]
-						],
-						"settings":
-						{
 							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
 							"git_gutter_is_enabled": true,
 							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tabs_extra_last_activated": 1542231773.51,
-							"tabs_extra_last_activated_sheet_index": 8,
+							"tabs_extra_last_activated": 1542318818.6,
+							"tabs_extra_last_activated_sheet_index": 3,
 							"typescript_plugin_format_options":
 							{
 								"convertTabsToSpaces": true,
@@ -1165,219 +2676,30 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "_RecipeBook/src/app/recipes/recipe.model.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 276,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								268,
-								268
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tabs_extra_last_activated": 1542229024.85,
-							"tabs_extra_last_activated_sheet_index": 8,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "_RecipeBook/src/app/recipes/recipes.component.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 192,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								154,
-								154
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tabs_extra_last_activated": 1542227682.13,
-							"tabs_extra_last_activated_sheet_index": 6
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "_ExerciseLectureApp/src/app/servers/servers.component.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 542,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tabs_extra_last_activated": 1542230362.29,
-							"tabs_extra_last_activated_sheet_index": 10,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 4,
-								"tabSize": 4
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "_RecipeBook/src/app/shopping-list/shopping-edit/shopping-edit.component.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 902,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								902,
-								902
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tabs_extra_last_activated": 1542233375.88,
-							"tabs_extra_last_activated_sheet_index": 13
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
+					"buffer": 5,
 					"file": "_RecipeBook/src/app/shopping-list/shopping-list.component.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 379,
+						"buffer_size": 429,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								301,
-								301
+								143,
+								143
 							]
 						],
 						"settings":
 						{
-							"SL.23.region_keys":
-							[
-							],
 							"encoding_helper_encoding": "UTF-8",
 							"encoding_thread_running": true,
 							"git_gutter_is_enabled": true,
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tabs_extra_last_activated": 1542232265.21,
-							"tabs_extra_last_activated_sheet_index": 13
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "_RecipeBook/src/app/shopping-list/shopping-list.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 457,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								405,
-								405
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tabs_extra_last_activated": 1542232209.37,
-							"tabs_extra_last_activated_sheet_index": 14,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
+							"tabs_extra_last_activated": 1542318820.24,
+							"tabs_extra_last_activated_sheet_index": 4
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1454,6 +2776,14 @@
 		"selected_items":
 		[
 			[
+				"cour",
+				"CourseNotes.txt"
+			],
+			[
+				"recipe.mo",
+				"_RecipeBook/src/app/recipes/recipe.model.ts"
+			],
+			[
 				"Course",
 				"CourseNotes.txt"
 			],
@@ -1491,10 +2821,6 @@
 			],
 			[
 				"cours",
-				"CourseNotes.txt"
-			],
-			[
-				"cour",
 				"CourseNotes.txt"
 			],
 			[
@@ -1542,7 +2868,7 @@
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
