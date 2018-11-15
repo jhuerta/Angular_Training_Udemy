@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+	numbers:number[] = [];
+
+	tickTrigered(num){
+		this.numbers.push(num);
+	}
 }

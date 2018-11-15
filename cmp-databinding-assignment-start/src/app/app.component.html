@@ -15,3 +15,14 @@
     </div>
   </div>
 </div>
+
+<hr>
+
+<app-game-control (tick)='tickTrigered($event)'></app-game-control>
+
+<p *ngFor="let number of numbers">
+  <app-odd-number *ngIf="number%2 ===0" [number]="number">{{number*1000}}</app-odd-number>
+  <app-even-number *ngIf="number%2 !==0" [number]="number">{{number*546}}</app-even-number>
+</p>
+
+
