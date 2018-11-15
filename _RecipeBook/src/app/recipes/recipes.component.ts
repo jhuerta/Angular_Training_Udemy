@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class RecipesComponent implements OnInit {
 
   constructor() { }
-	@Input('display') display:string="";
+	
   ngOnInit() {
   }
 
