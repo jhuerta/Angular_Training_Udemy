@@ -9,5 +9,5 @@ export class AppComponent {
 	changeMenu(menu){
 		this.display = menu;
 	}
-	display:string='recipes';
+	display:string='shopping-list';
 }
