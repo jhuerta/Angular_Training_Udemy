@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 import { Recipe } from '../recipe.model';
 @Component({
   selector: 'app-recipe-list',
@@ -10,6 +10,11 @@ export class RecipeListComponent implements OnInit {
         new Recipe('Estofado de carne','Para tardes de invierno', 'https://www.publicdomainpictures.net/pictures/70000/velka/beef-stew.jpg'),
         new Recipe('Pasta Carbonara','Un clasico entre los clasicosw', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Spaghetti_alla_Carbonara_%28cropped%29.jpg/738px-Spaghetti_alla_Carbonara_%28cropped%29.jpg')
     ];
+    @Output() on_recipe_selected = new EventEmitter<Recipe>();
+
+    recipeSelected(recipe){
+      this.on_recipe_selected.emit(recipe);
+    }
 
   constructor() { }
 
