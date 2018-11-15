@@ -195,3 +195,22 @@ Create an Angular project
       }
     }
 
+5.71 Use <ng-content></ng-content> to indicate a  placeholder in a child component. In this placeholder, angular will inject the text passed inside the HTML tags of hte component. The text inside will be "projected" into the view of the child component.
+
+    <child-component>THIS IS ANY CONTENT</child-component>
+
+    child-component.html
+        <p> BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA  </p>
+        <ng-content></ng-content>
+        <p> BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA  </p>
+
+5.72 Lifecycle
+    There is quite a bit of hooks that will be triggered during changes, events, constructions, deletions of the angular application: https://angular.io/guide/lifecycle-hooks:
+        - ngOnChanges()
+        - ngOnInit()  
+        - ngDoCheck() 
+        - ngAfterContentInit()    
+        - ngAfterContentChecked() 
+        - ngAfterViewInit()   
+        - ngAfterViewChecked()    
+        - ngOnDestroy()   

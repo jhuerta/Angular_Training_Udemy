@@ -19,8 +19,8 @@ export class AppComponent {
 
    onServerAdded(serverData: {serverName: string, serverContent: string}) {
      console.log(this.cockpitElement._results[0].serverHTMLElementContentInput.nativeElement.value);
-     console.log(this.cockpitElement._results[1].serverHTMLElementContentInput.nativeElement.value);
-     console.log(this.cockpitElement._results[2].serverHTMLElementContentInput.nativeElement.value);
+     // console.log(this.cockpitElement._results[1].serverHTMLElementContentInput.nativeElement.value);
+     // console.log(this.cockpitElement._results[2].serverHTMLElementContentInput.nativeElement.value);
      // console.log(this.cockpitElement[1].serverHTMLElementContentInput.nativeElement.value);
      // console.log(this.cockpitElement[2].serverHTMLElementContentInput.nativeElement.value);
     this.addServerData('server', serverData);
