@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, Output, EventEmitter} from "@angular/core";
 
 
 @Component({
@@ -6,5 +6,10 @@ import {Component} from "@angular/core";
     templateUrl:"./header.component.html",
 })
 export class HeaderComponent  {
+	@Output('changeMenu') changeMenu = new EventEmitter<string>();
+
+	goTo(newMenu){
+		this.changeMenu.emit(newMenu);
+	}
 }
 
