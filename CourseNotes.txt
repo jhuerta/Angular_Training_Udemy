@@ -76,9 +76,62 @@ Create an Angular project
                 ngClass: Add class
                     <p  [ngStyle]="{'background-color': getColor()}"
                         [ngClass]="{online:isOnline(),offline:!isOnline()}"></p>
-
-
-
 4.57
     To debut in the browser, look for the TypeScript file under the sources/webpack/. folder
     Install augury as a chrome extension to debut
+5.61
+    Property and Event binding on HTML elements
+    Property and Event binding on diretives
+    Property and Event binding on custom properties and events
+    CUSTOM PROPERTY BINDING
+        Use to communicate from PARENT TO CHILDREN
+        Use Input decorator (do not forget to import) to expose a property to the outside
+        Then, this property can be binded to a variable from other component
+            CHILD COMPONENT (ts)
+            import { ... Input } from '@angular/core';
+            <====== MAKE SURE TO IMPORT
+
+            [...]
+
+            export class ParentComponent implements OnInit {
+                @Input('HERE_THE_ALIAS') element: { type: string, name: string, content: string};
+                <====== NOTICE THE @Input decorator
+            }
+            PARENT COMPONENT (HTML)
+            <app-server-element
+                *ngFor="let serverElement of serverElements"
+                [ALIAS]="serverElement"> <======== HERE THE ASSIGNMENT
+            </app-server-element>
+    CUSTOM EVENT BINDING
+        Use to communicate from CHILDREN TO PARENT
+        We need to create a new event in the child component, and emmit it with an argument.
+        Later, in the father, we catch that event and assign it to a proper method, using the argument emmited.
+            CHILD COMPONENT (ts)
+                // Make sure to import EventEmitter and Output
+                import { ... EventEmitter, Output } from '@angular/core';
+
+            []...
+            export class CockpitComponent implements OnInit {
+                // Create event, assign alias and specify argument that will be passed
+              @Output('HERE_THE_EVENT_ALIAS') newChildEvent = new EventEmitter<{serverName: string, serverContent: string}>();
+              // Use a method to trigger te emmision of the event
+
+              property_1;
+              property_2;
+
+              onSomethingHappendInChildComponent() {
+                //Emmit the event and properties
+                this.newChildEvent.emit({serverName: this.property_1, serverContent: this.property_2});
+              }
+            }
+                CHILD HTML
+                <button (click)="onSomethingHappendInChildComponent()">Emmit New Event</button>
+
+            PARENT COMPONENT (HTML)
+                <child-app (HERE_THE_EVENT_ALIAS)="parent_method($event)"></child-app>
+
+                PARENT COMPONENT (ts
+                  parent_method(serverData: {serverName: string, serverContent: string}) {
+                        DO_SOMETHING_HERE
+                })
+
