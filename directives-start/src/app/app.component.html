@@ -1,0 +1,66 @@
+<div class="container">
+  
+
+
+
+
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        class="btn btn-primary"
+        (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
+      <br><br>
+
+      <div appBasicHighlight><div appBasicHighlight>&lt;div appBasicHighlight&gt;<strong>selector:'appBasicHighlight'</strong>&lt;/div&gt;</div></div>
+      <div class="appBasicHighlight">&lt;div class="appBasicHighlight"&gt;<strong>selector:'.appBasicHighlight'</strong>&lt;/div&gt;</div>
+      <div>&lt;appBasicHighlight&gt;<strong>selector:'[appBasicHighlight]'</strong>&lt;/appBasicHighlight&gt;</div>
+
+
+      <hr>
+
+      <div appBetterHighlight [defaultColor]="'red'" highlightColor="pink">THIS IS A NEW DIRECTIVE</div>
+      
+
+      <ul class="list-group" *ngIf="onlyOdd">
+        <li
+          class="list-group-item"
+          [ngClass]="{odd: oddNumber % 2}"
+          [ngStyle]="{backgroundColor:  oddNumber % 2 ? 'blue' : 'red'}"
+          *ngFor="let oddNumber of oddNumbers">
+          {{oddNumber}}
+        </li>
+      </ul>
+      
+            <ul class="list-group" *ngIf="!onlyOdd">
+        <li
+          class="list-group-item"
+          [ngClass]="{even: !(evenNumber % 2)}"
+          [ngStyle]="{backgroundColor:  !(evenNumber % 2) ? 'cyan' : 'orange'}"
+          *ngFor="let evenNumber of evenNumbers">
+          {{evenNumber}}
+        </li>
+      </ul>
+
+      <div *appUnless="false">
+        DISPLAY WHEN FALSE
+      </div>
+
+       <div *ngFor="let evenNumber of evenNumbers">
+       <div [ngSwitch]="evenNumber">
+        <p *ngSwitchCase="2">Two</p>
+        <p *ngSwitchCase="4">Four</p>
+        <p *ngSwitchDefault>Other</p>
+         
+       </div>          
+        </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+  <app-show-ref-values></app-show-ref-values>
+</div>
+</div>
+
+    
+    </div>
+  </div>
+</div>

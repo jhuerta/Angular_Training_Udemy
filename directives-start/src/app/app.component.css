@@ -1,0 +1,21 @@
+.container {
+  margin-top: 30px;
+}
+
+.odd {
+	color: red;
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+.even {
+	color: green;
+	font-weight: bolder;
+	font-size: 16px;
+}
+
+.betterHighlight{
+	background-color: brown;
+	color: white;
+	font-size: 25px;
+}

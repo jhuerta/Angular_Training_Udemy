@@ -277,4 +277,69 @@ Create an Angular project
         }
         If you don't use export (modularity), the class wont be able to be used outside that file
 
+7.83 DIRECTIVES
+    Attribute Directives: Sit on element and only affect that element
+    Structural Directives: Sit on element but changes the DOM by adding/removing elements on it
+    A DIRECTIVE DOES NOT HAVE A TEMPLATE!!
+    CUSTOM DIRECTIVE
 
+    import { Directive,ElementRef,OnInit } from '@angular/core';
+    @Directive({selector:'[appBasicHighlight]'})
+    export class BasicHighlightDirective implements OnInit {
+        constructor(private elementRef:ElementRef) {}
+        ngOnInit(){this.elementRef.nativeElement.style.backgroundColor = 'green';}
+    }
+    // DO NOT FORGET TO ADD IN THE APP.MODULE.TS
+    ng c directive DIRECTIVE_NAME
+    // USE BETTER RENDERER TO MODIFY THE DOM
+      ngOnInit()
+        {
+            this.renderer.addClass(this.elRef.nativeElement,'betterHighlight');
+        }
+
+    //USE HOSTBINDING FOR BIND A VARIABLE TO A PROPERTY OF THE HOST ELEMENT
+    @HostBinding('style.backgroundColor') myVariable: string = 'yellow';
+    Any change in myVariable will be applied directly to the style.backgroundColor of the host element
+    This solution is similar to the Renderer2, nothing good, nothing bad
+
+7.91 PASSING PROPERTIES TO DIRECTIVES
+
+  @Input() defaultColor: string = 'purple';
+  @Input() highlightColor: string = 'cyan';
+<div appBetterHighlight [defaultColor]="'red'" [highlightColor]="'pink'">THIS IS A NEW DIRECTIVE</div>
+
+
+
+7.84 CONSTRUCTOR TIP
+    constructor(private elementRef:ElementRef) {}
+    constructor(public elementRef:ElementRef) {}
+        This will create a public/private property called elementRef.
+
+7.89 HOSTLISTENER
+    // USE A HOSTLISTENER IN DIRECTIVES TO LISTEN TO EVENTS ON THE ELEMENT AND REACT
+      @HostListener('mouseenter') mouseover(eventData: Event){
+        this.renderer.addClass(this.elRef.nativeElement,'betterHighlight');
+        }
+7.91 TRICK: Assigning values to properties
+    <div appBetterHighlight [defaultColor]="'red'" highlightColor="pink">THIS IS A NEW DIRECTIVE</div>
+    Notice you can assign a value to a property withouth single quotes "pink", as long as the property name has no [] signs
+    Notice the difference between the assignment of defaultColor ahd highlightColor
+
+7.93 BUILDIN STRUCTURAL DIRECTIVES
+    @Input() set appUnless(condition: boolean) {
+    Use a setter (instead of property) to create a property that is executed everytime the value of the property changes.So, that means, we assigne the property to  method and this method is executed when the value of the property (assigned externally) changes
+
+    constructor(private templateRef: TemplateRef<any>, private viewContainerRef: ViewContainerRef) { }
+    Inject this values to access a template (ng-template) and where to inject or modify the code
+
+    <div *appUnless="false">DISPLAY WHEN FALSE</div>
+    <ng-template [appUnless]="false"><div>DISPLAY WHEN FALSE</div></ng-template>
+
+    !!!!!!!!!!!! READ ABOUT TemplateRef vs ViewContainerRef !!!!!!!!
+7.94 ngSwitch
+       <div *ngFor="let evenNumber of evenNumbers">
+       <div [ngSwitch]="evenNumber">
+            <p *ngSwitchCase="2">Two</p>
+            <p *ngSwitchCase="4">Four</p>
+            <p *ngSwitchDefault>Other</p>
+       </div> 
