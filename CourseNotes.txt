@@ -347,3 +347,31 @@ Create an Angular project
 8.95 USE OF HOSTBINDING TO ADD/REMOVE CLASS
     @HostBinding("class.CLASS_NAME") anyVariableName = false;
     By doing this, when anyVariableName is true, the class name will be added, and if false, it will be removed
+9.99 SERVICES AND DEPENDENCY INJECTION
+    A services is just a TypeScript class, it does not need any extra decorator, nor add it to the app.modules file
+    In order to use a service in a component, you can:
+        1) Instantiate the service: DO NOT USE THIS. Not clean
+            const logger = new LoggingService();
+        2) Use dependency injection:
+            2.1) In the Component decorator, add the providers object, and in the array, the name of the class that you can inject
+            2.2) Indicate in the constructor of the component that you will need an object of that type
+                @Component({
+                  [...]
+                  providers: [LoggingService]
+                })
+                constructor(private logger: LoggingService){}
+
+9.100 VERY IMPOTANT: HIERARCHICAL INJECTION
+    The injection of dependencies is HIERARCHICAL, very important. This means that the very same instance of the dependency injected into a component, will be (or can be) propagated into the children. So, if the instance is used in the main app.component, the very same instance can be propagated into the child components. This can be handy but also it can lead to errors.
+
+    If you want to inherite the instance of a parent component, then do not add the providers:[NAME_OF_SERVICE] into the @Component. The injector will insert the instance of the parent into the children. Howerver, if you add the service_name into the providers, a new instance of the service will be created and injected into the component.!!!
+
+    The highest level is the apps.module, NOT THE APP.COMPONENT!!!
+
+9.101 INJECTING SERVICE INTO SERVICES
+    In order to inject something into a class, YOU NEED ANGULAR METADATA. This means that you need to decorate the class with something, like @Component, @Directive ... For services, since they are not properly Angular objects, there was no need to add a decorator. However, if you want Angular to inject a service into a service, you need to add a decorator, and this is @Injecetable.
+    This way, by having a service declared in the APP.MODULE file, any service can be injected into others services (since services do not have parents, they can't inherite from no where)
+
+9.104 USING SERVICES TO COMMUNICATE AMONG SIBLING COMPONENTS
+    If two components are sharing the same instance of a service, an event triggered from the service in one component,can be listened (observed) by other component that is subscribed (listening) to the events triggered by the same instance of the service. 
+    This way, by triggering an event, we can pass information between any sort of components, regardless of the hierarchy, as long as they share the same instance of the service
