@@ -343,3 +343,7 @@ Create an Angular project
             <p *ngSwitchCase="4">Four</p>
             <p *ngSwitchDefault>Other</p>
        </div> 
+
+8.95 USE OF HOSTBINDING TO ADD/REMOVE CLASS
+    @HostBinding("class.CLASS_NAME") anyVariableName = false;
+    By doing this, when anyVariableName is true, the class name will be added, and if false, it will be removed
