@@ -21,7 +21,7 @@ import { LogActionService } from './logActions.service';
     FormsModule,
     HttpModule
   ],
-  providers: [UsersManagementService,LogActionService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

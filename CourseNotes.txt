@@ -342,7 +342,7 @@ Create an Angular project
             <p *ngSwitchCase="2">Two</p>
             <p *ngSwitchCase="4">Four</p>
             <p *ngSwitchDefault>Other</p>
-       </div> 
+       </div>
 
 8.95 USE OF HOSTBINDING TO ADD/REMOVE CLASS
     @HostBinding("class.CLASS_NAME") anyVariableName = false;
@@ -373,5 +373,6 @@ Create an Angular project
     This way, by having a service declared in the APP.MODULE file, any service can be injected into others services (since services do not have parents, they can't inherite from no where)
 
 9.104 USING SERVICES TO COMMUNICATE AMONG SIBLING COMPONENTS
-    If two components are sharing the same instance of a service, an event triggered from the service in one component,can be listened (observed) by other component that is subscribed (listening) to the events triggered by the same instance of the service. 
+    If two components are sharing the same instance of a service, an event triggered from the service in one component,can be listened (observed) by other component that is subscribed (listening) to the events triggered by the same instance of the service.
     This way, by triggering an event, we can pass information between any sort of components, regardless of the hierarchy, as long as they share the same instance of the service
+9.105 It is good practice to initialize variables in the OnInit method!!

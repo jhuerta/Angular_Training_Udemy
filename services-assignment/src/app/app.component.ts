@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 
 import {UsersManagementService} from './usersManagement.service'
+import { LogActionService } from './logActions.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [UsersManagementService,LogActionService]
 })
 export class AppComponent {
 
