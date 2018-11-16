@@ -8,6 +8,7 @@ import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
 
 import { UsersManagementService } from './usersManagement.service';
+import { LogActionService } from './logActions.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { UsersManagementService } from './usersManagement.service';
     FormsModule,
     HttpModule
   ],
-  providers: [UsersManagementService],
+  providers: [UsersManagementService,LogActionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
