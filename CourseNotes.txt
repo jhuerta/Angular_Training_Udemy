@@ -35,7 +35,7 @@ Create an Angular project
 2.20
     As with templates, for styling the component, you can also use external file (styleUrls , notice this takes an array) or styles (using ` if you need multiple lines). It seems that the css is exclusively for that component, is not inherited in the children
 2.21
-    Selectors are like css selectors, therefore you can use [] (attributre) or . (class). Id does not work
+    Selectors are like css selectors, therefore you can use [attribute ] (attributre) or . (class). Id does not work
             selector: 'app-root' ====> <app-root></app-root>
             selector: '[app-root]' ====> <div app-root></app-root>
             selector: '.app-root' ======> <div class='app-root'></div>
@@ -233,7 +233,7 @@ Create an Angular project
     So, it will be the same as ng build --prod --aot
     The end product will be compiled into hte dist/SolutionName folder
 
-30.397 ANGULAR 6: WHAT'S NEW
+30.397 ANGULAR 6: WHAT IS NEW
     [DONE, nothing to written]
 
 32.414 TYPESCRIPT
@@ -378,3 +378,144 @@ Create an Angular project
 9.105 It is good practice to initialize variables in the OnInit method!!
 
 10.108 User array.slice() to return a copy of an array, avoiding returning the array itself (reference) that could probably modify the array
+
+11. ROUTES
+    To add routes to your app:
+        import { Routes, RouterModule } from "@angular/router"; <=== Import
+
+        const appRoutes: Routes = [ <========= DECLARE ROUTES (path + component name)
+          { path: "", component: HomeComponent },
+          { path: "users", component: UsersComponent },
+          { path: "servers", component: ServerComponent }
+        ];
+
+        @NgModule({
+            [...]
+            imports: [
+                [...]
+                RouterModule.forRoot(appRoutes) <======== IMPORT ROUTES
+            ]}
+            )
+
+    In the app.componen.html, indicate where to load the component set by the the route:
+    <router-outlet></router-outlet> <==== This router will be replaced by the component of the route
+
+    In order to call the routes, there are 3 options:
+
+        <a href="/ROUTENAME">  ===> Not a good option, as it reloads the HTML and the page looses the state. It is like  refresh.
+        <a routerLink="/servers"> ===> Better option to call, withthe router name. The user does not see the reload
+        <a [routerLink]="['/users']"> ==> Using property binding, better option to pass parameters
+        (<a [routerLink]="['users']"> or <a [routerLink]="['./users']"> or even <a [routerLink]="['../users']">) vs <a [routerLink]="['/users']"> ===> Without / is a relative path, while with / is absolute!
+
+        User routerLinkActive and routerLinkActiveOptions to dinamycally set a class depending on the route. This can be applied to the same element wih routerLink or to the parent (wrapping) element itself.
+
+            <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Home</a></li>
+            <li role="presentation" routerLinkActive="active"><a routerLink="/servers">Servers</a></li>
+            <li role="presentation" routerLinkActive="active"><a [routerLink]="['/users']">Users</a></li>
+
+        Use this.router.navigate(["servers"]); to navigate progrmatically from the ts code itself (import { Router } from "@angular/router";)
+
+        Use the relative route if you want the route to be relative
+        import { Router, ActivatedRoute } from "@angular/router";
+
+        this.router.navigate(["servers"], { relativeTo: this.route });
+
+        Use snapshots to access params in the url defined in route path:
+            id: this.route.snapshot.params["id"],
+            { path: "users/:id/:name", component: UserComponent },
+            THIS ONLY WORKS IF LOADING THE COMPONENT FROM OTHER COMPONENT
+            IF USING THE ROUTERLINK FROM THE VERY SAME COMPONENT, THIS INIT WONT WORK, ANGULAR WONT LOAD AGAIN THE SAME INFO:
+                [routerLink]="['/users',user.id,user.name]"
+                IN THIS CASE, USE OBSERVABLE:
+                    this.route.params.subscribe((params: Params) => {
+                        this.user.id = params["id"];
+                        this.user.name = params["name"];
+                    });
+
+                SO, SUMMING UP: ONLY USE OBSERVABLE IF YOU THINK THAT THE COMPONENT MAY BE RELOADED FROM WITHIN HIMSELF. IF YOU ARE CERTAIN THE COMPONENT WILL BE ALOWAYS RELOADED FROM OUTSIDE, THEN, THERE IS NO NEED (ALTHOUGH NO HARM THOUG) TO SUBSCRIBE TO THE OBSERVABLE
+
+                WHEN USING OBSERVABLES, YOU MAY WANT TO USE THE UNSUBSCRIBE:
+                ngOnDestroy() {
+                   console.log("destroy");
+                    this.paramsSubscription.unsubscribe();
+                }
+
+        USING QUERY PARAMETERS (?mode=SOMETHIN#OTHER_THING)
+            -------------------- "INSERTING/PASSING PARAMETERS" -----------------------------------------
+                IN HTML
+                    <a
+                        [routerLink]="['/servers', 5, 'edit']"
+                        [queryParams]="{allowEdit: '1', alreadyEdit: '2'}"
+                        fragment='loading'
+                    </a>
+                    
+                    http://localhost:4200/servers/5/edit?allowEdit=1&alreadyEdit=2#loading
+                PROGRAMATICALLY
+                    this.router.navigate(["/server", id, "edit"], {
+                        queryParams: { allowEdit: "1" },
+                        fragment: "loading"
+                    });
+
+            -------------------- "RETRIEVEING PARAMETERS" -----------------------------------------
+            With snapshot: (ATTENTION TO RELOAD!!)
+                this.route.snapshot.queryParams;
+                this.route.snapshot.fragment;
+                this.route.snapshot.params["id"];
+
+            USING OBSERVABLES:
+                this.route.queryParams.subscribe();
+                this.route.fragments.subscribe();
+                this.route.params.subscribe((params: Params) => {
+                        this.user.id = params["id"];
+                        this.user.name = params["name"];
+                    });
+
+                        UNSUBSCRIBE (THIS IS OPTIONAL)
+                            ngOnDestroy() {
+                                console.log("destroy");
+                                this.paramsSubscription.unsubscribe();
+                            }
+        
+        TRICK:
+            MAKE SURE TO CONVERT TO INTEGER WHEN GETTING VALUES FROM THE QUERY STRING (USE + to do so)
+                +this.route.snapshot.params["id"];
+        
+        KEEP PARAMS IN URL
+            When moving programatically to a different URL (different route), you can use  queryParamsHandling to either preserve or merge the params in the new URL. By using preserve, we don't loose previous values passed through the URL
+
+            this.router.navigate(["edit"], {
+                relativeTo: this.route,
+                queryParamsHandling: "preserve"
+            });
+
+        WILDCARDS
+            To handle URLS that are not handled in the routes:
+            The last route should be:
+                { path: "not-found", component: PageNotFoundComponent },
+                { path: "**", redirectTo: "not-found" }
+                AVOID GREEEDY ROUTES!!!
+                Notice the use of redirectTo and the wildcards in the path
+            It is also possible to use pathMath:'full' to make sure the route matches perfectly:
+                { path: '', redirectTo: '/somewhere-else', pathMatch: 'full' } 
+
+        OUTSOURCE ROUTE MODULE
+            Use an external file to hold your routes and keep the app.modules.ts cleaner
+
+            const appRoutes: Routes = [
+                { path: "", component: HomeComponent },
+                [...]
+            ];
+
+            @NgModule({
+                imports: [RouterModule.forRoot(appRoutes)],
+                exports: [RouterModule]
+            })
+            export class AppRoutingModule {}
+
+        ROUTE GUARDS
+            It is logic that is excuted before the ROUTES are accessed. So, moving some logic out of the component so it is executed regardless of the route
+            It is a way to protect routes
+            So, hooking code to a point to be executed defined by us
+            Use the canActivate to guard to check beforehand whether you can access a route
+            Or canActivateChild to protect only the children
+            Mix this canActivate with an auth Service and you can protect your page, and methods per parent or children
