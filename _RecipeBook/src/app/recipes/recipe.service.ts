@@ -44,7 +44,6 @@ export class RecipeService {
     }
 
     getRecipe(recipeId: number): Recipe {
-        console.log("333");
         return this.recipes[recipeId];
     }
 }

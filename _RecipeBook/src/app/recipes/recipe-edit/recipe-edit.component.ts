@@ -10,10 +10,14 @@ import { RecipeService } from "../recipe.service";
 })
 export class RecipeEditComponent implements OnInit {
     recipe: Recipe;
+    id: number;
+    editMode: boolean = false;
     constructor(private recipeService: RecipeService,  private route: ActivatedRoute) {}
 
     ngOnInit() {
             this.route.params.subscribe((params: Params) => {
-      this.recipe= this.recipeService.getRecipe( +params["id"] );
+                this.id = +params["id"];
+                this.editMode = params["id"] != null;
+      this.recipe= this.recipeService.getRecipe( this.id );
     }
 }

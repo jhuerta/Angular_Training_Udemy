@@ -14,7 +14,6 @@ export class RecipeItemComponent implements OnInit {
   // @Output() on_recipe_click = new EventEmitter<void>();
 
   onRecipeClick() {
-    alert("here");
     this.router.navigate(["/id", this.recipeDetails.id], {
       relativeTo: this.route
     });

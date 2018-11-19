@@ -1,4 +1,10 @@
-<p>
+<div *ngIf='editMode'>
+  <h1>RECIPE EDIT</h1>
+  <h3>
   {{recipe.id}}
   {{recipe.name}}
-</p>
+</h3>
+</div>
+<div *ngIf='!editMode'>
+  <h1>NEW RECIPE</h1>
+</div>
