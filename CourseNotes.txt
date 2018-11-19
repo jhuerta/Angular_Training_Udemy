@@ -448,7 +448,7 @@ Create an Angular project
                         [queryParams]="{allowEdit: '1', alreadyEdit: '2'}"
                         fragment='loading'
                     </a>
-                    
+
                     http://localhost:4200/servers/5/edit?allowEdit=1&alreadyEdit=2#loading
                 PROGRAMATICALLY
                     this.router.navigate(["/server", id, "edit"], {
@@ -475,11 +475,11 @@ Create an Angular project
                                 console.log("destroy");
                                 this.paramsSubscription.unsubscribe();
                             }
-        
+
         TRICK:
             MAKE SURE TO CONVERT TO INTEGER WHEN GETTING VALUES FROM THE QUERY STRING (USE + to do so)
                 +this.route.snapshot.params["id"];
-        
+
         KEEP PARAMS IN URL
             When moving programatically to a different URL (different route), you can use  queryParamsHandling to either preserve or merge the params in the new URL. By using preserve, we don't loose previous values passed through the URL
 
@@ -496,7 +496,7 @@ Create an Angular project
                 AVOID GREEEDY ROUTES!!!
                 Notice the use of redirectTo and the wildcards in the path
             It is also possible to use pathMath:'full' to make sure the route matches perfectly:
-                { path: '', redirectTo: '/somewhere-else', pathMatch: 'full' } 
+                { path: '', redirectTo: '/somewhere-else', pathMatch: 'full' }
 
         OUTSOURCE ROUTE MODULE
             Use an external file to hold your routes and keep the app.modules.ts cleaner
@@ -519,3 +519,47 @@ Create an Angular project
             Use the canActivate to guard to check beforehand whether you can access a route
             Or canActivateChild to protect only the children
             Mix this canActivate with an auth Service and you can protect your page, and methods per parent or children
+        STATIC DATA IN THE ROUTE DEFINITION
+            It is possible to pass static data in the route defintion to be consumed in the view
+                {   path: "not-found",
+                    component: ErrorPageComponent,
+                    data: { message: 'Page not found!'} },
+        RESOLVER
+            Preprocess before the data is rendered
+            You declare the resolver like this:
+            {
+                path: ":id",
+                component: ServerComponent,
+                resolve: { server: ServerResolver }
+            }
+            And the data can be retrieved through the this.route.Data (ActivatedRoute):
+
+                And we use the observable!
+
+                this.route.data.subscribe((data: Data) => {
+                    this.server = data["server"];
+                });
+
+            The resolver is declared like this (implementing the resolve interface):
+
+                export class ServerResolver implements Resolve<Server> {
+
+                    resolve(
+                        route: ActivatedRouteSnapshot,
+                        state: RouterStateSnapshot
+                    ): Observable<Server> | Promise<Server> | Server {
+                        // THIS IS RUN EVERY TIME - NO NEED FOR OBSERVABLE
+                        const serverId = +route.params["id"];
+                        return this.serversService.getServer(serverId);
+                    }
+                }
+
+            IMPORTANT IMPORTANT:
+                The route will be handled first by the server. That's why the server 404 page has to return the index page. And then, let Angular to handle erroneus URLs.
+
+                It this is not possible, there is an old approach: use this in the routing module:
+
+                    imports: [RouterModule.forRoot(appRoutes, { useHash: true })],
+
+                Use the useHash:true which will append a # in the URL that will let the server know to only care about the domain, not the rest of the URL. However, this give us an ugly URL: http://localhost:4200/#/servers (notice the #)
+
