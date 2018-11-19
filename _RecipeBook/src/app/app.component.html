@@ -1,11 +1,11 @@
-
 <!-- <app-header (changeMenu)="display = $event"></app-header> -->
 <app-header (changeMenu)="changeMenu($event)"></app-header>
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <app-recipes *ngIf="display==='recipes'"></app-recipes>
-            <app-shopping-list *ngIf="display==='shopping-list'"></app-shopping-list>
-        </div>
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+      <!--             <app-recipes *ngIf="display==='recipes'"></app-recipes>
+            <app-shopping-list *ngIf="display==='shopping-list'"></app-shopping-list> -->
     </div>
+  </div>
 </div>
