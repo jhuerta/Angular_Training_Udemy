@@ -11,7 +11,8 @@ Display a warning message if the Form is invalid AND was touched. Display a warn
 Upon submitting the form, you should simply print the Value of the Form to the Console.
 Optionally, display it in your template.
  -->
-      <form #exForm='ngForm'>
+      <form #exForm='ngForm' (ngSubmit)="onSubmit()
+">
         <label>Email</label>
         <input type="text" class="form-control" name="email" ngModel required email #email='ngModel'>
         <p *ngIf='!email.valid'>Email is invalid</p>
@@ -22,7 +23,7 @@ Optionally, display it in your template.
         <label>Password</label>
         <input required type="password" class="form-control" ngModel name="password" required #password='ngModel'>
         <p *ngIf='!password.valid'>Password is invalid</p>
-        <input [disabled]='!exForm.valid' type="submit" class="btn btn-primary" name="submit" (click)='onSubmit()'>
+        <input [disabled]='!exForm.valid' type="submit" class="btn btn-primary" name="submit">
         <p class="help-block" *ngIf='!exForm.valid && exForm.touched'>Not correct form</p>
       </form>
     </div>
