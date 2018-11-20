@@ -603,7 +603,7 @@ Create an Angular project
 14 FORMS
     As it is a single page application, THERE IS NO SUBMIT! So, you need angular to help you in sending data to the server, but also receive it and validate
     Template-Driven Approach
-        Inferred configuration. 
+        Inferred configuration.
 
     Reactive Approach
         Manual configuration
@@ -685,5 +685,8 @@ Create an Angular project
             }
         });
 
+        FORMS: REACTIVE APPROACH
 
+            Form Template Driven approach, we need to add FormsModule into the modules
+            For Reactive Approach, we need to add the ReactiveFormsModule.
 

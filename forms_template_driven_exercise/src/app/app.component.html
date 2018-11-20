@@ -14,7 +14,7 @@ Optionally, display it in your template.
       <form #exForm='ngForm' (ngSubmit)="onSubmit()
 ">
         <label>Email</label>
-        <input type="text" class="form-control" name="email" ngModel required email #email='ngModel'>
+        <input type="text" class="form-control" name="email" forbiddenNames ngModel required email #email='ngModel'>
         <p *ngIf='!email.valid'>Email is invalid</p>
         <label>Quality</label>
         <select class="form-control" [ngModel]='"good"' name='quality'>
