@@ -599,3 +599,48 @@ Create an Angular project
             });
     NOTICE THE DIFFERENT NOTATION IF NOT USING THE COMPAT LIBRARY!
 
+
+14 FORMS
+    As it is a single page application, THERE IS NO SUBMIT! So, you need angular to help you in sending data to the server, but also receive it and validate
+    Template-Driven Approach
+        Inferred configuration. 
+
+    Reactive Approach
+        Manual configuration
+
+        TEMPLATE-DRIVEN APPROACH
+            1) No need specify nothing in form tag (no verb, url, action ...)
+            <form></form>
+            2) <form (ngSubmit)='METHOD_TO_HANDLE(f)' #f='ngForm'> // f is keyword
+            3) Add ngModel and name in all the elements you want to get the value
+                <input type="email" id="email" class="form-control" ngModel name="email">
+            4) In the ts file, declare your method:
+                METHOD_TO_HANDLE(form: NgForm) {
+                   console.log(form); // the values are in form.value
+                }
+
+        You can use:
+
+            <form (ngSubmit)='onSubmit(thisForm)' #thisForm='ngForm'>
+            @ViewChild("thisForm") signupForm: NgForm;
+
+        To be updated on changes:
+                1) <button [disabled]='!f.valid' class="btn btn-primary" type="submit">Submit</button>
+                OR
+
+                2) ngOnInit() {
+                    this.signupForm.valueChanges.subscribe(() => {
+                        this.isValid = this.signupForm.valid;
+                        console.log(this.isValid);
+                    });
+                }
+        Use ng-invalid classes to color when invalid
+            input.ng-invalid,
+                select.ng-invalid {
+                    border: 2px solid red;
+                }
+        Use validators in the input controls for max length, minlength ...
+
+
+
+
