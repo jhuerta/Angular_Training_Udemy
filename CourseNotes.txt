@@ -563,3 +563,39 @@ Create an Angular project
 
                 Use the useHash:true which will append a # in the URL that will let the server know to only care about the domain, not the rest of the URL. However, this give us an ugly URL: http://localhost:4200/#/servers (notice the #)
 
+
+13 OBSERVABLES
+    SUBSCRIBER/OBSERVER <---> OBSERVABLE
+    Think of an observable as a data source that is delivering data packages asynchronously
+    Make sure to unsubscribe the observer!
+    SUBJECT ------------
+        Use subjects instead of event emmiter for cross components communication
+
+        -- Creating the observer and observable into one SUBJECT
+
+            import { Subject } from "rxjs/Rx";
+
+            export class UsersService {
+                userActivated = new Subject();
+            }
+
+        -- Emmiting the event
+            this.userActivated.next(HERE_THE_DATA_TO_+PASS);
+            this.userActivated.error(HERE_THE_DATA_TO_+PASS);
+            this.userActivated.complete(HERE_THE_DATA_TO_+PASS);
+
+        -- Subscribing
+            this.usersService.userActivated.subscribe(
+                (id: number) => {
+                    this.user1Activated = id === 1;
+                    this.user2Activated = id === 2;
+                }
+            );
+    OPERATORS
+        Allow to transform the data sent/received. You apply the OPERATOR on the OBSERVABLE.
+        Example:
+            Observable.interval(1000).map((data: number) => {
+                return { number: data, message: "ALL GOOD" };
+            });
+    NOTICE THE DIFFERENT NOTATION IF NOT USING THE COMPAT LIBRARY!
+
