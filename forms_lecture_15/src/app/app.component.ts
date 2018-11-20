@@ -9,11 +9,39 @@ import { NgForm } from "@angular/forms";
 export class AppComponent implements OnInit {
 	formData;
 	answer = "";
+	user = {
+		username: "",
+		email: "",
+		age: "",
+		secretQuestion: "",
+		answer: "",
+		gender: ""
+	};
+
 	@ViewChild("thisForm") signupForm: NgForm;
+
 	suggestUserName() {
-		const suggestedName = "Superuser";
+		// const suggestedName = "Superuser";
+		// this.signupForm.setValue({
+		// 	age: 121,
+		// 	gender: "male",
+		// 	questionAnswer: "aaabbccc",
+		// 	secret: "the secret value",
+		// 	userData: {
+		// 		username: "juan",
+		// 		email: "jjjaa@adfafd.com"
+		// 	}
+		// });
+
+		this.signupForm.form.patchValue({
+			userData: {
+				username: "aaaaaaaaa"
+			}
+		});
 	}
+
 	isValid = false;
+	genders: string[] = ["male", "female"];
 
 	// onSubmit(form: NgForm) {
 	// 	console.log(form);
@@ -24,13 +52,29 @@ export class AppComponent implements OnInit {
 	ngOnInit() {
 		this.signupForm.valueChanges.subscribe(() => {
 			this.isValid = this.signupForm.valid;
-			console.log(this.isValid);
+			// console.log(this.isValid);
 		});
 	}
 
 	onSubmit() {
 		console.log(this.signupForm);
-		console.log(this.signupForm.value);
-		console.log(this.signupForm.valid);
+
+		this.user.username = this.signupForm.value.userData.username;
+		this.user.email = this.signupForm.value.userData.email;
+		this.user.age = this.signupForm.value.age;
+		this.user.secretQuestion = this.signupForm.value.secret;
+		this.user.answer = this.signupForm.value.questionAnswer;
+		this.user.gender = this.signupForm.value.gender;
+		console.log(this.user);
+
+		this.submitted = true;
+		// console.log(this.signupForm.value);
+		// console.log(this.signupForm.valid);
+	}
+	submitted: boolean = false;
+
+	onReset() {
+		console.log("resettting");
+		this.signupForm.reset();
 	}
 }

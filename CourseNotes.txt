@@ -641,6 +641,49 @@ Create an Angular project
                 }
         Use validators in the input controls for max length, minlength ...
 
+        You can control each individual conttrol by ngModel
+
+            <input type="email" id="email" ngModel #email='ngModel'>
+            <p *ngIf='!email.valid' >Please enter a valid email</p>
+
+        Default dropdown value:
+            <select id="secret" class="form-control" [ngModel]="'pet'" name="secret">
+                <option value="pet">Your first Pet?</option>
+                <option value="teacher">Your first teacher?</option>
+            </select>
+
+        Use ngModelGroup='userData' to group values into its own group of data and also the validation can be divided and set appart for this control
+
+        2 way binding:
+            <textarea name='questionAnswer' rows='3' [(ngModel)]='answer'>
+            <p>Your reply: {{answer}}</p>
+        1 way binding
+            <select id="secret" class="form-control" [ngModel]="'pet'" name="secret">
+
+        Use cool local reference:
+            <div id="user-data" style="border:1px solid blue" ngModelGroup='userData' #MY_LOCAL_REFERENCE='ngModelGroup'>
+            <p class="help-block" *ngIf="!MY_LOCAL_REFERENCE.valid">This Form is not correct</p>
+
+        To set the value of all the form (this requires to set all the values):
+            this.signupForm.setValue({
+                age: 121,
+                gender: "male",
+                questionAnswer: "aaabbccc",
+                secret: "the secret value",
+                userData: {
+                    username: "juan",
+                    email: "jjjaa@adfafd.com"
+                }
+            });
+            OR
+
+            IF you want to override only part of the form
+
+                this.signupForm.form.patchValue({
+            userData: {
+                username: "aaaaaaaaa"
+            }
+        });
 
 
 
