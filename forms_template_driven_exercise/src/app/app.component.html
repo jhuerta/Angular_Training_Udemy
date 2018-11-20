@@ -16,7 +16,7 @@ Optionally, display it in your template.
         <input type="text" class="form-control" name="email" ngModel required email #email='ngModel'>
         <p *ngIf='!email.valid'>Email is invalid</p>
         <label>Quality</label>
-        <select class="form-control" ngModel='excellent' name='quality'>
+        <select class="form-control" [ngModel]='"good"' name='quality'>
           <option *ngFor='let quality of qualities' [value]='quality'>{{quality}}</option>
         </select>
         <label>Password</label>
