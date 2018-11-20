@@ -17,7 +17,8 @@
           <div class="form-group">
             <label for="email">email</label>
             <input type="text" id="email" class="form-control" formControlName="email">
-            <span class="help-block" *ngIf="!signupForm.get('userData.email').valid">Please enter a valid email</span>
+            <span class="help-block" *ngIf="!emailControl.valid">Please enter a valid email
+            </span>
           </div>
         </div>
         <div class="radio" *ngFor="let gender of genders">
@@ -29,9 +30,8 @@
           <h4>Your Hobbies</h4>
           <button class="btn btn-default" type="button" (click)='onAddHobbies()'>Add Hobby</button>
           <div class="form-group" *ngFor='let hobbyControl of signupForm.get("hobbies").controls;let i = index'>
-  <input type="text" class="form-control" [formControlName]='i'>
-</div>
-
+            <input type="text" class="form-control" [formControlName]='i'>
+          </div>
         </div>
         <span class="help-block" *ngIf="!signupForm.valid">Please enter a valid form</span>
         <button class="btn btn-primary" type="submit" [disabled]='!signupForm.valid'>Submit</button>

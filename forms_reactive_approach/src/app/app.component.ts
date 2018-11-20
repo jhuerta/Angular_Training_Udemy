@@ -1,5 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormControl, Validators, FormArray } from "@angular/forms";
+import {
+    FormGroup,
+    FormControl,
+    Validators,
+    FormArray,
+    AbstractControl
+} from "@angular/forms";
 import { Observable } from "rxjs/Observable";
 
 @Component({
@@ -12,6 +18,7 @@ export class AppComponent implements OnInit {
     signupForm: FormGroup;
     forbiddenUsernames: string[] = ["chris", "anna"];
     forbiddenEmailsValues: string[] = ["juan@gmail.com", "hola@adios.com"];
+    emailControl: FormControl;
 
     forbiddenNames(control: FormControl): { [s: string]: boolean } {
         if (this.forbiddenUsernames.indexOf(control.value) !== -1) {
@@ -50,9 +57,13 @@ export class AppComponent implements OnInit {
             gender: new FormControl("female"),
             hobbies: new FormArray([])
         });
+
+        this.emailControl = this.signupForm.get("userData.email");
     }
 
     onAddHobbies() {
+        //this.signupForm.controls.get()
+
         const control = new FormControl("null", Validators.required);
         (<FormArray>this.signupForm.get("hobbies")).push(control);
     }
@@ -84,6 +95,6 @@ export class AppComponent implements OnInit {
         hobbiesControl.push(new FormControl("run"));
         hobbiesControl.push(new FormControl("talk"));
         hobbiesControl.push(new FormControl("walk"));
-        hobbiesControl = ["a", "b"];
+        //hobbiesControl = ["a", "b"];
     }
 }

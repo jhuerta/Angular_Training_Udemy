@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { CustomValidators } from "./custom-validators";
 
 @Component({
     selector: "app-root",
@@ -17,7 +18,8 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this.signupForm = new FormGroup({
             project_name: new FormControl("female", [
-                this.noTestName,
+                CustomValidators.invalidProjectName,
+                //this.noTestName,
                 Validators.required
             ]),
             mail: new FormControl(
