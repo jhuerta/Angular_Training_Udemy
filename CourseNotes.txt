@@ -694,3 +694,43 @@ Create an Angular project
 
         TIP: ADD TYPE BUTTON TO BUTTON TAGS TO PREVENT SUBMITTING THE FORM!!!!!!!!
 
+SECTION 17: PIPES: https://angular.io/guide/pipes
+======================================
+    A mechanism to transform data
+    VARIABLE | pipe_name
+    Pipes: 
+        uppercase
+        date
+        date:'fullDate'
+        date:'dd-mm-yyy'
+    import { PipeTransform, Pipe } from "@angular/core";
+
+    @Pipe({
+        name: "shorten"
+    })
+    export class ShortenPipe implements PipeTransform {
+        transform(value: any) {
+        return `<strong>${value.substr(0, 2)}</strong>`;
+        }
+    }
+
+    YOU CAN USE PIPE TO FILTER AUTOMATICALLY IN A LIST (FOR LOOP!!!!!!!!)
+
+    The pipe does not get refreshed when a change is done in the DOM, this is to prevent performance issue.
+    It is possible to chane the behaviour and trigger the pipe when the DOM changes by making the PURE property to FALSE.
+    THIS MAY HVE PERFORMANCE ISSUES!!!!!!!!!!!!!!
+    @Pipe({
+    name: "filter",
+    pure: false
+    })
+
+    Use async PIPE!!!!!!
+        When a value is gonna change asynchronously, you can use this pipe to wait for the value:
+
+        <h3>App Status: {{appStatus | async}}</h3>
+
+        appStatus = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("stable");
+    }, 2000);
+  });
