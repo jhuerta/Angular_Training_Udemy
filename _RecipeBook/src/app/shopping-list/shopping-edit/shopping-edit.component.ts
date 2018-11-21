@@ -11,7 +11,7 @@ import { Ingredient } from "../../shared/ingredient.model";
 import { ShoppingListService } from "../shopping-list.service";
 
 import { NgForm } from "@angular/forms";
-import { Subscripion } from "rxjs";
+import { Subscription } from "rxjs";
 
 @Component({
   selector: "app-shopping-edit",
@@ -27,7 +27,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   @ViewChild("amountInput") ingredientAmount: ElementRef;
 
   @ViewChild("editShoppingForm") editShoppingForm: NgForm;
-  startEditingSubscription: Subscripion;
+  startEditingSubscription: Subscription;
   editingMode: boolean = false;
 
   addOrUpdateIngredient() {
