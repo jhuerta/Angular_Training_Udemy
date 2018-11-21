@@ -28,29 +28,49 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
 
   @ViewChild("editShoppingForm") editShoppingForm: NgForm;
   startEditingSubscription: Subscripion;
+  editingMode: boolean = false;
 
-  addIngredient() {
-    const name = this.editShoppingForm.value.recipeName;
-    const amount = this.editShoppingForm.value.amount;
+  addOrUpdateIngredient() {
+    const ingredient_name = this.editShoppingForm.value.recipeName;
+    const ingredient_amount = this.editShoppingForm.value.amount;
+    const ingredient_id = this.editShoppingForm.value.ingredientId;
     // const ingredient_name = this.ingredientName.nativeElement.value;
     // const ingredient_amount = this.ingredientAmount.nativeElement.value;
 
-    const ingredient_name = name;
-    const ingredient_amount = amount;
     const newIngredient = new Ingredient(ingredient_name, ingredient_amount);
-    this.shoppingListService.addIngredient(newIngredient);
+    if (this.editingMode) {
+      this.shoppingListService.updateIngredient(ingredient_id, newIngredient);
+    } else {
+      this.shoppingListService.addIngredient(newIngredient);
+    }
   }
 
   ngOnDestroy() {
     this.startEditingSubscription.unsubscribe();
   }
 
+  onResetForm() {
+    this.editShoppingForm.reset();
+    this.editingMode = false;
+  }
+
+  onDeleteItem() {
+    console.log("eeee");
+    const ingredient_id = this.editShoppingForm.value.ingredientId;
+    this.shoppingListService.deleteIngredient(ingredient_id);
+  }
+
   ngOnInit() {
     this.startEditingSubscription = this.shoppingListService.startedEditing.subscribe(
-      (ingredient: Ingredient) => {
+      (ingredientId: number) => {
+        this.editingMode = true;
+        const thisIngredient = this.shoppingListService.getIngredient(
+          ingredientId
+        );
         this.editShoppingForm.form.setValue({
-          recipeName: ingredient.name,
-          amount: ingredient.amount
+          recipeName: thisIngredient.name,
+          amount: thisIngredient.amount,
+          ingredientId: ingredientId
         });
       }
     );

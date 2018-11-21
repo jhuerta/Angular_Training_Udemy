@@ -1,7 +1,8 @@
 <div class="row">
   <div class="col-xs-12">
-    <form (ngSubmit)="addIngredient()" #editShoppingForm='ngForm'>
+    <form (ngSubmit)="addOrUpdateIngredient()" #editShoppingForm='ngForm'>
       <div class="row">
+        <input type="hidden" name='ingredientId' ngModel>
         <div class="col-sm-5 form-group">
           <label for="name">Name</label>
           <input type="text" id="name" class="form-control" name='recipeName' ngModel required>
@@ -13,9 +14,9 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <button class="btn btn-success" type="submit" [disabled]='!editShoppingForm.valid'>Add</button>
-          <button class="btn btn-danger" type="button">Delete Item</button>
-          <button class="btn btn-primary" type="button">Clear</button>
+          <button class="btn" [ngClass]="{'btn-primary':!editingMode,'btn-success':editingMode}" type="submit" [disabled]='!editShoppingForm.valid'>{{editingMode ? 'Update':'Add'}}</button>
+          <button class="btn btn-danger" type="button" (click)='onDeleteItem()'>Delete Item</button>
+          <button class="btn btn-primary" type="button" (click)='onResetForm()'>Clear</button>
         </div>
       </div>
     </form>
