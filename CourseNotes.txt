@@ -698,7 +698,7 @@ SECTION 17: PIPES: https://angular.io/guide/pipes
 ======================================
     A mechanism to transform data
     VARIABLE | pipe_name
-    Pipes: 
+    Pipes:
         uppercase
         date
         date:'fullDate'
@@ -734,3 +734,7 @@ SECTION 17: PIPES: https://angular.io/guide/pipes
       resolve("stable");
     }, 2000);
   });
+
+17 HTTP REQUESTS
+    USING FIREBASE FROM GOOGLE: https://udemy-angular-training-0001.firebaseio.com/
+    (Real Time database)
