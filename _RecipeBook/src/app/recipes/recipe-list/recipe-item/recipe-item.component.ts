@@ -10,13 +10,13 @@ import { Router } from "@angular/router";
 })
 export class RecipeItemComponent implements OnInit {
   @Input() recipeDetails: Recipe;
+  @Input() recipeIndex: number;
 
   // @Output() on_recipe_click = new EventEmitter<void>();
 
   onRecipeClick() {
-    this.router.navigate(["/id", this.recipeDetails.id], {
-      relativeTo: this.route
-    });
+    console.log("from item " + this.recipeIndex);
+    this.route.navigate(["/id", this.recipeIndex]);
 
     // this.recipeService.recipeSelected.emit(this.recipeDetails);
     //this.on_recipe_click.emit();

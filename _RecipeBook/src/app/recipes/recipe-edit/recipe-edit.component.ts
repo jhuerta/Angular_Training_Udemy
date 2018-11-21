@@ -26,6 +26,7 @@ export class RecipeEditComponent implements OnInit {
         this.route.params.subscribe((params: Params) => {
             this.id = +params["id"];
             if (!isNaN(this.id)) {
+                this.editMode = true;
                 this.recipe = this.recipeService.getRecipe(this.id);
             }
 
@@ -45,7 +46,20 @@ export class RecipeEditComponent implements OnInit {
         );
     }
 
-    onSubmit() {}
+    onSubmit() {
+        let newRecipe = new Recipe(
+            this.id,
+            this.recipeForm.value["name"],
+            this.recipeForm.value["description"],
+            this.recipeForm.value["imagePath"],
+            this.recipeForm.value["ingredients"]
+        );
+        if (this.editMode) {
+            this.recipeService.updateRecipe(this.id, newRecipe);
+        } else {
+            this.recipeService.addRecipe(newRecipe);
+        }
+    }
 
     private initForm() {
         let recipeIngredients = new FormArray([]);
