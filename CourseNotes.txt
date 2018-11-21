@@ -692,3 +692,5 @@ Create an Angular project
             Form Template Driven approach, we need to add FormsModule into the modules
             For Reactive Approach, we need to add the ReactiveFormsModule.
 
+        TIP: ADD TYPE BUTTON TO BUTTON TAGS TO PREVENT SUBMITTING THE FORM!!!!!!!!
+
