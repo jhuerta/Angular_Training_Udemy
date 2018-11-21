@@ -1,5 +1,6 @@
 import { Recipe } from "./recipe.model";
 import { EventEmitter, Injectable } from "@angular/core";
+import { Route } from "@angular/router";
 import { Ingredient } from "../shared/ingredient.model";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
 import { Subject } from "rxjs";
@@ -62,5 +63,10 @@ export class RecipeService {
 
     getRecipe(recipeId: number): Recipe {
         return this.recipes[recipeId];
+    }
+
+    deleteRecipe(recipeId: number) {
+        this.recipes.splice(recipeId, 1);
+        this.recipesChanged.next(this.recipes);
     }
 }
