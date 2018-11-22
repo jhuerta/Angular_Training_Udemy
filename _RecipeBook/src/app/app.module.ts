@@ -13,11 +13,14 @@ import { ShoppingEditComponent } from "./shopping-list/shopping-edit/shopping-ed
 import { DropdownDirective } from "./shared/dropdown-directive/dropdown.directive";
 
 import { RecipeService } from "./recipes/recipe.service";
+import { ServerService } from "./shared/server.service";
+
 import { ShoppingListService } from "./shopping-list/shopping-list.service";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { RecipeEditComponent } from "./recipes/recipe-edit/recipe-edit.component";
 import { RecipeStartComponent } from "./recipes/recipe-start/recipe-start.component";
+import { HttpModule } from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -33,8 +36,14 @@ import { RecipeStartComponent } from "./recipes/recipe-start/recipe-start.compon
     RecipeEditComponent,
     RecipeStartComponent
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
-  providers: [RecipeService, ShoppingListService],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpModule
+  ],
+  providers: [RecipeService, ShoppingListService, ServerService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

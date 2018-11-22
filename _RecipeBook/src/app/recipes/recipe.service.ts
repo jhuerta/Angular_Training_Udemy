@@ -4,10 +4,14 @@ import { Route } from "@angular/router";
 import { Ingredient } from "../shared/ingredient.model";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
 import { Subject } from "rxjs";
+import { ServerService } from "../shared/server.service";
 
 @Injectable()
 export class RecipeService {
-    constructor(private shoppingListService: ShoppingListService) {}
+    constructor(
+        private shoppingListService: ShoppingListService,
+        private serverService: ServerService
+    ) {}
 
     recipeSelected = new EventEmitter<Recipe>();
 
@@ -43,22 +47,41 @@ export class RecipeService {
         this.shoppingListService.addIngredients(ingredients);
     }
 
+    saveRecipes() {
+        return this.serverService.saveRecipes(this.recipes);
+    }
+
+    refreshRecipes() {
+        this.serverService.getRecipes().subscribe(response => {
+            //const recipes: Recipe[] = response;
+            console.log(response);
+            this.setRecipes(response);
+        });
+    }
+
+    setRecipes(recipes: Recipe[]) {
+        this.recipes = recipes;
+        this.recipesChanged.next(this.recipes);
+    }
+
     addRecipe(recipe: Recipe) {
-        console.log(this.recipes);
         this.recipes.push(recipe);
-        console.log(this.recipes);
+        //let saveToDb = this.serverService.saveRecipes(this.recipes);
+        // saveToDb.subscribe(response => {
+        //     console.log(response);
+        // });
+
         this.recipesChanged.next(this.recipes);
     }
 
     updateRecipe(index: number, recipe: Recipe) {
-        console.log(this.recipes);
         this.recipes[index] = recipe;
-        console.log(this.recipes);
+        //this.serverService.saveRecipes(this.recipes);
         this.recipesChanged.next(this.recipes);
     }
 
     getRecipes() {
-        return this.recipes.slice();
+        this.refreshRecipes();
     }
 
     getRecipe(recipeId: number): Recipe {
