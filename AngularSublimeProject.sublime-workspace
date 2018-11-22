@@ -4,44 +4,128 @@
 		"selected_items":
 		[
 			[
-				"config",
-				"webpack.config.dev.js"
+				"auth",
+				"auth.service\tscript"
 			],
 			[
-				"style",
-				"styleUrls\tproperty"
+				"Htt",
+				"HttpParams\talias"
 			],
 			[
-				"add",
-				"addIngredients\tmethod"
+				"db",
+				"dbDomain\tproperty"
 			],
 			[
-				"in",
-				"ingredients\tparameter"
+				"rec",
+				"recipes\tproperty"
 			],
 			[
-				"shop",
-				"shopping-list.service\tscript"
+				"prop",
+				"propName\tparameter"
 			],
 			[
-				"sho",
-				"shopping-list/"
+				"filter",
+				"filterString\tparameter"
 			],
 			[
-				"ing",
-				"ingredientsChanged\tproperty"
+				"rj",
+				"rxjs\texternal module name"
 			],
 			[
-				"ingre",
-				"ingredients\tproperty"
+				"re",
+				"recipeService\tproperty"
 			],
 			[
-				"shopping-list",
-				"shopping-list.service.ts"
+				"reci",
+				"recipesChanged\tproperty"
 			],
 			[
 				"recipe",
-				"recipeSelected\tproperty"
+				"recipeForm\tproperty"
+			],
+			[
+				"ingre",
+				"ingredientName\tproperty"
+			],
+			[
+				"di",
+				"disabled"
+			],
+			[
+				"min",
+				"minlength\tAttr"
+			],
+			[
+				"valu",
+				"valueChanges\tproperty"
+			],
+			[
+				"user",
+				"users.service\tscript"
+			],
+			[
+				"ob",
+				"observableCustom\tproperty"
+			],
+			[
+				"impor",
+				"import\tkeyword"
+			],
+			[
+				"isl",
+				"isLoggedIn\tproperty"
+			],
+			[
+				"lo",
+				"loggedEvent\tproperty"
+			],
+			[
+				"aut",
+				"auth.service\tscript"
+			],
+			[
+				"not",
+				"not-allowed\tdirectory"
+			],
+			[
+				"app",
+				"app-routing.module\tscript"
+			],
+			[
+				"Page",
+				"PageNotFoundComponent\talias"
+			],
+			[
+				"query",
+				"queryParamsHandling\tproperty"
+			],
+			[
+				"in",
+				"inactiveUsers\tproperty"
+			],
+			[
+				"sub",
+				"subscribe\tmethod"
+			],
+			[
+				"acc",
+				"accountsService\tproperty"
+			],
+			[
+				"Event",
+				"EventEmitter\talias"
+			],
+			[
+				"Accoun",
+				"AccountsService\talias"
+			],
+			[
+				"prov",
+				"viewProviders\tproperty"
+			],
+			[
+				"new",
+				"newAccount\tparameter"
 			],
 			[
 				"c",
@@ -100,66 +184,49 @@
 	"buffers":
 	[
 		{
-			"contents": "Package Control Messages\n========================\n\nSublimeLinter-tslint\n--------------------\n\n  SublimeLinter-tslint\n  -------------------------------\n  This linter plugin for SublimeLinter provides an interface to tslint.\n  \n  Please read the installation instructions at:\n  \n  https://github.com/SublimeLinter/SublimeLinter-tslint\n\n\nSublimeLinter-eslint\n--------------------\n\n  SublimeLinter-eslint\n  -------------------------------\n  This linter plugin for SublimeLinter provides an interface to ESLint.\n  \n  Please read the installation instructions at:\n  \n  https://github.com/SublimeLinter/SublimeLinter-eslint\n\n\nSublimeLinter-contrib-jslint\n----------------------------\n\n  SublimeLinter-jslint\n  -------------------------------\n  This linter plugin for SublimeLinter provides an interface to jslint.\n  \n  ** IMPORTANT! **\n  \n  Before this plugin will activate, you *must*\n  follow the installation instructions here:\n  \n  https://github.com/devdoc/SublimeLinter-jslint\n",
+			"file": "httpclient_lecture_23/src/app/shared/data-storage.service.ts",
 			"settings":
 			{
-				"buffer_size": 976,
-				"line_ending": "Unix",
-				"name": "Package Control Messages",
-				"read_only": true,
-				"scratch": true
+				"buffer_size": 2118,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "routing-start/src/app/app-routing.module.ts",
+			"file": "httpclient_lecture_23/src/app/shared/auth.interceptor.ts",
 			"settings":
 			{
-				"buffer_size": 1709,
+				"buffer_size": 1119,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "httpclient_lecture_23/src/app/shared/logging.interceptor.ts",
+			"settings":
+			{
+				"buffer_size": 512,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "CourseNotes.txt",
 			"settings":
 			{
-				"buffer_size": 26777,
+				"buffer_size": 35078,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "routing-start/src/app/error-page/error-page.component.html",
+			"contents": "import { Component } from \"@angular/core\";\nimport { HttpEvent } from \"@angular/common/http\";\n\nimport { DataStorageService } from \"../../shared/data-storage.service\";\nimport { AuthService } from \"../../auth/auth.service\";\n\n@Component({\n  selector: \"app-header\",\n  templateUrl: \"./header.component.html\"\n})\nexport class HeaderComponent {\n  constructor(\n    private dataStorageService: DataStorageService,\n    private authService: AuthService\n  ) {}\n\n  onSaveData() {\n    this.dataStorageService\n      .storeRecipes()\n      .subscribe((response) => {\n        console.log(\"events----\");\n        console.log(response);\n        console.log(\"events****\");\n      });\n  }\n\n  onFetchData() {\n    this.dataStorageService.getRecipes();\n  }\n\n  onLogout() {\n    this.authService.logout();\n  }\n}\n",
+			"file": "httpclient_lecture_23/src/app/core/header/header.component.ts",
+			"file_size": 800,
+			"file_write_time": 131873569074281631,
 			"settings":
 			{
-				"buffer_size": 28,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routing-start/src/app/error-page/error-page.component.ts",
-			"settings":
-			{
-				"buffer_size": 563,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routing-start/src/app/servers/server/server-resolver.service.ts",
-			"settings":
-			{
-				"buffer_size": 681,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routing-start/src/tslint.json",
-			"settings":
-			{
-				"buffer_size": 53,
+				"buffer_size": 781,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -177,80 +244,80 @@
 		"selected_items":
 		[
 			[
-				"eslint",
-				"Preferences: SublimeLinter Settings"
-			],
-			[
-				"lint",
-				"Preferences: SublimeLinter Settings"
-			],
-			[
-				"install ",
-				"Package Control: Install Package"
-			],
-			[
-				"autofix",
-				"eslintAutoFix"
-			],
-			[
-				"tslint",
-				"SublimeLinter: Reload SublimeLinter and its Plugins"
-			],
-			[
-				"install pa",
-				"Package Control: Install Package"
-			],
-			[
-				"pret",
-				"Preferences: JsPrettier Settings - Default"
-			],
-			[
 				"remove pa",
 				"Package Control: Remove Package"
 			],
 			[
-				"jspre",
-				"JsPrettier: Format Code"
+				"remov pa",
+				"Package Control: Remove Package"
 			],
 			[
-				"intall pa",
-				"Package Control: Install Package"
-			],
-			[
-				"install p",
-				"Package Control: Install Package"
-			],
-			[
-				"html",
-				"HTMLPrettify: Set Plugin Options"
-			],
-			[
-				"htl",
-				"HTMLPrettify"
-			],
-			[
-				"prettier",
-				"Preferences: JsPrettier Settings - Default"
+				"remoe pa",
+				"Package Control: Remove Package"
 			],
 			[
 				"remove",
 				"Package Control: Remove Package"
 			],
 			[
-				"terminal",
-				"Terminal View: Open Bash Terminal"
-			],
-			[
-				"terminality",
-				"Terminality: Browse Commands..."
-			],
-			[
-				"termina",
-				"Terminal: Open"
-			],
-			[
 				"upper",
 				"Convert Case: Upper Case"
+			],
+			[
+				"origa create",
+				"Origami: Create Pane on the Right"
+			],
+			[
+				"refactor",
+				"Text Refactor: Extract Method"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"refac",
+				"TypeScript: Refactor"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"html ",
+				"HTMLPrettify: Set Plugin Options"
+			],
+			[
+				"syntax text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"noe",
+				"Set Syntax: Notes - Text"
+			],
+			[
+				"prettier",
+				"Preferences: JsPrettier Settings - Default"
+			],
+			[
+				"eslint ",
+				"eslintAutoFix"
+			],
+			[
+				"eslint",
+				"ESLint Formatter: Format this file"
+			],
+			[
+				"remo pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal p",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
 			],
 			[
 				"type",
@@ -265,6 +332,10 @@
 				"Set Syntax: JavaScript"
 			],
 			[
+				"pret",
+				"HTMLPrettify"
+			],
+			[
 				"beau",
 				"HTMLBeautify"
 			],
@@ -273,12 +344,12 @@
 				"Set Syntax: TypeScript"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"tabs",
 				"TabsExtra: Settings"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
 			],
 			[
 				"install",
@@ -287,10 +358,6 @@
 			[
 				"insall pa",
 				"Package Control: Install Package"
-			],
-			[
-				"html ",
-				"HTMLBeautify"
 			],
 			[
 				"typescr",
@@ -323,6 +390,10 @@
 			[
 				"es",
 				"ESLint Formatter: Format this file"
+			],
+			[
+				"html",
+				"HTMLBeautify"
 			],
 			[
 				"esl",
@@ -561,6 +632,10 @@
 				"Activate Materialize Theme"
 			],
 			[
+				"intall pa",
+				"Package Control: Install Package"
+			],
+			[
 				"package in",
 				"Package Control: Install Package"
 			]
@@ -590,98 +665,127 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/routing-start",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/routing-start/src",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/routing-start/src/app",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/routing-start/src/app/error-page",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/routing-start/src/app/page-not-found",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/routing-start/src/app/servers",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/routing-start/src/app/servers/server"
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/testing_angular_lecture_28"
 	],
 	"file_history":
 	[
-		"/Users/jhuerta/Library/Application Support/Sublime Text 3/Packages/JsPrettier/JsPrettier.sublime-settings",
-		"/Users/jhuerta/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
-		"/Users/jhuerta/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom-project-final/package.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom-project-final_not_working/webpack.config.dev.js",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom-project-final_not_working/webpack.config.common.js",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom-project-final_not_working/src/polyfills.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom-project-final_not_working/src/app/main.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom-project-final_not_working/src/index.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom-project-final_not_working/src/app/app.module.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom-project-final_not_working/src/app/app.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/angular_universal_lecture/webpack.server.config.js",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/webpack.config.prod.js",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/webpack.config.dev.js",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/app/users/users.module.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/app/users/users.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/app/users/users.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/app/users/users.component.css",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/app/users/users-routing.module.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/angular_universal_lecture/src/tsconfig_2.app.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/angular_universal_lecture/src/tsconfig.server.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/tsconfig.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/angular_universal_lecture/src/tsconfig.app.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/angular_universal_lecture/server.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/polyfills.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/angular_universal_lecture/package.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/app/main.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/angular_universal_lecture/main.server.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/index.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/app/home.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/angular_universal_lecture/src/app/app.server.module.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/app/app.module.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/angular_universal_lecture/src/app/app.module.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/app/app.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/app/app.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/app/app.component.css",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/src/app/app-routing.module.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/angular_universal_lecture/angular.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/custom_project_workflow/.gitignore",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/services-assignment/src/app/usersManagement.service.ts",
-		"/Users/jhuerta/Library/Application Support/Sublime Text 3/Packages/User/Terminality.sublime-settings",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shopping-list/shopping-list.service.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shopping-list/shopping-list.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shopping-list/shopping-list.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shopping-list",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shopping-list/shopping-edit/shopping-edit.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/services",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipes.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipes.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe.service.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe.model.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe-list/recipe-item/recipe-item.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe-detail/recipe-detail.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/recipes/recipe-detail/recipe-detail.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/services-assignment/src/app/logActions.service.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/shared/ingredient.model.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/CourseNotes.txt",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/app.module.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/services-assignment/src/app/app.module.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/services-assignment/src/app/app.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/header/header.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/header/header.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/app.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/src/app/app.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/httpclient_lecture_23/src/app/app.module.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/httpclient_lecture_23/src/app/core/core.module.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/httpclient_lecture_23/src/app/app.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/http_requests_section_18/src/app/server.service.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/shared/server.service.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe.service.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/app.module.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/header/header.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/header/header.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/http_requests_section_18/src/app/app.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/pipes-start/src/app/shorten.pipe.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/app-routing.module.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_ExerciseLectureApp/src/app/servers/servers.component.css",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/pipes-start/src/app/filter.pipe.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/pipes-start/src/app/app.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/pipes-start/src/app/app.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/pipes-start/src/app/app.module.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe-edit/recipe-edit.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe-edit/recipe-edit.component.css",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/servers/servers.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe-edit/recipe-edit.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/node_modules/@angular/router/src/router.d.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe-detail/recipe-detail.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe-detail/recipe-detail.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/shopping-list/shopping-list.service.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe.model.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/shared/ingredient.model.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe-list/recipe-item/recipe-item.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe-list/recipe-item/recipe-item.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/shopping-list/shopping-list.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/forms_reactive_assignment/src/app/app.module.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/forms_lecture_15/src/app/app.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/shopping-list/shopping-edit/shopping-edit.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/shopping-list/shopping-list.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/shopping-list/shopping-edit/shopping-edit.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/forms_template_driven_exercise/src/app/app.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/forms_template_driven_exercise/src/app/app.component.css",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/forms_template_driven_exercise/src/app/app.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/forms_lecture_15/src/app/app.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/forms_lecture_15/src/app/app.module.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/forms_lecture_15/src/app/app.component.css",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/forms_lecture_15/src/app/app.component.spec.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/observables-start/src/app/user/user.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/observables-start/src/app/home/home.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/observables-start/src/app/app.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/observables-start/src/app/app.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/observables-start/src/app/user/user.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/observables-start/src/app/app.module.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/observables-start/src/app/user/users.service.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/observables-start/package.json",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/servers/edit-server/edit-server.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/home/home.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/app.module.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/app-routing.module.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/app.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/app.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/home/home.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/auth.service.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/shared/dropdown-directive/dropdown.directive.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/auth-guard.service.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/CourseNotes.txt",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/servers/server/server.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/servers/servers.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/servers/edit-server/edit-server.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/servers/edit-server/can-deactivate-guard.service.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/servers/server/server.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/users/users.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/not-allowed/not-allowed.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding-assignment/src/app/game-control/game-control.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/node_modules/@angular/router/src/interfaces.d.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/users/user/user.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/users/user/user.component.html",
+		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/src/app/users/users.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/tslint.json",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/routing-start/package.json",
+		"/C/Users/huertaj/AppData/Roaming/Sublime Text 3/Packages/JsPrettier/JsPrettier.sublime-settings",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/app.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-lecture/src/app/app.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-lecture/src/app/app.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-lecture/src/app/accounts.service.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-assignment/src/app/app.module.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-assignment/src/app/inactive-users/inactive-users.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-assignment/src/app/active-users/active-users.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-assignment/src/app/app.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-assignment/src/app/logActionsService.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-assignment/src/app/app.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-assignment/src/app/usersManagement.service.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-lecture/src/app/logging.service.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-lecture/src/app/account/account.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-lecture/src/app/new-account/new-account.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/services-lecture/src/app/app.module.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/directives-start/src/app/better-highlight/better-highlight.directive.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/app.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipes.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/directives-start/src/app/unless-directive/unless.directive.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/directives-start/src/app/app.component.css",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/directives-start/src/app/app.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/directives-start/src/app/app.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/directives-start/src/app/basic-hightlight/basic-highlight.directive.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/directives-start/src/app/better-highlight/better-directive.directive.spec.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/directives-start/src/app/show-ref-values/show-ref-values.component.ts",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/directives-start/src/app/show-ref-values/show-ref-values.component.html",
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/directives-start/src/app/app.module.ts",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding-assignment-start/src/app/game-control/game-control.component.html",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding-assignment-start/src/app/game-control/game-control.component.ts",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding-assignment-start/src/app/app.component.ts",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding-assignment-start/src/app/odd-number/odd-number.component.ts",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding-assignment-start/src/app/even-number/even-number.component.ts",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/app.component.ts",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe.model.ts",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/app.component.html",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding-assignment-start/src/app/even-number/even-number.component.html",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding-assignment-start/src/app/odd-number/odd-number.component.html",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding-assignment-start/src/app/odd-number/odd-number.component.css",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding-assignment-start/src/app/even-number/even-number.component.css",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding-assignment-start/src/app/app.component.html",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/CourseNotes.txt",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding_5_60/src/app/app.component.ts",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding_5_60/src/app/app.component.css",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding_5_60/src/app/server-element/server-element.component.ts",
@@ -692,53 +796,22 @@
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding_5_60/src/app/server-element/server-element.component.html",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding_5_60/src/app/shared/server.model.ts",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding_5_60/src/app/app.component.html",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/shopping-list/shopping-list.component.ts",
 		"/E/MyStuff/Personal/Trainings/Angular_Udemy/cmp-databinding_5_60/src/app/app.component.spec.ts",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.ts",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/angular.json",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/app.module.ts",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/header/header.component.html",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/header/header.component.ts",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/shared/ingredient.model.ts",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe-detail/recipe-detail.component.html",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipe-list/recipe-list.component.html",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/recipes/recipes.component.html",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/shopping-list/shopping-edit/shopping-edit.component.html",
-		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/src/app/shopping-list/shopping-list.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/servers/servers.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/servers/servers.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/server/server.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/server/server.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_3/src/app/app.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_3/src/app/app.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_3/src/app/app.component.css",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_RecipeBook/angular.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/_ExerciseLectureApp/src/app/server/server.component.css",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/favicon.ico",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/tslint.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/tsconfig.spec.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/tsconfig.app.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/package.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/karma.conf.js",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/index.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/how-to-use.txt",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/browserslist",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.spec.ts",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.html",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/src/app/app.component.css",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/angular.json",
-		"/Users/jhuerta/Documents/Trainings/AngularUdemy/assignment_2/tslint.json"
+		"/E/MyStuff/Personal/Trainings/Angular_Udemy/_RecipeBook/angular.json"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
 		"height": 155.0,
 		"where_history":
 		[
+			"E:\\MyStuff\\Personal\\Trainings\\Angular_Udemy,*.ts",
+			"E:\\MyStuff\\Personal\\Trainings\\Angular_Udemy,*.ts,-*/node-modules/*",
+			"E:\\MyStuff\\Personal\\Trainings\\Angular_Udemy,*.ts,*\\node-modules\\-*.*",
+			"E:\\MyStuff\\Personal\\Trainings\\Angular_Udemy,*.ts,,\\node-modules\\-*.*",
 			"E:\\MyStuff\\Personal\\Trainings\\Angular_Udemy,*.ts",
 			"E:\\MyStuff\\Personal\\Trainings\\Angular_Udemy"
 		]
@@ -748,10 +821,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"save",
-			"require",
-			"module",
-			"}",
+			"refreshRecipes",
+			"serverservice",
+			"recipe",
+			"click",
+			".patch",
+			"patch",
+			"addIngredient",
+			"two",
+			"secret qu",
+			"thisForm",
+			"FormsModule",
+			"1",
+			"event",
+			"eventemmiter",
+			"new_ingredient_event",
+			"EventEmitter",
+			"extends",
 			"emit(",
 			"emmiter",
 			"display:string=\"\"",
@@ -777,50 +863,222 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "httpclient_lecture_23/src/app/shared/data-storage.service.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 976,
+						"buffer_size": 2118,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								976,
-								976
+								1738,
+								1738
 							]
 						],
 						"settings":
 						{
-							"SL.71.region_keys":
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2009,
+										2010
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1605,
+										1606
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
 							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
-							"auto_indent": false,
-							"default_dir": "/Users/jhuerta/Documents/Trainings/AngularUdemy/routing-start/src/app/servers/server",
-							"encoding_helper_encoding": "",
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2009,
+										2010
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1605,
+										1606
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"git_savvy.repo_path": "E:\\MyStuff\\Personal\\Trainings\\Angular_Udemy",
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
 							"tab_size": 2,
-							"tab_width": 2,
-							"tabs_extra_last_activated": 1542657385.8,
+							"tabs_extra_last_activated": 1542885733.23,
 							"tabs_extra_last_activated_sheet_index": 0,
 							"translate_tabs_to_spaces": true,
 							"typescript_plugin_format_options":
 							{
 								"convertTabsToSpaces": true,
-								"indentSize": 4,
-								"tabSize": 4
+								"indentSize": 2,
+								"tabSize": 2
 							},
-							"word_wrap": true
+							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 702.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -828,32 +1086,410 @@
 				},
 				{
 					"buffer": 1,
-					"file": "routing-start/src/app/app-routing.module.ts",
+					"file": "httpclient_lecture_23/src/app/shared/auth.interceptor.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1709,
+						"buffer_size": 1119,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1503,
-								1503
+								326,
+								326
 							]
 						],
 						"settings":
 						{
-							"SL.51.region_keys":
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1107,
+										1108
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										649,
+										650
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
 							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"git_savvy.repo_path": "E:\\MyStuff\\Personal\\Trainings\\Angular_Udemy",
+							"open_with_edit": true,
 							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tabs_extra_last_activated": 1542655489.07,
-							"tabs_extra_last_activated_sheet_index": 0,
+							"tabs_extra_last_activated": 1542885566.9,
+							"tabs_extra_last_activated_sheet_index": 1,
+							"tabs_extra_spawned": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 7.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "httpclient_lecture_23/src/app/shared/logging.interceptor.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 512,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								507,
+								507
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										506,
+										507
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										402,
+										403
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										506,
+										507
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										402,
+										403
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"git_savvy.repo_path": "E:\\MyStuff\\Personal\\Trainings\\Angular_Udemy",
+							"open_with_edit": true,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tabs_extra_last_activated": 1542893341.72,
+							"tabs_extra_last_activated_sheet_index": 2,
+							"tabs_extra_spawned": true,
 							"translate_tabs_to_spaces": false,
 							"typescript_plugin_format_options":
 							{
@@ -864,224 +1500,6 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "CourseNotes.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 26777,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26775,
-								26775
-							]
-						],
-						"settings":
-						{
-							"SL.34.region_keys":
-							[
-							],
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"tabs_extra_last_activated": 1542655742.21,
-							"tabs_extra_last_activated_sheet_index": 1,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 14914.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "routing-start/src/app/error-page/error-page.component.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 28,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								28,
-								28
-							]
-						],
-						"settings":
-						{
-							"SL.62.region_keys":
-							[
-							],
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tabs_extra_last_activated": 1542655469.1,
-							"tabs_extra_last_activated_sheet_index": 2
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "routing-start/src/app/error-page/error-page.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 563,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								458,
-								458
-							]
-						],
-						"settings":
-						{
-							"SL.39.region_keys":
-							[
-							],
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tab_size": 2,
-							"tabs_extra_last_activated": 1542655312.33,
-							"tabs_extra_last_activated_sheet_index": 3,
-							"translate_tabs_to_spaces": true,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "routing-start/src/app/servers/server/server-resolver.service.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 681,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								535,
-								535
-							]
-						],
-						"settings":
-						{
-							"SL.63.region_keys":
-							[
-								"SL.tslint.Highlights.|2f5e2a30d890a8c29792338be83cfe53ae57c0f2fcae85a0a637edc2882fd398|region.redish markup.error.sublime_linter|32",
-								"SL.tslint.Gutter.|region.redish markup.error.sublime_linter|dot",
-								"SL.tslint.Highlights.|2c0722288c4cbd8919db022e61b151fed321f35bb2bff783a5700809055a2f38|region.redish markup.error.sublime_linter|32",
-								"SL.tslint.Highlights.|d5717d10532c8d05f1f53c8ce32a4b9666e6ee78b63366098a679377d095c3de|region.redish markup.error.sublime_linter|32",
-								"SL.tslint.Highlights.|a0111e9aa950a2d3cacf33c6d28f2b2470f4bdd292e11944891328813243c820|region.redish markup.error.sublime_linter|32",
-								"SL.tslint.Highlights.|79f318a30b415d74706f53e0d94523f296a1e32e1ff639d62253b6c31a443313|region.redish markup.error.sublime_linter|32",
-								"SL.tslint.Highlights.|63445232178f2d15200152425b2ccca393ce9b212c0c61d2315c0da7c6e397cd|region.redish markup.error.sublime_linter|32",
-								"sublime_linter.protected_regions"
-							],
-							"SL.77.region_keys":
-							[
-								"SL.tslint.Highlights.|63445232178f2d15200152425b2ccca393ce9b212c0c61d2315c0da7c6e397cd|region.redish markup.error.sublime_linter|32",
-								"SL.tslint.Highlights.|a0111e9aa950a2d3cacf33c6d28f2b2470f4bdd292e11944891328813243c820|region.redish markup.error.sublime_linter|32",
-								"SL.tslint.Highlights.|79f318a30b415d74706f53e0d94523f296a1e32e1ff639d62253b6c31a443313|region.redish markup.error.sublime_linter|32",
-								"SL.tslint.Highlights.|2f5e2a30d890a8c29792338be83cfe53ae57c0f2fcae85a0a637edc2882fd398|region.redish markup.error.sublime_linter|32",
-								"SL.tslint.Gutter.|region.redish markup.error.sublime_linter|dot",
-								"sublime_linter.protected_regions",
-								"SL.tslint.Highlights.|2c0722288c4cbd8919db022e61b151fed321f35bb2bff783a5700809055a2f38|region.redish markup.error.sublime_linter|32"
-							],
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tab_size": 4,
-							"tabs_extra_last_activated": 1542657896.34,
-							"tabs_extra_last_activated_sheet_index": 5,
-							"translate_tabs_to_spaces": true,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 68.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "routing-start/src/tslint.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 53,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								53,
-								53
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"encoding_thread_running": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"tabs_extra_last_activated": 1542657874.29,
-							"tabs_extra_last_activated_sheet_index": 6,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -1089,11 +1507,430 @@
 					"type": "text"
 				}
 			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "CourseNotes.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 35078,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								35078,
+								35078
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"git_savvy.repo_path": "E:\\MyStuff\\Personal\\Trainings\\Angular_Udemy",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"tabs_extra_last_activated": 1542893910.41,
+							"tabs_extra_last_activated_sheet_index": 0,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 13494.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "httpclient_lecture_23/src/app/core/header/header.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 781,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								541,
+								541
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										560,
+										561
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										532,
+										533
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										541,
+										542
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										532,
+										533
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"git_savvy.repo_path": "E:\\MyStuff\\Personal\\Trainings\\Angular_Udemy",
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"tabs_extra_last_activated": 1542883411.29,
+							"tabs_extra_last_activated_sheet_index": 0,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -1108,16 +1945,30 @@
 				0,
 				1,
 				1
+			],
+			[
+				0,
+				1,
+				2,
+				2
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.51093951094,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+			0.589147249269,
 			1.0
 		]
 	},
@@ -1146,7 +1997,7 @@
 	"project": "AngularSublimeProject.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1156,16 +2007,44 @@
 		"selected_items":
 		[
 			[
-				"shoppinglistser",
-				"_RecipeBook/src/app/shopping-list/shopping-list.service.ts"
+				"data",
+				"httpclient_lecture_23\\src\\app\\shared\\data-storage.service.ts"
+			],
+			[
+				"server.ser",
+				"_RecipeBook\\src\\app\\shared\\server.service.ts"
+			],
+			[
+				"recip",
+				"_RecipeBook\\src\\app\\recipes\\recipe.service.ts"
+			],
+			[
+				"server",
+				"_ExerciseLectureApp\\src\\app\\servers\\servers.component.css"
+			],
+			[
+				"recipe",
+				"_RecipeBook\\src\\app\\recipes\\recipe.service.ts"
+			],
+			[
+				"app-re",
+				"_RecipeBook\\src\\app\\app-routing.module.ts"
+			],
+			[
+				"ingre",
+				"_RecipeBook\\src\\app\\shared\\ingredient.model.ts"
+			],
+			[
+				"recipe.",
+				"_RecipeBook\\src\\app\\recipes\\recipe.model.ts"
+			],
+			[
+				"recipe.o",
+				"_RecipeBook\\src\\app\\recipes\\recipe.model.ts"
 			],
 			[
 				"ingredient",
-				"_RecipeBook/src/app/shared/ingredient.model.ts"
-			],
-			[
-				"cour",
-				"CourseNotes.txt"
+				"_RecipeBook\\src\\app\\shared\\ingredient.model.ts"
 			],
 			[
 				"server.model",
@@ -1220,6 +2099,10 @@
 				"CourseNotes.txt"
 			],
 			[
+				"cour",
+				"CourseNotes.txt"
+			],
+			[
 				"cou",
 				"CourseNotes.txt"
 			],
@@ -1260,7 +2143,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

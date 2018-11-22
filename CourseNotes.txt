@@ -735,6 +735,9 @@ SECTION 17: PIPES: https://angular.io/guide/pipes
     }, 2000);
   });
 
-17 HTTP REQUESTS
+LECTURE 17: HTTP REQUESTS
     USING FIREBASE FROM GOOGLE: https://udemy-angular-training-0001.firebaseio.com/
     (Real Time database)
+
+LECTURE 28: UNIT TESTING IN ANGULAR 2+
+
