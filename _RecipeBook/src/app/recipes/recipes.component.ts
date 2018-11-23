@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit,OnDestroy, Input } from '@angular/core';
+import { Subscription } from "rxjs";
 import { Recipe } from "./recipe.model";
 import { RecipeService } from "./recipe.service";
+import { AuthService } from "../auth/auth.service";
 
 @Component({
   selector: 'app-recipes',
@@ -9,12 +11,22 @@ import { RecipeService } from "./recipe.service";
 })
 export class RecipesComponent implements OnInit {
 
-  constructor(private recipeService:RecipeService) { }
+  constructor(private recipeService:RecipeService,		private authService: AuthService,) { }
 
   currentRecipe:Recipe;
+	observerOnAuthenticated: Subscription;
 
+authenticated: boolean = false;
   ngOnInit() {
       this.recipeService.recipeSelected.subscribe((newRecipeChosen:Recipe) => {this.currentRecipe = newRecipeChosen})
+      this.authenticated = this.authService.auth;
+      	this.observerOnAuthenticated = this.authService.onAuthenticated.subscribe(
+			auth => (this.authenticated = auth)
+		);
   }
+
+	ngOnDestroy() {
+		this.observerOnAuthenticated.unsubscribe();
+	}
 
 }
