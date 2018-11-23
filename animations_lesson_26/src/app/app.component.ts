@@ -75,6 +75,20 @@ export class AppComponent {
       this.list.push(item);
     }
 
+
+animationDone(evt)
+{
+	console.log('done-------------');
+	console.log(evt);
+	console.log('done-------------');
+}
+
+animationStarted(evt)
+{
+	console.log('started-------------');
+	console.log(evt);
+	console.log('started-------------');
+}
 onDelete(item) {
 var index = this.list.indexOf(item);
 if (index > -1) {
