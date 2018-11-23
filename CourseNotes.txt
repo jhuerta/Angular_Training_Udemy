@@ -789,5 +789,6 @@ LECTURE 21: MODULES
         import { CommonModule } from "@angular/common";
         imports: [CommonModule, ReactiveFormsModule],
     You must not duplicate declarations of modules, services, components ....
+    Sharing directives using shared modules
 
 
