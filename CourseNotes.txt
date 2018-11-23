@@ -765,14 +765,29 @@ LECTURE 20: AUTHENTICATION
 
 LECTURE 26: ANIMATIONS IN ANGULAR
 ====================================================================================================
-    - install the new animations package): npm install --save @angular/animations 
+    - install the new animations package): npm install --save @angular/animations
     - In the AppModule!, This Module needs to be imported from @angular/platform-browser/animations'
             import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     - Add the BrowserAnimationsModule  to your imports[]  array in AppModule
-    - You then import trigger , state , style  etc from @angular/animations  instead of @angular/core 
+    - You then import trigger , state , style  etc from @angular/animations  instead of @angular/core
 
 LECTURE 28: UNIT TESTING IN ANGULAR 2+
 ====================================================================================================
     - In a traditional app, the session (cookie) is sent client-server to validate the user
     - In a SPA, a token is sent from the server to the client, and the client will use it as a key to validate its request
+
+LECTURE 21: MODULES
+====================================================================================================
+    app.module.ts
+        Declarations: The components
+        Imports: The modules (forms, routes, http)
+        Providers: Classes available in the whole class
+    Custom Modules (potential)
+        Group of components that make up a feature
+    Watchout when grouping components into modules, services may be reused!!
+    Make sure to import the CommonModule
+        import { CommonModule } from "@angular/common";
+        imports: [CommonModule, ReactiveFormsModule],
+    You must not duplicate declarations of modules, services, components ....
+
 
