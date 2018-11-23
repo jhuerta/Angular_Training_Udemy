@@ -763,6 +763,14 @@ LECTURE 20: AUTHENTICATION
     To protect the views, use an auth service to share the state of the user
 
 
+LECTURE 26: ANIMATIONS IN ANGULAR
+====================================================================================================
+    - install the new animations package): npm install --save @angular/animations 
+    - In the AppModule!, This Module needs to be imported from @angular/platform-browser/animations'
+            import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+    - Add the BrowserAnimationsModule  to your imports[]  array in AppModule
+    - You then import trigger , state , style  etc from @angular/animations  instead of @angular/core 
+
 LECTURE 28: UNIT TESTING IN ANGULAR 2+
 ====================================================================================================
     - In a traditional app, the session (cookie) is sent client-server to validate the user
