@@ -1,13 +1,20 @@
 import * as firebase from "firebase";
 import { Subject } from "rxjs";
+import { Router } from "@angular/router";
+import {Injectable} from "@angular/core"
 
+@Injectable()
 export class AuthService {
+
+	constructor(private router: Router){}
+
 	auth: boolean = false;
 	user: { email: string };
 	token: string;
 	onLogOut() {
 		this.auth = false;
 		this.onAuthenticated.next(this.auth);
+		this.router.navigate(["/"]);
 		firebase
 			.auth()
 			.signOut()
@@ -37,7 +44,9 @@ export class AuthService {
 		firebase
 			.auth()
 			.signInWithEmailAndPassword(email, password)
-			.then(evt => {
+			.then(response => {
+				this.router.navigate(["/recipes"]);
+				console.log('usr ok');
 				firebase
 					.auth()
 					.currentUser.getIdToken()

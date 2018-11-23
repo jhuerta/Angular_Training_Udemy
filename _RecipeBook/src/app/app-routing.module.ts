@@ -8,14 +8,18 @@ import { SigninComponent } from "./auth/signin/signin.component";
 import { RecipeDetailComponent } from "./recipes/recipe-detail/recipe-detail.component";
 import { RecipeEditComponent } from "./recipes/recipe-edit/recipe-edit.component";
 import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
+import { AppComponent } from "./app.component";
+import { AuthGuardService } from "./auth/auth-guard.service";
 
 import { RecipeStartComponent } from "./recipes/recipe-start/recipe-start.component";
 
 const appRoutes: Routes = [
-    { path: "", redirectTo: "recipes", pathMatch: "full" },
+    // { path: "", component: AppComponent, pathMatch: "full" },
+    //{ path: "", redirectTo: "recipes", pathMatch: "full" },
     {
         path: "recipes",
         component: RecipesComponent,
+        canActivate:[AuthGuardService],
         children: [
             {
                 path: "",
@@ -23,7 +27,7 @@ const appRoutes: Routes = [
             },
             {
                 path: "new",
-                component: RecipeEditComponent
+                component: RecipeEditComponent, 
             },
             {
                 path: ":id",
@@ -36,7 +40,7 @@ const appRoutes: Routes = [
             }
         ]
     },
-    { path: "shopping-list", component: ShoppingListComponent },
+    { path: "shopping-list", component: ShoppingListComponent, canActivate:[AuthGuardService] },
     { path: "signup", component: SignupComponent }
     { path: "signin", component: SigninComponent }
 ];
