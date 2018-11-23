@@ -16,12 +16,14 @@ export class ServerService {
 	getRecipes() {
 		return this.http.get(this.db).pipe(
 			map((response: Response) => {
-				const recipes: Recipe[] = response.json();
+				const recipes: Recipe[] = response.json() || [];
+
 				for (let recipe of recipes) {
 					if (!recipe["ingredients"]) {
 						recipe["ingredients"] = [];
 					}
 				}
+
 				return recipes;
 			})
 		);

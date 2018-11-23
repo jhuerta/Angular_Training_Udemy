@@ -380,6 +380,7 @@ Create an Angular project
 10.108 User array.slice() to return a copy of an array, avoiding returning the array itself (reference) that could probably modify the array
 
 11. ROUTES
+====================================================================================================
     To add routes to your app:
         import { Routes, RouterModule } from "@angular/router"; <=== Import
 
@@ -565,6 +566,7 @@ Create an Angular project
 
 
 13 OBSERVABLES
+====================================================================================================
     SUBSCRIBER/OBSERVER <---> OBSERVABLE
     Think of an observable as a data source that is delivering data packages asynchronously
     Make sure to unsubscribe the observer!
@@ -601,6 +603,7 @@ Create an Angular project
 
 
 14 FORMS
+====================================================================================================
     As it is a single page application, THERE IS NO SUBMIT! So, you need angular to help you in sending data to the server, but also receive it and validate
     Template-Driven Approach
         Inferred configuration.
@@ -736,8 +739,18 @@ SECTION 17: PIPES: https://angular.io/guide/pipes
   });
 
 LECTURE 17: HTTP REQUESTS
+====================================================================================================
+
     USING FIREBASE FROM GOOGLE: https://udemy-angular-training-0001.firebaseio.com/
     (Real Time database)
 
+LECTURE 20: AUTHENTICATION
+====================================================================================================
+
+
+
 LECTURE 28: UNIT TESTING IN ANGULAR 2+
+====================================================================================================
+    - In a traditional app, the session (cookie) is sent client-server to validate the user
+    - In a SPA, a token is sent from the server to the client, and the client will use it as a key to validate its request
 
