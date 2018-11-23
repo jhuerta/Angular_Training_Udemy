@@ -24,6 +24,7 @@ import { HttpModule } from "@angular/http";
 import { SignupComponent } from "./auth/signup/signup.component";
 import { SigninComponent } from "./auth/signin/signin.component";
 import { IgnoredServices } from "./credentials.services.ngsec";
+import { AuthService } from "./auth/auth.service";
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { IgnoredServices } from "./credentials.services.ngsec";
     RecipeService,
     ShoppingListService,
     ServerService,
-    IgnoredServices
+    IgnoredServices,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { NgForm, FormControl } from "@angular/forms";
+import { AuthService } from "../auth.service";
 
 @Component({
-  selector: 'app-signin',
-  templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.css']
+	selector: "app-signin",
+	templateUrl: "./signin.component.html",
+	styleUrls: ["./signin.component.css"]
 })
 export class SigninComponent implements OnInit {
+	@ViewChild("signinForm") signinForm: NgForm;
 
-  constructor() { }
+	constructor(private authService: AuthService) {}
 
-  ngOnInit() {
-  }
+	onSignin() {
+		const email = this.signinForm.value.email;
+		const password = this.signinForm.value.password;
 
+		this.authService.signinUser(email, password);
+	}
+
+	ngOnInit() {}
 }

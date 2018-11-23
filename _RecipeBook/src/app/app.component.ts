@@ -1,24 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { IgnoredServices } from "./credentials.services.ngsec";
-import * as firebase from 'firebase';
+import * as firebase from "firebase";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+	selector: "app-root",
+	templateUrl: "./app.component.html",
+	styleUrls: ["./app.component.css"]
 })
-export class AppComponent implements OnInit{
-	constructor(private ignoredServies: IgnoredServices)
-	{}
+export class AppComponent implements OnInit {
+	constructor(private ignoredServies: IgnoredServices) {}
 
-	ngOnInit(){
+	ngOnInit() {
 		const key = this.ignoredServies.apiKey;
 		const authDomain = this.ignoredServies.authDomain;
-		firebase.initializeApp(apiKey: key, authDomain: authDomain);
-
+		firebase.initializeApp({ apiKey: key, authDomain: authDomain });
 	}
-	changeMenu(menu){
+	changeMenu(menu) {
 		this.display = menu;
 	}
-	display:string='recipes';
+	display: string = "recipes";
 }

@@ -10,6 +10,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a routerLink="/signup">Register</a></li>
+        <li><a routerLink="/signin" *ngIf='!authenticated'>Login</a></li>
+        <li><a  *ngIf='authenticated' style="cursor: pointer" (click)='onLogout()' >Logout</a></li>
         <li class="dropdown" appDropdown>
           <a style="cursor: pointer"class="dropdown-toggle" role="button" appDropdown>Manage <span class="caret"></span></a>
           <ul class="dropdown-menu">
