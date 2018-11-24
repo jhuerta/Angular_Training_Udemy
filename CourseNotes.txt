@@ -801,7 +801,8 @@ LECTURE 21: MODULES
         CONS:
             You have take special care of the code used in the Views
         USE AOT! HUGE DECREASE OF SIZE (80% reduction!)
-    Use preloadingStrategy: PreloadAllModules in conjunction with Lazy loading to have lazy loading modules but at the same time, they will be pre loaded, so somehow, splitting the download of load of parts of the applications in advance
+        ng build --prod --aot
+    Use "preloadingStrategy: PreloadAllModules" in conjunction with Lazy loading to have lazy loading modules but at the same time, they will be pre loaded, so somehow, splitting the download of load of parts of the applications in advance
 
 
 
