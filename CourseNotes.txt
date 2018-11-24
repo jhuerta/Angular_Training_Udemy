@@ -793,7 +793,8 @@ LECTURE 21: MODULES
     For Lazy Loading, use AuthGuard canLoad!!! (instead of canActivate)
     DO NOT ADD SERVICES IN A SHARED MODULE, IT HAS REPERCUSSIONS IN THE NUMBER OF INSTANCES!!
     Use a core module to group provides and imports of your app
-    Ahead of Time Compilation (AOT Compilation)
+    Ahead of Time Compilation (AOT Compilation):
+
 
 
 
