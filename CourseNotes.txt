@@ -794,7 +794,14 @@ LECTURE 21: MODULES
     DO NOT ADD SERVICES IN A SHARED MODULE, IT HAS REPERCUSSIONS IN THE NUMBER OF INSTANCES!!
     Use a core module to group provides and imports of your app
     Ahead of Time Compilation (AOT Compilation):
-
+        PROS:
+            Faster load time
+            Check of templates for bug
+            Smaller file size
+        CONS:
+            You have take special care of the code used in the Views
+        USE AOT! HUGE DECREASE OF SIZE (80% reduction!)
+    Use preloadingStrategy: PreloadAllModules in conjunction with Lazy loading to have lazy loading modules but at the same time, they will be pre loaded, so somehow, splitting the download of load of parts of the applications in advance
 
 
 
