@@ -804,5 +804,9 @@ LECTURE 21: MODULES
         ng build --prod --aot
     Use "preloadingStrategy: PreloadAllModules" in conjunction with Lazy loading to have lazy loading modules but at the same time, they will be pre loaded, so somehow, splitting the download of load of parts of the applications in advance
 
-
+LECTURE 24: NGRX
+====================================================================================================
+npm install --save @ngrx/store <--- Main ngrx package
+Reducers
+Consider using ngrx services to wrap feacture services (repositories and state management of the model )
 
